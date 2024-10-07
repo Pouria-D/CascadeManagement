@@ -1,0 +1,2 @@
+- add head_rules to policy
+- for log_collector add this line (*.* @127.0.0.1:30001) in /etc/rsyslog.conf

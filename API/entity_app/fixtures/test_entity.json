@@ -1,0 +1,369 @@
+[
+  {
+    "model": "entity_app.address",
+    "pk": 1,
+    "fields": {
+      "name": "addr1",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "10.10.10.1"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 2,
+    "fields": {
+      "name": "addr2",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "20.20.20.1","123.123.123.123"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 3,
+    "fields": {
+      "name": "addr3",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "20.20.20.20/24","10.10.10.0/16"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 4,
+    "fields": {
+      "name": "emptyaddr",
+      "description": null,
+      "type": "ip",
+      "value_list": []
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 5,
+    "fields": {
+      "name": "addr5",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "20.20.20.0/24","30.50.20.10","50.60.122.1/15","120.120.120.2"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 6,
+    "fields": {
+      "name": "wrongMac",
+      "description": null,
+      "type": "mac",
+      "value_list": [
+        "20.20.20.20"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 7,
+    "fields": {
+      "name": "mac1",
+      "description": null,
+      "type": "mac",
+      "value_list": [
+        "2e:ee:4a:8a:77:c4"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 8,
+    "fields": {
+      "name": "mac2",
+      "description": null,
+      "type": "mac",
+      "value_list": [
+        "2e:ee:4a:8a:77:c4","3e:ee:4a:8a:77:c4"
+      ]
+    }
+  },
+
+  {
+    "model": "entity_app.address",
+    "pk": 10,
+    "fields": {
+      "name": "fqdn",
+      "description": null,
+      "type": "fqdn",
+      "value_list": [
+        "www.google.com"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 11,
+    "fields": {
+      "name": "fqdn2",
+      "description": null,
+      "type": "fqdn",
+      "value_list": [
+        "www.lg.com","www.irib.ir"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 12,
+    "fields": {
+      "name": "addr12",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "10.10.10.12"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 13,
+    "fields": {
+      "name": "addr13",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "30.10.33.1"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 14,
+    "fields": {
+      "name": "addr14",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "30.10.33.22/32"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 15,
+    "fields": {
+      "name": "addr15",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "30.10.33.25"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 16,
+    "fields": {
+      "name": "addr16",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "30.10.33.36"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 17,
+    "fields": {
+      "name": "addr17",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "77.10.33.36"
+      ]
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 1,
+    "fields": {
+      "name": "service1",
+      "description": null,
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "src": [
+            "8432"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 2,
+    "fields": {
+      "name": "alludp",
+      "description": "allUdp",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 3,
+    "fields": {
+      "name": "service3",
+      "description": null,
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "src": [
+            "8432"
+          ],
+          "dst": [
+            "13243"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 4,
+    "fields": {
+      "name": "service4",
+      "description": null,
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "src": [
+            "2344",
+            "123-300"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 5,
+    "fields": {
+      "name": "service5",
+      "description": null,
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "src": [
+            "43122",
+            "9000-9005"
+          ],
+          "dst": [
+            "125-980",
+            "1243"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 6,
+    "fields": {
+      "name": "service6",
+      "description": null,
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "1283"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 7,
+    "fields": {
+      "name": "alltcp",
+      "description": "allTcp",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 8,
+    "fields": {
+      "name": "allicmp",
+      "description": "allICMP",
+      "is_user_defined": "True",
+      "protocol": {
+        "icmp": {
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 9,
+    "fields": {
+      "name": "icmp1",
+      "description": "icmp",
+      "is_user_defined": "True",
+      "protocol": {
+        "icmp": {
+          "code": "2",
+          "type": "12"
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.service",
+    "pk": 10,
+    "fields": {
+      "name": "protocol_12",
+      "description": "protocol12",
+      "is_user_defined": "True",
+      "protocol": {
+        "ip": {
+          "protocol_number": "12"
+        }
+      }
+    }
+  },
+  {
+    "model": "entity_app.schedule",
+    "pk": 1 ,
+    "fields": {
+      "name": "sch",
+      "description": "",
+      "start_date": "2017-05-05",
+      "end_date": "2017-08-05",
+      "start_time": "02:03:04",
+      "end_time": "10:03:04",
+      "days_of_week": { "sunday": true,
+                        "monday": true,
+                        "tuesday": false,
+                        "wednesday": false,
+                        "thursday": true,
+                        "friday": false,
+                        "saturday": true}
+    }
+  }
+]

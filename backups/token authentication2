@@ -1,0 +1,1722 @@
+pouria@ubuntu:~$ cd cascade
+pouria@ubuntu:~/cascade$ source env/bin/activate
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 08:12:52
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44782]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44782]
+^C(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 09:07:32
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.01, 127.0.0.1:44950]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44950]
+^C(env) pouria@ubuntu:~/cascade$ pip list
+Package             Version
+------------------- ---------
+aioredis            1.3.1
+amqp                2.6.1
+asgiref             3.2.10
+astroid             2.4.2
+async-timeout       3.0.1
+attrs               19.3.0
+autobahn            20.7.1
+Automat             20.2.0
+billiard            3.6.3.0
+celery              4.4.7
+certifi             2020.6.20
+cffi                1.14.2
+channels            2.4.0
+channels-redis      3.0.1
+chardet             3.0.4
+constantly          15.1.0
+cryptography        3.0
+daphne              2.5.0
+Django              3.1
+django-cors-headers 3.5.0
+django-extensions   3.0.8
+django-filter       2.3.0
+djangorestframework 3.11.1
+gevent              20.6.2
+greenlet            0.4.16
+gunicorn            20.0.4
+hiredis             1.1.0
+hyperlink           20.0.1
+idna                2.10
+incremental         17.5.0
+iniconfig           1.0.1
+isort               4.3.21
+kombu               4.6.11
+lazy-object-proxy   1.4.3
+Markdown            3.2.2
+mccabe              0.6.1
+more-itertools      8.4.0
+msgpack             1.0.0
+packaging           20.4
+pip                 20.2.2
+pluggy              0.13.1
+psycopg2-binary     2.8.5
+py                  1.9.0
+pyasn1              0.4.8
+pyasn1-modules      0.2.8
+pycparser           2.20
+Pygments            2.6.1
+PyHamcrest          2.0.2
+pylint              2.5.3
+pyOpenSSL           19.1.0
+pyparsing           2.4.7
+pytest              6.0.1
+pytest-asyncio      0.14.0
+pytest-django       3.9.0
+pytz                2020.1
+requests            2.24.0
+requests-unixsocket 0.2.0
+selenium            3.141.0
+service-identity    18.1.0
+setuptools          49.2.1
+six                 1.15.0
+sqlparse            0.3.1
+toml                0.10.1
+Twisted             20.3.0
+txaio               20.4.1
+urllib3             1.25.10
+vine                1.3.0
+websocket           0.2.1
+websocket-client    0.57.0
+wheel               0.34.2
+wrapt               1.12.1
+zope.event          4.4
+zope.interface      5.1.0
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 09:13:27
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44982]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44982]
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 09:16:30
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+HTTP GET / 200 [0.73, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.03, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.04, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/css/default.css 304 [0.01, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.01, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:45002]
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.35, 127.0.0.1:45002]
+HTTP GET /Devices/ 200 [0.43, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.03, 127.0.0.1:45010]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45014]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:45012]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 304 [0.00, 127.0.0.1:45016]
+HTTP GET /api-auth/logout/?next=/ 302 [0.02, 127.0.0.1:45016]
+HTTP GET / 200 [0.05, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:45012]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45014]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45010]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45012]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45014]
+HTTP GET /api-auth/logout/?next=/ 302 [0.00, 127.0.0.1:45014]
+HTTP GET / 200 [0.06, 127.0.0.1:45014]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45014]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:45014]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:45012]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45010]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45014]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45012]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45016]
+HTTP GET /api-auth/logout/?next=/ 302 [0.00, 127.0.0.1:45016]
+HTTP GET / 200 [0.05, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45012]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45014]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45010]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45012]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45012]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.02, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.02, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/css/default.css 304 [0.02, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.03, 127.0.0.1:45004]
+HTTP GET /api-auth/logout/?next=/ 302 [0.00, 127.0.0.1:45004]
+HTTP GET / 200 [0.05, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45016]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45012]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45010]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45014]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45004]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45002]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:45002]
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 09:18:44
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+HTTP GET / 200 [0.25, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45504]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45506]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45510]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45504]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.03, 127.0.0.1:45504]
+HTTP GET /api-auth/logout/?next=/ 302 [0.01, 127.0.0.1:45504]
+HTTP GET / 200 [0.08, 127.0.0.1:45504]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45504]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:45504]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.01, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45510]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45506]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:45504]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:45512]
+HTTP GET /api-auth/logout/?next=/ 302 [0.00, 127.0.0.1:45512]
+HTTP GET / 200 [0.10, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.01, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45504]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45506]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45510]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/js/default.js 304 [0.04, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:45502]
+HTTP GET /api-auth/logout/?next=/ 302 [0.00, 127.0.0.1:45502]
+HTTP GET / 200 [0.07, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45510]
+HTTP GET /static/rest_framework/js/default.js 304 [0.05, 127.0.0.1:45506]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.05, 127.0.0.1:45510]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.05, 127.0.0.1:45512]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.05, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.05, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:45508]
+Not Found: /api-auth
+HTTP GET /api-auth 404 [0.02, 127.0.0.1:45508]
+Not Found: /api-auth/
+HTTP GET /api-auth/ 404 [0.02, 127.0.0.1:45508]
+Not Found: /api-auth/logout
+HTTP GET /api-auth/logout 404 [0.01, 127.0.0.1:45508]
+HTTP GET /api-auth/logout/?next=/ 302 [0.00, 127.0.0.1:45508]
+HTTP GET / 200 [0.08, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45508]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:45502]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.03, 127.0.0.1:45502]
+HTTP GET /Devices/ 200 [0.36, 127.0.0.1:47222]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:47222]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:47222]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:47222]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:47222]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:47222]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:47224]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:47226]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:47228]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:47232]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:47230]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.01, 127.0.0.1:47230]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.05, 127.0.0.1:47230]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:47230]
+HTTP GET /Devices/ 200 [0.21, 127.0.0.1:47230]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:47230]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:47230]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:47232]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:47228]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:47226]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:47224]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:47222]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:47230]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:47228]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:47232]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:47232]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:49144]
+/home/pouria/cascade/main/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 09:29:04
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+HTTP GET / 200 [0.41, 127.0.0.1:50568]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:50568]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:50568]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.03, 127.0.0.1:50568]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.06, 127.0.0.1:50572]
+HTTP GET /static/rest_framework/css/default.css 304 [0.09, 127.0.0.1:50570]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.05, 127.0.0.1:50576]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.06, 127.0.0.1:50574]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:50568]
+HTTP GET /static/rest_framework/js/default.js 304 [0.05, 127.0.0.1:50572]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.11, 127.0.0.1:50578]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:50578]
+HTTP GET /accounts/logout/?next=/ 302 [0.00, 127.0.0.1:50578]
+HTTP GET / 200 [0.12, 127.0.0.1:50578]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:50578]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:50578]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:50578]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:50572]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:50568]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:50574]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:50576]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:50570]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:50578]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:50572]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:50572]
+/home/pouria/cascade/main/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 09:29:44
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+HTTP GET / 200 [0.26, 127.0.0.1:50904]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:50904]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:50904]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:50906]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:50916]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.02, 127.0.0.1:50918]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.03, 127.0.0.1:50920]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:50922]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:50906]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:50916]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:50904]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.03, 127.0.0.1:50904]
+HTTP GET /accounts/logout/?next=/ 302 [0.00, 127.0.0.1:50904]
+HTTP GET / 200 [0.09, 127.0.0.1:50904]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:50904]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:50904]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:50904]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:50916]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:50906]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:50922]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:50920]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:50918]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:50904]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:50916]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:50916]
+/home/pouria/cascade/main/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 09:30:49
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+HTTP GET / 200 [0.18, 127.0.0.1:51440]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.01, 127.0.0.1:51440]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:51440]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.04, 127.0.0.1:51442]
+HTTP GET /static/rest_framework/css/default.css 304 [0.05, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:51456]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.04, 127.0.0.1:51440]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.03, 127.0.0.1:51454]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:51458]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:51442]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.03, 127.0.0.1:51452]
+HTTP GET /accounts/logout/?next=/ 302 [0.01, 127.0.0.1:51452]
+HTTP GET / 200 [0.07, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:51442]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:51458]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:51454]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.04, 127.0.0.1:51440]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:51456]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:51442]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:51452]
+HTTP GET /accounts/logout/?next=/ 302 [0.00, 127.0.0.1:51452]
+HTTP GET / 200 [0.08, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:51440]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:51454]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:51456]
+HTTP GET /static/rest_framework/css/default.css 304 [0.02, 127.0.0.1:51442]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.04, 127.0.0.1:51452]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:51458]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:51440]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:51454]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:51454]
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/urls.py", line 40, in <module>
+    from auth_app.views import ObtainExpiringAuthToken, logout
+  File "/home/pouria/cascade/auth_app/views.py", line 5, in <module>
+    from rest_framework import status, viewsets, serializers
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 27, in <module>
+    from rest_framework import generics, mixins, views
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 9, in <module>
+    from rest_framework import mixins, views
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 17, in <module>
+    from rest_framework.schemas import DefaultSchema
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/schemas/__init__.py", line 33, in <module>
+    authentication_classes=api_settings.DEFAULT_AUTHENTICATION_CLASSES,
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 220, in __getattr__
+    val = perform_import(val, attr)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return [import_from_string(item, setting_name) for item in val]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 168, in <listcomp>
+    return [import_from_string(item, setting_name) for item in val]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 177, in import_from_string
+    return import_string(val)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/pouria/cascade/auth_app/utils.py", line 11, in <module>
+    from auth_app.models import Token
+  File "/home/pouria/cascade/auth_app/models.py", line 9, in <module>
+    class Token(models.Model):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/base.py", line 113, in __new__
+    raise RuntimeError(
+RuntimeError: Model class auth_app.models.Token doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 09:31:51
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 70, in inner_run
+    self.check_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 459, in check_migrations
+    executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__
+    self.build_graph()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/urls.py", line 40, in <module>
+    from auth_app.views import ObtainExpiringAuthToken, logout
+ModuleNotFoundError: No module named 'auth_app'
+/home/pouria/cascade/main/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 70, in inner_run
+    self.check_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 459, in check_migrations
+    executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__
+    self.build_graph()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+/home/pouria/cascade/DeviceManagement/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 70, in inner_run
+    self.check_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 459, in check_migrations
+    executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__
+    self.build_graph()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 70, in inner_run
+    self.check_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 459, in check_migrations
+    executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__
+    self.build_graph()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 70, in inner_run
+    self.check_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 459, in check_migrations
+    executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__
+    self.build_graph()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 70, in inner_run
+    self.check_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 459, in check_migrations
+    executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__
+    self.build_graph()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+^C(env) pouria@ubuntu:~/cascade$ sudo -u postgres psql
+[sudo] password for pouria: 
+psql: error: could not connect to server: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+(env) pouria@ubuntu:~/cascade$ ^C
+(env) pouria@ubuntu:~/cascade$ ^C
+(env) pouria@ubuntu:~/cascade$ ^C
+(env) pouria@ubuntu:~/cascade$ ^C
+(env) pouria@ubuntu:~/cascade$ ^C
+(env) pouria@ubuntu:~/cascade$ ^C
+(env) pouria@ubuntu:~/cascade$ ^C
+(env) pouria@ubuntu:~/cascade$ ^C
+(env) pouria@ubuntu:~/cascade$ ^C
+(env) pouria@ubuntu:~/cascade$ sudo -u postgres psql
+psql: error: could not connect to server: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+(env) pouria@ubuntu:~/cascade$ pip install psycopg2
+Collecting psycopg2
+  Downloading psycopg2-2.8.6.tar.gz (383 kB)
+     |████████████████████████████████| 383 kB 195 kB/s 
+Building wheels for collected packages: psycopg2
+  Building wheel for psycopg2 (setup.py) ... done
+  Created wheel for psycopg2: filename=psycopg2-2.8.6-cp38-cp38-linux_x86_64.whl size=505040 sha256=44b99f7f5c0ded63e03517f52b7e5286e7a0a270820f29deea8e1b8f972f4d3b
+  Stored in directory: /home/pouria/.cache/pip/wheels/70/5e/69/8a020d78c09043156a7df0b64529e460fbd922ca065c4b795c
+Successfully built psycopg2
+Installing collected packages: psycopg2
+Successfully installed psycopg2-2.8.6
+(env) pouria@ubuntu:~/cascade$ sudo -u postgres psql
+psql: error: could not connect to server: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+(env) pouria@ubuntu:~/cascade$ pip install psycopg2
+Requirement already satisfied: psycopg2 in ./env/lib/python3.8/site-packages (2.8.6)
+(env) pouria@ubuntu:~/cascade$ sudo -u postgres psql
+psql: error: could not connect to server: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+(env) pouria@ubuntu:~/cascade$ sudo apt install postgresql postgresql-contrib
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+postgresql is already the newest version (12+214ubuntu0.1).
+postgresql-contrib is already the newest version (12+214ubuntu0.1).
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 88 not upgraded.
+(env) pouria@ubuntu:~/cascade$ sudo -u postgres psql
+psql: error: could not connect to server: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+(env) pouria@ubuntu:~/cascade$ sudo apt-get update
+Err:1 http://dl.google.com/linux/chrome/deb stable InRelease                                                                                                                                              
+  Temporary failure resolving 'dl.google.com'
+Err:2 https://download.docker.com/linux/ubuntu focal InRelease                                                                                                                                            
+  Temporary failure resolving 'download.docker.com'
+Err:3 http://packages.microsoft.com/repos/vscode stable InRelease                                                                                                                         
+  Temporary failure resolving 'packages.microsoft.com'
+Err:4 http://security.ubuntu.com/ubuntu focal-security InRelease                                                                                      
+  Temporary failure resolving 'security.ubuntu.com'
+Err:5 https://deb.nodesource.com/node_12.x focal InRelease                                                     
+  Temporary failure resolving 'deb.nodesource.com'
+Err:6 http://us.archive.ubuntu.com/ubuntu focal InRelease                  
+  Temporary failure resolving 'us.archive.ubuntu.com'
+Err:7 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease
+  Temporary failure resolving 'us.archive.ubuntu.com'
+Err:8 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
+  Temporary failure resolving 'us.archive.ubuntu.com'
+Reading package lists... Done           
+W: Failed to fetch http://us.archive.ubuntu.com/ubuntu/dists/focal/InRelease  Temporary failure resolving 'us.archive.ubuntu.com'
+W: Failed to fetch http://us.archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Temporary failure resolving 'us.archive.ubuntu.com'
+W: Failed to fetch http://us.archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Temporary failure resolving 'us.archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Failed to fetch https://download.docker.com/linux/ubuntu/dists/focal/InRelease  Temporary failure resolving 'download.docker.com'
+W: Failed to fetch http://dl.google.com/linux/chrome/deb/dists/stable/InRelease  Temporary failure resolving 'dl.google.com'
+W: Failed to fetch https://deb.nodesource.com/node_12.x/dists/focal/InRelease  Temporary failure resolving 'deb.nodesource.com'
+W: Failed to fetch http://packages.microsoft.com/repos/vscode/dists/stable/InRelease  Temporary failure resolving 'packages.microsoft.com'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+(env) pouria@ubuntu:~/cascade$ sudo apt update
+0% [Connecting to dl.google.com] [Connecting to deb.nodesource.com]^C
+(env) pouria@ubuntu:~/cascade$ ifconfig
+docker0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        inet6 fe80::42:a1ff:fe51:7ed1  prefixlen 64  scopeid 0x20<link>
+        ether 02:42:a1:51:7e:d1  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 356  bytes 73556 (73.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ens33: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.6.124  netmask 255.255.255.0  broadcast 192.168.6.255
+        inet6 fe80::7acd:d798:36b7:f74c  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:10:07:ed  txqueuelen 1000  (Ethernet)
+        RX packets 71853  bytes 17002522 (17.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 29849  bytes 4687168 (4.6 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 31640  bytes 2789253 (2.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 31640  bytes 2789253 (2.7 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+vethe08f70d: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::e03d:b9ff:fe3e:5df4  prefixlen 64  scopeid 0x20<link>
+        ether e2:3d:b9:3e:5d:f4  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 396  bytes 79335 (79.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+(env) pouria@ubuntu:~/cascade$ upgrade pip
+upgrade: command not found
+(env) pouria@ubuntu:~/cascade$ --upgrade pip
+--upgrade: command not found
+(env) pouria@ubuntu:~/cascade$ sudo apt-get update
+0% [Connecting to dl.google.com] [Connecting to deb.nodesource.com]^C
+(env) pouria@ubuntu:~/cascade$ sudo apt-get update
+Hit:1 http://dl.google.com/linux/chrome/deb stable InRelease                                                                                                                                              
+Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease                                                                                                                                                 
+Hit:3 http://packages.microsoft.com/repos/vscode stable InRelease                                                                                                       
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]                                                                                              
+Hit:5 https://download.docker.com/linux/ubuntu focal InRelease                                                       
+Hit:6 https://deb.nodesource.com/node_12.x focal InRelease                                          
+Get:7 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]  
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [209 kB]
+Get:9 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [186 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:11 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,768 B]
+Get:12 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]                                                                                                                                
+Get:13 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [24.3 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/main DEP-11 48x48 Icons [4,890 B]
+Get:15 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [52.2 kB]
+Fetched 796 kB in 32s (25.0 kB/s)            
+^C
+(env) pouria@ubuntu:~/cascade$ sudo apt-get update
+Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease                                                                                                               
+Hit:3 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease                                                                                                       
+Get:4 http://dl.google.com/linux/chrome/deb stable InRelease [1,811 B]                                                                                                  
+Hit:5 http://packages.microsoft.com/repos/vscode stable InRelease                                                                                                       
+Hit:6 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease                                                                                                     
+Hit:7 https://deb.nodesource.com/node_12.x focal InRelease                                                                  
+Hit:8 https://download.docker.com/linux/ubuntu focal InRelease           
+Fetched 1,811 B in 4s (444 B/s)
+^C
+(env) pouria@ubuntu:~/cascade$ pip install numpy
+Collecting numpy
+  Downloading numpy-1.19.2-cp38-cp38-manylinux2010_x86_64.whl (14.5 MB)
+     |████████████████████████████████| 14.5 MB 105 kB/s 
+Installing collected packages: numpy
+Successfully installed numpy-1.19.2
+(env) pouria@ubuntu:~/cascade$ sudo apt-get update
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://dl.google.com/linux/chrome/deb stable InRelease [1,811 B]                                                                                                                                    
+Hit:3 http://security.ubuntu.com/ubuntu focal-security InRelease                                                                                                                                          
+Hit:4 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease                                                                                                                        
+Hit:5 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease                                                                                                
+Hit:6 https://deb.nodesource.com/node_12.x focal InRelease                                                                                                         
+Hit:7 https://download.docker.com/linux/ubuntu focal InRelease                                                              
+Hit:8 http://packages.microsoft.com/repos/vscode stable InRelease                                                                                                                                         
+Fetched 1,811 B in 32s (57 B/s)
+Reading package lists... Done
+(env) pouria@ubuntu:~/cascade$ sudo apt-get update
+Hit:1 https://download.docker.com/linux/ubuntu focal InRelease                                                                                                                                            
+Hit:2 https://deb.nodesource.com/node_12.x focal InRelease                                                                                                                                                
+Get:3 http://dl.google.com/linux/chrome/deb stable InRelease [1,811 B]                                                                                                                                 
+Get:4 http://packages.microsoft.com/repos/vscode stable InRelease [3,959 B]                                                                                                      
+Hit:5 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Hit:6 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:7 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease
+Get:8 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]                                                                                                                                 
+Fetched 113 kB in 33s (3,401 B/s) 
+Reading package lists... Done
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/snippets/
+
+Command 'http' not found, but can be installed with:
+
+sudo snap install http    # version 1.0.3-1, or
+sudo apt  install httpie  # version 1.0.3-2
+
+See 'snap info http' for additional versions.
+
+(env) pouria@ubuntu:~/cascade$ sudo apt install httpie
+[sudo] password for pouria: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  python3-pygments
+Suggested packages:
+  python-pygments-doc ttf-bitstream-vera
+The following NEW packages will be installed:
+  httpie python3-pygments
+0 upgraded, 2 newly installed, 0 to remove and 88 not upgraded.
+Need to get 648 kB of archives.
+After this operation, 3,486 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 python3-pygments all 2.3.1+dfsg-1ubuntu2 [579 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 httpie all 1.0.3-2 [68.2 kB]
+Fetched 648 kB in 3s (196 kB/s)
+Selecting previously unselected package python3-pygments.
+(Reading database ... 214934 files and directories currently installed.)
+Preparing to unpack .../python3-pygments_2.3.1+dfsg-1ubuntu2_all.deb ...
+Unpacking python3-pygments (2.3.1+dfsg-1ubuntu2) ...
+Selecting previously unselected package httpie.
+Preparing to unpack .../httpie_1.0.3-2_all.deb ...
+Unpacking httpie (1.0.3-2) ...
+Setting up python3-pygments (2.3.1+dfsg-1ubuntu2) ...
+Setting up httpie (1.0.3-2) ...
+Processing triggers for man-db (2.9.1-1) ...
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/users/
+HTTP/1.1 302 Found
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Mon, 14 Sep 2020 05:17:51 GMT
+Location: /accounts/login/?next=/users/
+Referrer-Policy: same-origin
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+
+
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/
+HTTP/1.1 200 OK
+Allow: GET, HEAD, OPTIONS
+Content-Length: 146
+Content-Type: application/json
+Date: Mon, 14 Sep 2020 05:18:13 GMT
+Referrer-Policy: same-origin
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Accept
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+{
+    "change password": "http://127.0.0.1:8000/change%20password/",
+    "snippets": "http://127.0.0.1:8000/snippets/",
+    "users": "http://127.0.0.1:8000/users/"
+}
+
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/snippets/
+HTTP/1.1 302 Found
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Mon, 14 Sep 2020 05:18:21 GMT
+Location: /accounts/login/?next=/snippets/
+Referrer-Policy: same-origin
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+
+
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/snippets
+HTTP/1.1 404 Not Found
+Connection: close
+Content-Type: text/html
+Date: Mon, 14 Sep 2020 05:18:25 GMT
+Server: WSGIServer/0.2 CPython/3.8.2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Page not found at /snippets</title>
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <style type="text/css">
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font:small sans-serif; background:#eee; color:#000; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 span { font-size:60%; color:#666; font-weight:normal; }
+    table { border:none; border-collapse: collapse; width:100%; }
+    td, th { vertical-align:top; padding:2px 3px; }
+    th { width:12em; text-align:right; color:#666; padding-right:.5em; }
+    #info { background:#f6f6f6; }
+    #info ol { margin: 0.5em 4em; }
+    #info ol li { font-family: monospace; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+  </style>
+</head>
+<body>
+  <div id="summary">
+    <h1>Page not found <span>(404)</span></h1>
+    <table class="meta">
+      <tr>
+        <th>Request Method:</th>
+        <td>GET</td>
+      </tr>
+      <tr>
+        <th>Request URL:</th>
+        <td>http://127.0.0.1:8000/snippets</td>
+      </tr>
+      
+    </table>
+  </div>
+  <div id="info">
+    
+      <p>
+      Using the URLconf defined in <code>tutorial.urls</code>,
+      Django tried these URL patterns, in this order:
+      </p>
+      <ol>
+        
+          <li>
+            
+                
+                
+            
+                snippets/
+                [name='snippet-list']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                remote/snippets/
+                [name='snippet-list']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                snippets/&lt;int:pk&gt;/
+                [name='snippet-detail']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                snippets/&lt;int:pk&gt;/highlight/
+                [name='snippet-highlight']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                users/
+                [name='user-list']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                users/&lt;int:pk&gt;/
+                [name='user-detail']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                api/change-password/
+                [name='change-password']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                accounts/
+                
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                accounts/logout
+                
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^snippets/$
+                [name='snippet-list']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^snippets\.(?P&lt;format&gt;[a-z0-9]+)/?$
+                [name='snippet-list']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^snippets/(?P&lt;pk&gt;[^/.]+)/$
+                [name='snippet-detail']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^snippets/(?P&lt;pk&gt;[^/.]+)\.(?P&lt;format&gt;[a-z0-9]+)/?$
+                [name='snippet-detail']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^snippets/(?P&lt;pk&gt;[^/.]+)/highlight/$
+                [name='snippet-highlight']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^snippets/(?P&lt;pk&gt;[^/.]+)/highlight\.(?P&lt;format&gt;[a-z0-9]+)/?$
+                [name='snippet-highlight']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^users/$
+                [name='user-list']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^users\.(?P&lt;format&gt;[a-z0-9]+)/?$
+                [name='user-list']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^users/(?P&lt;pk&gt;[^/.]+)/$
+                [name='user-detail']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^users/(?P&lt;pk&gt;[^/.]+)\.(?P&lt;format&gt;[a-z0-9]+)/?$
+                [name='user-detail']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^$
+                [name='api-root']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                ^\.(?P&lt;format&gt;[a-z0-9]+)/?$
+                [name='api-root']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                change password/$
+                [name='change password-list']
+            
+          </li>
+        
+          <li>
+            
+                
+                
+            
+                
+                
+            
+                change password\.(?P&lt;format&gt;(json|html))/?$
+                [name='change password-list']
+            
+          </li>
+        
+      </ol>
+      <p>
+        
+        The current path, <code>snippets</code>, didn't match any of these.
+      </p>
+    
+  </div>
+
+  <div id="explanation">
+    <p>
+      You're seeing this error because you have <code>DEBUG = True</code> in
+      your Django settings file. Change that to <code>False</code>, and Django
+      will display a standard 404 page.
+    </p>
+  </div>
+</body>
+</html>
+
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/snippets/
+HTTP/1.1 302 Found
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Mon, 14 Sep 2020 05:19:08 GMT
+Location: /accounts/login/?next=/snippets/
+Referrer-Policy: same-origin
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+
+
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/snippets/
+HTTP/1.1 302 Found
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Mon, 14 Sep 2020 05:19:50 GMT
+Location: /accounts/login/?next=/snippets/
+Referrer-Policy: same-origin
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+
+
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/snippets/
+HTTP/1.1 302 Found
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Mon, 14 Sep 2020 05:20:16 GMT
+Location: /accounts/login/?next=/snippets/
+Referrer-Policy: same-origin
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+
+
+(env) pouria@ubuntu:~/cascade$ curl http://127.0.0.1:8000/snippets/
+(env) pouria@ubuntu:~/cascade$ curl http://127.0.0.1:8000/snippets/
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/snippets/
+HTTP/1.1 302 Found
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Mon, 14 Sep 2020 05:20:42 GMT
+Location: /accounts/login/?next=/snippets/
+Referrer-Policy: same-origin
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+
+
+(env) pouria@ubuntu:~/cascade$ httpie http://127.0.0.1:8000/snippets/
+
+Command 'httpie' not found, did you mean:
+
+  command 'httpee' from snap httpee (1.0.2-9-gfd44f1a)
+
+See 'snap info <snapname>' for additional versions.
+
+(env) pouria@ubuntu:~/cascade$ http http://127.0.0.1:8000/users/ 'Authorization: Token 670adb1f08b6e9d9fb29e55d87964087cf4470b9'
+HTTP/1.1 302 Found
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+Date: Mon, 14 Sep 2020 05:25:01 GMT
+Location: /accounts/login/?next=/users/
+Referrer-Policy: same-origin
+Server: WSGIServer/0.2 CPython/3.8.2
+Vary: Cookie
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+
+
+(env) pouria@ubuntu:~/cascade$ curl http://127.0.0.1:8000/users/ -H 'Authorization: Token 670adb1f08b6e9d9fb29e55d87964087cf4470b9'
+(env) pouria@ubuntu:~/cascade$ 
+

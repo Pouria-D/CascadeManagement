@@ -1,0 +1,7 @@
+#normal :
+
+192.168.203.139 - - [22/Aug/2020:21:43:21 -0700] "GET /ws/Devices/ HTTP/1.1" 200 4760 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36"
+
+# url link :
+
+192.168.203.139 - - [22/Aug/2020:21:47:02 -0700] "GET /ws/Devices/ HTTP/1.1" 200 4759 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36"

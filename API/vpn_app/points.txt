@@ -1,0 +1,5 @@
+In vpn connection this items should be checked (for Tunnel in Tunnel mode):
+
+1. All Tunnels should have a unique Virtual Endpoints.
+2. Real Endpoint should be unique between same tunnels type.
+3. Virtual Endpoint shouldn't be same as Narin IPs(and it's network)

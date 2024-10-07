@@ -1,0 +1,11 @@
+Rest framework:
+https://www.django-rest-framework.org/
+
+Database:
+https://www.howtoforge.com/tutorial/how-to-install-django-with-postgresql-and-nginx-on-ubuntu-16-04/
+
+
+https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04
+
+Pgadmin:
+https://www.postgresqltutorial.com/connect-to-postgresql-database/

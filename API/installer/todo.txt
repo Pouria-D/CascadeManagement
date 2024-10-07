@@ -1,0 +1,11 @@
+on build server:
+    - pip install --upgrade pip
+    - pip install wheel
+    - pip wheel --wheel-dir=/tmp/modules -r requirements.txt
+    - scp -r /tmp/modules ngfw@<TARGET>:/tmp/modules
+m
+on target server:
+    - python3 -m venv .env
+    - source .env/bin/activate
+    - pip install /tmp/modules/*
+    - rm -rf /tmp/modules/*

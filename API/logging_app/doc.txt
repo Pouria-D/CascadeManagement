@@ -1,0 +1,5 @@
+for set timeout in mongo Qurey use max_time_ms(ms)
+
+max_time_ms(ms):Wait ms milliseconds before killing the query on the server
+Parameters:	ms – the number of milliseconds before killing the query on the server
+

@@ -1,0 +1,23 @@
+System information:
+    -system information include these fields:
+        wanip
+        uptime
+        servertime
+        timezone
+        hostname
+        last_login_ip
+        last_login_time
+        serial_number
+        token_number
+        firmware number(narin_version)
+        module_list
+
+    catch wan-ip  from 'curl ifconfig.me'
+    catch uptime  from 'uptime -p'
+    catch server time from 'sudo hwclock --show'
+    catch time from timedatectl status | grep "Time zone" '
+    catch hostname from 'hostname'
+    catch last login ip from AdminLoginLock function
+    catch last login time from AdminLoginLock function
+    catch module list from /var/ngfw/module-list.yml
+    catch narin version from get_version function

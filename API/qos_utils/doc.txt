@@ -1,0 +1,14 @@
+The bw unit is based on 'kbps'(kilo bit per second)
+
+all LANs egress traffic --> ifb0
+default class id --> 9999
+mark of interfaces in mangle --> interfaces id (in database) marking interface is done in updating interface and in watcher
+ifb interface bandwidth --> we consider a very big number () for ifb bandwidth. we use what admin enter as bandwidth for validating policies.
+
+Design:
+ -Interface config:
+    Two things are requierd and should enter in Interface config section:
+    1. Interface estimated upload and download BW)
+    2. Type of interface (WAN or LAN)
+
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Dashboard Web Socket</title>
+</head>
+<body>
+<div><span id="notification"></span></div>
+
+<script>
+    function new_websocket() {
+        var socket = new WebSocket('ws://' + window.location.host + '/ws/notifications');
+
+        socket.onmessage = function (e) {
+            document.querySelector('#' + item).innerHTML = (e.data + '\n');
+        };
+
+    }
+
+    new_websocket();
+
+</script>
+</body>
+</html>

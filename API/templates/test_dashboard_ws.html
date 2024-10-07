@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Dashboard Web Socket</title>
+</head>
+<body>
+<div><span id="cpu"></span></div>
+<div><span id="ram"></span></div>
+<div><span id="disk"></span></div>
+<div><span id="system-io"></span></div>
+<div><span id="network"></span></div>
+<div><span id="interrupts"></span></div>
+<div><span id="softirqs"></span></div>
+<div><span id="softnet"></span></div>
+<div><span id="uptime"></span></div>
+<div><span id="packets"></span></div>
+<div><span id="error-packets"></span></div>
+<div><span id="tcp-connections"></span></div>
+<div><span id="tcp-packets"></span></div>
+<div><span id="udp-sockets"></span></div>
+<div><span id="udp-packets"></span></div>
+<div><span id="firewall"></span></div>
+<div><span id="diskusage"></span></div>
+<div><span id="system-info"></span></div>
+<div><span id="is-master"></span></div>
+
+<script>
+    function new_websocket(item) {
+        var socket = new WebSocket('wss://' + window.location.host + '/ws/dashboard/' + item + '?token={{ token }}');
+
+        socket.onmessage = function (e) {
+            document.querySelector('#' + item).innerHTML = (e.data + '\n');
+        };
+
+    }
+
+    new_websocket('cpu');
+    new_websocket('ram');
+    new_websocket('disk');
+    new_websocket('system-io');
+    new_websocket('network');
+    new_websocket('interrupts');
+    new_websocket('softirqs');
+    new_websocket('softnet');
+    new_websocket('uptime');
+    new_websocket('packets');
+    new_websocket('error-packets');
+    new_websocket('tcp-connections');
+    new_websocket('tcp-packets');
+    new_websocket('udp-sockets');
+    new_websocket('udp-packets');
+    new_websocket('firewall');
+    new_websocket('diskusage');
+    new_websocket('system-info');
+    new_websocket('is-master');
+
+</script>
+</body>
+</html>

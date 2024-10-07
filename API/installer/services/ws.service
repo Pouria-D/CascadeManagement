@@ -1,0 +1,14 @@
+[Unit]
+Description=API Service
+After=network.target
+
+[Service]
+User=ngfw
+Group=www-data
+WorkingDirectory=/opt/narin/api
+ExecStart=/opt/narin/.env/bin/daphne -p 8001 api.asgi:application
+Restart=on-failure
+#CPUQuota=30%
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Vlan & Bridge Service
+After=network.target
+
+[Service]
+User=ngfw
+Group=www-data
+WorkingDirectory=/opt/narin/api/vlan_bridge_checker
+ExecStart=/opt/narin/.env/bin/python /opt/narin/api/vlan_bridge_checker/run.py
+Restart=on-failure
+CPUQuota=15%
+
+[Install]
+WantedBy=multi-user.target

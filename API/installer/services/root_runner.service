@@ -1,0 +1,14 @@
+[Unit]
+Description=Root Runner Service
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/opt/narin/api
+ExecStart=/opt/narin/.env/bin/gunicorn --workers 2 --error-logfile /var/log/root_runner_errors.log --log-file /var/log/root_runner.log --log-level error --capture-output --bind unix:/tmp/root_runner.sock root_runner.wsgi:application
+Restart=on-failure
+#CPUQuota=10%
+
+[Install]
+WantedBy=multi-user.target

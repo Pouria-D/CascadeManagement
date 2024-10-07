@@ -1,0 +1,14 @@
+[Unit]
+Description=API Service
+After=network.target
+
+[Service]
+User=ngfw
+Group=www-data
+WorkingDirectory=/opt/narin/api
+ExecStart=/opt/narin/.env/bin/gunicorn --timeout 120 --workers 2 --error-logfile /var/log/api.log --log-file /var/log/api.log --log-level info --capture-output --bind unix:/tmp/api.sock api.wsgi:application
+Restart=on-failure
+#CPUQuota=15%
+
+[Install]
+WantedBy=multi-user.target

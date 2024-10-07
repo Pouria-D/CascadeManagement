@@ -1,0 +1,11 @@
+VPN:
+problem: some vpn params are save by the value of objects and becouse of this when object updates the vpn does not!!
+this params are:
+    -local-endpoint
+    -remote-endpoint
+    -real-local-endpoint
+    -virtual-local-endpoint
+    -real-remote-endpoint
+    --virtul-remote-endpoint
+if and address value is equal to one of this params, and the admin want to update this value to another type that is not
+acceptable for vpn (mac, fqdn or network range) we raise error that you can't change this value.

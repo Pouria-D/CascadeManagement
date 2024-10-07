@@ -1,0 +1,228 @@
+HighAvailability:
+  usefull link: https://www.thegeekdiary.com/beginner-guide-to-rhel-7-high-availability-cluster-architectural-overview/
+
+ - steps to setup a cluster and manage resources by pacemaker:
+    1. enable pcs deamon by "systemctl enable pcsd.service"
+    2. set password for 'hacluster' user
+    3. open following ports on both peers:
+         TCP ports 2224, 3121, and 21064, and UDP port 5405
+    4. config corosync -> On either node, use pcs cluster auth to authenticate as the hacluster user
+        # pcs cluster auth {peer1_ip} {peer2_ip}
+    5. use pcs cluster setup on the same node to generate and synchronize the corosync configuration and start and enable the cluster
+        # pcs cluster setup --name {cluster_name} {peer1_ip} {peer2_ip}  --start --force --enable
+    6. create resources
+        #  pcs resource create {resource_name} ocf:heartbeat:IPaddr2 ip={cluster_ip} cidr_netmask={cluster_netmask} nic={interface} op monitor interval=30s
+            interval: tell the cluster to check whether it is running every 30 seconds
+            ocf:heartbeat:IPaddr2: ocf is the standard to which the resource script conforms and where to find it.
+                                   heartbeat is standard-specific; for OCF resources, it tells the cluster which OCF namespace the resource script is in.
+                                   IPaddr2 is the name of the resource script
+    7. create colocation to Ensure Resources Run on the Same Host
+        #  pcs constraint colocation add WebSite with ClusterIP INFINITY
+             Colocation constraints are "directional", in that they imply certain things about the order in which the
+             two resources will have a location chosen. In this case, we’re saying that WebSite needs to be placed on the
+             same machine as ClusterIP, which implies that the cluster must know the location of ClusterIP before
+             choosing a location for WebSite
+
+
+ Note: if a cluster exist between two system and on slave system we change interface ip (ip that is used in ha config)
+       communication between these systems will break and then we can't delete cluster or update it properly. so we
+       don't let user to change ip address unless he disable the ha!
+ Note: In most circumstances, it is highly desirable to prevent healthy resources from being moved around the cluster.
+       Moving resources almost always requires a period of downtime.
+ Note: We let user to remove or edit HA configuration in 2 conditions:
+       1. if the system that is removing or editing HA config is master(active node)
+       2. if none of node1 and node2 are not master(there is some uncertainties about HA service, sometimes active node does not exist)
+ Note: some of system setting configs needs to restart ssh, nginx and fail2ban service. for this reason we don't let admin
+       to change these settings until he has high availability enable. we only sync them when HA instance is creating or updating.
+
+ Note: system setting items that need a service restart after changing them are:
+         - HTTP, HTTPS, ssh-certificate --> nginx service should restart
+         - Admin-session-timeout --> ssh service should restart
+         - max-login-attempts, ssh-ban-time --> fail2ban service should restart
+       we don't let admin to change them while he has highAvailability enable. but we should sync them right after HighAvailability
+       enables.
+
+
+ Notes for admin: It's recommended to edit or delete high availability configuration if both node1 and node2
+                  are alive. if one node went down don't change the other node high availability configuration.
+ Notes for admin: Every 20 second node1 and node2 synchronize. so consider this delay for applying your configurations.
+
+
+Backup:
+    - each backup record in database has these fields:
+        - description
+        - version
+        - file
+        - datetime
+        - is_uploaded_by_user
+
+    - There are two types of backup exist:
+        - uploaded by user
+        - created by system
+
+    - Backup file version and system version should be the same
+    - Backup file contains all models in all apps except config_app.Backup
+    - Creating backup file by system is done asynchronously
+    - User can download backup file by sending GET request to /config/backups/<id>/file
+    - User can upload backup file by sending POST request to /config/backups/<id>/file
+    - Name of backup file is fix so user can't change it
+    - default backup file name is sg_backup_(datetime).bak
+    - Name of backup file uploaded by user always rename to default
+    - System prevent upload invalid file by user
+    - System prevent upload backup file that the version of backup up file different form version software
+    - System prevent restore backup file that the version of backup up file different form version software
+    - System save and restore ip tables when user save or restore backup
+    - System restart watcher and service ipsec when restore occur
+
+    - If user wants to restore system from an existing backup file, first he/she have to send a post request to
+      /config/backups/. After getting the backup record id, user have to send a post request contains backup file
+      to /config/backups/<id>/file
+
+    - To restore to a backup file, user should send a POST request to /config/backups/<id>/restore
+    - Restoring from a backup file is done asynchronously and the user must wait for process to finish. During restore
+      if user send a request to get notifications the response would be HTTP error 400.
+
+DNS:
+    - installation : apt install dnsmasq
+
+    - configuration file: /etc/dnsmasq.conf
+
+    - functionality requirements:
+
+        -Options that should be enable in this file:
+            domain-needed
+            bogus-priv
+            dnssec
+            resolv-file=/etc/dns_upstream_list  => this file contains system upstream servers. we have a default value 8.8.8.8 in this file
+            strict-order => this option show that requests to dns upstream servers are send in order
+                            the other option is  "all-servers".
+                            if all-servers option is selected instead of strict-order dns requests would send to all upsetream dns servers.
+                            default option is strict-order
+            no-hosts
+            listen-address=127.0.0.1
+            addn-hosts=/etc/host_list => this file contains user dns records (ip_address hostname)
+            log-queries
+            log-facility=/var/log/dns.log
+            cache-size=1000
+            interface=lo =>   If you want dnsmasq to listen for DNS requests only on specified interfaces
+                                (and the loopback) give the name of the interface (eg eth0) here.
+
+                   -notice that when user doesn't select any interface, this option would fill with "lo"
+
+            expand-hosts  =>  if you want to have a domain automatically added to simple names in a addn-hosts
+            domain = payampardaz.local
+
+some points abaout dnsmasq:
+    dnsmasq service has dependencies to interfaces, if one of its interfaces have a problem then service will fail. for this reason,
+    we should be very careful. and its why we wrote if-up and if-post-down scripts to remove down interfaces from dnsmasq config file
+    Despite the existence of this scripts we Sometimes saw dnsmasq will fail after reboot the system. and it is because this service
+    started earlier than network service in the startup. So in watcher (watcher service start after network service), we restart
+    dnsmasq service to be sure that dnsmasq started after network service
+
+SystemService:
+    - For Each systemd service there is one record in database.
+    - Each db record has two field: name and real_name. name is visible to the users. For example the name of
+      watcher service is auto_fix and it's real_name is watcher.
+
+    - Service status is specified in serializer and it may be one of these values: active, failed, inactive, unavailable
+    - If the service command status has an unexpected output the status will be unknown
+
+    - User can get list of system services by sending a GET request to /config/system_services
+    - User can restart or stop system service by sending PUT or PATCH request to /config/system_services/<id>/restart or stop
+
+
+Setting:
+    - Each Setting record has these fields:
+        - key
+        - data
+        - display_name
+        - description
+        - type
+        - order
+        - category
+
+    - Settings are loaded by fixtures. User cannot add or remove them. Their data just can be modified.
+
+    - data is in json format. Currently for all settings except ssl_certificate, data is something like this: {'value': ...}
+      and for ssl_certificate is in this form: {'public_key': ..., 'private_key': ...}.
+
+    - type can be one of these values:
+        - number
+        - bool
+        - string
+        - certificate
+
+    - Current Settings are:
+        - ssh-port
+        - http-port
+        - https-port
+        - admin-session-timeout
+        - max-login-attempts
+        - min-password-length
+        - login-message
+        - ssh-ban-time
+        - protection-log
+        - ssl_certificate
+
+    - Current Categories:
+        - Access Settings
+        - Security
+        - Authentication Settings
+
+
+
+
+Update Doc
+
+
+
+فرایند بروزرسانی نارین
+
+:معرفی توابع آپدیت
+Cheak:
+از دو بخش تشکیل شده است.
+در بخش اول وضعیت آپدیت جاری در سیستم چک می شود
+در بخش بعدی برای چک کردن آپدیت جدید در اپدیت سرور مورد استفاده قرار می گیرد
+Validate:
+وظیفه ای این بخش احراز هویت فایل اپدیت دریافت شده و باز کردن رمز فایل اپدیت می باشد
+Restore point:
+در این بخش یک کپی از سیستم جاری گرفته می شود
+Install:
+در این بخش فایل اپدیت از حالت فشرده خارج و ansible اجرا می شود
+Rollback
+Complete
+Retry
+Discard
+
+
+فرایند رمز کردن آپدیت:
+ابتدا فایل آپدیت فشرده می شود بعد از یک کلید تولید می شود و فایل آپدیت توسط آن کلید رمز می شود بعد از فایل sign می شود
+
+فرایند دریافت فایل آپدیت
+کلاینت با فرستادن نسخه جاری خود به آپدیت سرور فایل آپدیت را دریافت می کند
+سپس با فرستادن token number  به آپدیت سرور کلید آپدیت را دریافت می کند
+
+فرایند نصب نسخه توسط client:
+ابتدا کاربر فایل آپدبت را با فرستادن نسخه خود دریافت می کند سپس با ارسال token number خود در صورتی که مشخصات کاربر در آپدیت سرور ثبت شده باشد کلید اپدیت را دریافت می کند
+در مرحله بعدی sing فایل چک می شود و فایل از حلت رمز خارج می شود و سپس فایل را در مسیر /var/ngfw از حالت فشرده خارج می کند و ansible  آن را اجرا می کند
+
+
+update error and how to fix them
+
+Error Code :(0x6E)
+این Error زمانی مشاهده می شود که فایل system_info.txt در آدرس /var/ngfw موجود نباشد برای رفع آن فایل را ایجاد نموده و  token number را درون آن بنویسید
+
+
+Error Code : (0x2)
+این Error زمانی رخ می دهد که نارین نتوانسته token number خود احراز کند برای رفع آن باید موارد زیر چک شود
+۱- شماره توکن به درستی در فایل system_info.txt نوشته شده باشد
+۲- شماره توکن در update server به طور صحیح نوشته شده باشد
+۳-ارتباط نارین با update server بر قرار باشد
+
+Error Code : (0x56)
+
+ زمانی رخ می دهد که private نارین مطابق با آنچه در update server است نباشد برای رفع آن فایل ssh_host_rsa_key را در آدرس /etc/ssh
+ را اصلاح نمایید
+
+
+

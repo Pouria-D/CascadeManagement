@@ -1,0 +1,5 @@
+version:
+    - Version read from BACKUP_DIR/currentversion.yml ReleaseID_id
+    - BACKUP_DIR is in project settings and it has '/var/ngfw/' as default value
+    - Client can get current version using url /api/version
+    - In creating backup this version stored in backup record in db.

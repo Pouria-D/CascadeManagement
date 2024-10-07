@@ -1,0 +1,3 @@
+Test:
+    - Run real iptables command by putting --debug-mode in test command. e.g. manage.py test firewall_app --debug-mode
+        otherwise, the test are mocked (anything work without any thread and the result will inserted into test db).

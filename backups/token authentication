@@ -1,0 +1,2812 @@
+pouria@ubuntu:~$ ping 192.168.6.124
+PING 192.168.6.124 (192.168.6.124) 56(84) bytes of data.
+64 bytes from 192.168.6.124: icmp_seq=1 ttl=64 time=0.033 ms
+64 bytes from 192.168.6.124: icmp_seq=2 ttl=64 time=0.033 ms
+64 bytes from 192.168.6.124: icmp_seq=3 ttl=64 time=0.035 ms
+64 bytes from 192.168.6.124: icmp_seq=4 ttl=64 time=0.035 ms
+64 bytes from 192.168.6.124: icmp_seq=5 ttl=64 time=0.035 ms
+64 bytes from 192.168.6.124: icmp_seq=6 ttl=64 time=0.033 ms
+64 bytes from 192.168.6.124: icmp_seq=7 ttl=64 time=0.036 ms
+64 bytes from 192.168.6.124: icmp_seq=8 ttl=64 time=0.036 ms
+64 bytes from 192.168.6.124: icmp_seq=9 ttl=64 time=0.033 ms
+^C
+--- 192.168.6.124 ping statistics ---
+9 packets transmitted, 9 received, 0% packet loss, time 8171ms
+rtt min/avg/max/mdev = 0.033/0.034/0.036/0.001 ms
+pouria@ubuntu:~$ cd cascade
+pouria@ubuntu:~/cascade$ sudo apt update
+[sudo] password for pouria: 
+Reading package lists... Done
+E: Could not get lock /var/lib/apt/lists/lock. It is held by process 12123 (apt-get)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to lock directory /var/lib/apt/lists/
+pouria@ubuntu:~/cascade$ sudo apt update
+Get:1 http://dl.google.com/linux/chrome/deb stable InRelease [1,811 B]
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]      
+Hit:3 http://us.archive.ubuntu.com/ubuntu focal InRelease                      
+Hit:4 http://packages.microsoft.com/repos/vscode stable InRelease              
+Hit:5 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease              
+Hit:6 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease            
+Hit:7 https://deb.nodesource.com/node_12.x focal InRelease                     
+Hit:8 https://download.docker.com/linux/ubuntu focal InRelease                 
+Fetched 109 kB in 3s (34.8 kB/s)                   
+^C
+pouria@ubuntu:~/cascade$ sudo apt update
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]      
+Get:2 http://packages.microsoft.com/repos/vscode stable InRelease [3,959 B]    
+Hit:3 http://dl.google.com/linux/chrome/deb stable InRelease                   
+Hit:4 https://deb.nodesource.com/node_12.x focal InRelease                     
+Hit:5 https://download.docker.com/linux/ubuntu focal InRelease           
+Hit:6 http://us.archive.ubuntu.com/ubuntu focal InRelease
+Hit:7 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:8 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease            
+Fetched 111 kB in 7s (16.6 kB/s)                                               
+^C
+pouria@ubuntu:~/cascade$ source env/bin/activate
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 70, in inner_run
+    self.check_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 459, in check_migrations
+    executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__
+    self.build_graph()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+^C(env) pouria@ubuntu:~/cascade$ sudo -u postgres psql
+psql: error: could not connect to server: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+(env) pouria@ubuntu:~/cascade$ ps auxw | grep post
+pouria     14844  0.0  0.0  17532   724 pts/0    S+   04:53   0:00 grep --color=auto post
+(env) pouria@ubuntu:~/cascade$ sudo find / -name .s.PGSQL.5432 -ls
+find: ‘/run/user/1000/doc’: Permission denied
+find: ‘/run/user/1000/gvfs’: Permission denied
+^C
+(env) pouria@ubuntu:~/cascade$ sudo -u postgres psql
+psql: error: could not connect to server: could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+(env) pouria@ubuntu:~/cascade$ sudo apt-get remove postgresql
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  postgresql
+0 upgraded, 0 newly installed, 1 to remove and 88 not upgraded.
+After this operation, 67.6 kB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 214934 files and directories currently installed.)
+Removing postgresql (12+214ubuntu0.1) ...
+(env) pouria@ubuntu:~/cascade$ sudo apt-get purge postgresql
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'postgresql' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 88 not upgraded.
+(env) pouria@ubuntu:~/cascade$ apt-get --purge remove postgresql\*
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+(env) pouria@ubuntu:~/cascade$ sudo apt-get --purge remove postgresql\*
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'postgresql-12-postgis' for glob 'postgresql*'
+Note, selecting 'postgresql-common' for glob 'postgresql*'
+Note, selecting 'postgresql-12-bgw-replstatus' for glob 'postgresql*'
+Note, selecting 'postgresql-pgmp' for glob 'postgresql*'
+Note, selecting 'postgresql-12-preprepare' for glob 'postgresql*'
+Note, selecting 'postgresql-10-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-9.2-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-pltcl' for glob 'postgresql*'
+Note, selecting 'postgresql-contrib-12' for glob 'postgresql*'
+Note, selecting 'postgresql-server-dev-all' for glob 'postgresql*'
+Note, selecting 'postgresql-12-similarity' for glob 'postgresql*'
+Note, selecting 'postgresql-12-python-multicorn' for glob 'postgresql*'
+Note, selecting 'postgresql-12-icu-ext' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pllua' for glob 'postgresql*'
+Note, selecting 'postgresql-12-asn1oid' for glob 'postgresql*'
+Note, selecting 'postgresql-9.5-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-12-mysql-fdw' for glob 'postgresql*'
+Note, selecting 'postgresql-12-prioritize' for glob 'postgresql*'
+Note, selecting 'postgresql-filedump' for glob 'postgresql*'
+Note, selecting 'postgresql-12-cron' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgmp' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgq3' for glob 'postgresql*'
+Note, selecting 'postgresql-12-prefix' for glob 'postgresql*'
+Note, selecting 'postgresql-12-wal2json' for glob 'postgresql*'
+Note, selecting 'postgresql-python3-multicorn' for glob 'postgresql*'
+Note, selecting 'postgresql-postgis-java' for glob 'postgresql*'
+Note, selecting 'postgresql-12-hll' for glob 'postgresql*'
+Note, selecting 'postgresql-ogr-fdw' for glob 'postgresql*'
+Note, selecting 'postgresql-12-jsquery' for glob 'postgresql*'
+Note, selecting 'postgresql-postgis-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-12-ogr-fdw' for glob 'postgresql*'
+Note, selecting 'postgresql-12-plsh' for glob 'postgresql*'
+Note, selecting 'postgresql-doc-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-hypopg' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgsphere' for glob 'postgresql*'
+Note, selecting 'postgresql-12-toastinfo' for glob 'postgresql*'
+Note, selecting 'postgresql-12-rdkit' for glob 'postgresql*'
+Note, selecting 'postgresql-12-slony1' for glob 'postgresql*'
+Note, selecting 'postgresql-12-omnidb' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pg-checksums' for glob 'postgresql*'
+Note, selecting 'postgresql-all' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pldebugger' for glob 'postgresql*'
+Note, selecting 'postgresql-11-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-pgrouting-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-12-ip4r' for glob 'postgresql*'
+Note, selecting 'postgresql-9.3-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-12-powa' for glob 'postgresql*'
+Note, selecting 'postgresql-12-q3c' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgmemcache' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pg-qualstats' for glob 'postgresql*'
+Note, selecting 'postgresql-9.0-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-12-plr' for glob 'postgresql*'
+Note, selecting 'postgresql-doc' for glob 'postgresql*'
+Note, selecting 'postgresql-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-orafce' for glob 'postgresql*'
+Note, selecting 'postgresql-pgtap' for glob 'postgresql*'
+Note, selecting 'postgresql-9.1' for glob 'postgresql*'
+Note, selecting 'postgresql-9.3' for glob 'postgresql*'
+Note, selecting 'postgresql-9.4' for glob 'postgresql*'
+Note, selecting 'postgresql-9.5' for glob 'postgresql*'
+Note, selecting 'postgresql-9.6' for glob 'postgresql*'
+Note, selecting 'postgresql-client' for glob 'postgresql*'
+Note, selecting 'postgresql-12-first-last-agg' for glob 'postgresql*'
+Note, selecting 'postgresql-12-rum' for glob 'postgresql*'
+Note, selecting 'postgresql-12-repack' for glob 'postgresql*'
+Note, selecting 'postgresql-12-slony1-2' for glob 'postgresql*'
+Note, selecting 'postgresql-plperl' for glob 'postgresql*'
+Note, selecting 'postgresql-12-plproxy' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgextwlist' for glob 'postgresql*'
+Note, selecting 'postgresql-9.6-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgrouting-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pg-fact-loader' for glob 'postgresql*'
+Note, selecting 'postgresql-12-mimeo' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgrouting' for glob 'postgresql*'
+Note, selecting 'postgresql-12-python3-multicorn' for glob 'postgresql*'
+Note, selecting 'postgresql-contrib' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgaudit' for glob 'postgresql*'
+Note, selecting 'postgresql-plpython3' for glob 'postgresql*'
+Note, selecting 'postgresql-12-snakeoil' for glob 'postgresql*'
+Note, selecting 'postgresql-12-dirtyread' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgagent' for glob 'postgresql*'
+Note, selecting 'postgresql-12-numeral' for glob 'postgresql*'
+Note, selecting 'postgresql-12-periods' for glob 'postgresql*'
+Note, selecting 'postgresql-q3c' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgq-node' for glob 'postgresql*'
+Note, selecting 'postgresql-12-debversion' for glob 'postgresql*'
+Note, selecting 'postgresql-12-postgis-3-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-plr' for glob 'postgresql*'
+Note, selecting 'postgresql-autodoc' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgtap' for glob 'postgresql*'
+Note, selecting 'postgresql-pltcl-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgrouting-doc' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgfincore' for glob 'postgresql*'
+Note, selecting 'postgresql-comparator' for glob 'postgresql*'
+Note, selecting 'postgresql-12-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-9.4-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-pgsphere' for glob 'postgresql*'
+Note, selecting 'postgresql-12-cstore-fdw' for glob 'postgresql*'
+Note, selecting 'postgresql-12-rational' for glob 'postgresql*'
+Note, selecting 'postgresql-server-dev-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-partman' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgpool2' for glob 'postgresql*'
+Note, selecting 'postgresql-plperl-12' for glob 'postgresql*'
+Note, selecting 'postgresql-9.1-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pglogical-ticker' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pg-stat-kcache' for glob 'postgresql*'
+Note, selecting 'postgresql-client-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pglogical' for glob 'postgresql*'
+Note, selecting 'postgresql-plpython3-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-postgis-3' for glob 'postgresql*'
+Note, selecting 'postgresql-12-postgis-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-postgis' for glob 'postgresql*'
+Note, selecting 'postgresql-pgrouting' for glob 'postgresql*'
+Note, selecting 'postgresql-12-unit' for glob 'postgresql*'
+Note, selecting 'postgresql-client-common' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgl-ddl-deploy' for glob 'postgresql*'
+Package 'postgresql-pgmp' is not installed, so not removed
+Note, selecting 'postgresql-12' instead of 'postgresql-contrib-12'
+Package 'postgresql-9.1' is not installed, so not removed
+Note, selecting 'postgresql-plperl-12' instead of 'postgresql-plperl'
+Package 'postgresql-9.3' is not installed, so not removed
+Package 'postgresql-9.4' is not installed, so not removed
+Package 'postgresql-9.5' is not installed, so not removed
+Package 'postgresql-9.6' is not installed, so not removed
+Note, selecting 'postgresql-12-pgrouting' instead of 'postgresql-pgrouting'
+Note, selecting 'postgresql-12-plr' instead of 'postgresql-plr'
+Package 'postgresql-postgis-java' is not installed, so not removed
+Note, selecting 'postgresql-12-postgis-3' instead of 'postgresql-postgis'
+Note, selecting 'postgresql-12-pgtap' instead of 'postgresql-pgtap'
+Note, selecting 'pgagent' instead of 'postgresql-12-pgagent'
+Note, selecting 'postgresql-12-ogr-fdw' instead of 'postgresql-ogr-fdw'
+Note, selecting 'postgresql-12-postgis-3' instead of 'postgresql-12-postgis'
+Note, selecting 'postgresql-12-postgis-3-scripts' instead of 'postgresql-12-postgis-scripts'
+Note, selecting 'postgresql-12-pgrouting-scripts' instead of 'postgresql-pgrouting-scripts'
+Note, selecting 'postgresql-12-postgis-3-scripts' instead of 'postgresql-postgis-scripts'
+Package 'postgresql-12-python-multicorn' is not installed, so not removed
+Note, selecting 'postgresql-12-python3-multicorn' instead of 'postgresql-python3-multicorn'
+Note, selecting 'postgresql-12-slony1-2' instead of 'postgresql-12-slony1'
+Note, selecting 'postgresql-pgsphere' instead of 'postgresql-12-pgsphere'
+Note, selecting 'postgresql-plpython3-12' instead of 'postgresql-plpython3'
+Note, selecting 'postgresql-pltcl-12' instead of 'postgresql-pltcl'
+Note, selecting 'postgresql-q3c' instead of 'postgresql-12-q3c'
+Package 'postgresql-11-repmgr' is not installed, so not removed
+Package 'postgresql-10-repmgr' is not installed, so not removed
+Package 'postgresql-9.6-repmgr' is not installed, so not removed
+Package 'postgresql-9.5-repmgr' is not installed, so not removed
+Package 'postgresql-9.4-repmgr' is not installed, so not removed
+Package 'postgresql-9.3-repmgr' is not installed, so not removed
+Package 'postgresql-9.2-repmgr' is not installed, so not removed
+Package 'postgresql-9.1-repmgr' is not installed, so not removed
+Package 'postgresql-9.0-repmgr' is not installed, so not removed
+Package 'postgresql-12-asn1oid' is not installed, so not removed
+Package 'postgresql-12-bgw-replstatus' is not installed, so not removed
+Package 'postgresql-12-cron' is not installed, so not removed
+Package 'postgresql-12-cstore-fdw' is not installed, so not removed
+Package 'postgresql-12-debversion' is not installed, so not removed
+Package 'postgresql-12-dirtyread' is not installed, so not removed
+Package 'postgresql-12-first-last-agg' is not installed, so not removed
+Package 'postgresql-12-hll' is not installed, so not removed
+Package 'postgresql-12-hypopg' is not installed, so not removed
+Package 'postgresql-12-icu-ext' is not installed, so not removed
+Package 'postgresql-12-ip4r' is not installed, so not removed
+Package 'postgresql-12-jsquery' is not installed, so not removed
+Package 'postgresql-12-mimeo' is not installed, so not removed
+Package 'postgresql-12-mysql-fdw' is not installed, so not removed
+Package 'postgresql-12-numeral' is not installed, so not removed
+Package 'postgresql-12-ogr-fdw' is not installed, so not removed
+Package 'postgresql-12-omnidb' is not installed, so not removed
+Package 'postgresql-12-orafce' is not installed, so not removed
+Package 'postgresql-12-partman' is not installed, so not removed
+Package 'postgresql-12-periods' is not installed, so not removed
+Package 'postgresql-12-pg-checksums' is not installed, so not removed
+Package 'postgresql-12-pg-fact-loader' is not installed, so not removed
+Package 'postgresql-12-pg-qualstats' is not installed, so not removed
+Package 'postgresql-12-pg-stat-kcache' is not installed, so not removed
+Package 'postgresql-12-pgaudit' is not installed, so not removed
+Package 'postgresql-12-pgextwlist' is not installed, so not removed
+Package 'postgresql-12-pgfincore' is not installed, so not removed
+Package 'postgresql-12-pgl-ddl-deploy' is not installed, so not removed
+Package 'postgresql-12-pglogical' is not installed, so not removed
+Package 'postgresql-12-pglogical-ticker' is not installed, so not removed
+Package 'postgresql-12-pgmemcache' is not installed, so not removed
+Package 'postgresql-12-pgmp' is not installed, so not removed
+Package 'postgresql-12-pgpool2' is not installed, so not removed
+Package 'postgresql-12-pgq-node' is not installed, so not removed
+Package 'postgresql-12-pgq3' is not installed, so not removed
+Package 'postgresql-12-pgrouting' is not installed, so not removed
+Package 'postgresql-12-pgrouting-doc' is not installed, so not removed
+Package 'postgresql-12-pgrouting-scripts' is not installed, so not removed
+Package 'postgresql-12-pgtap' is not installed, so not removed
+Package 'postgresql-12-pldebugger' is not installed, so not removed
+Package 'postgresql-12-pllua' is not installed, so not removed
+Package 'postgresql-12-plproxy' is not installed, so not removed
+Package 'postgresql-12-plr' is not installed, so not removed
+Package 'postgresql-12-plsh' is not installed, so not removed
+Package 'postgresql-12-postgis-3' is not installed, so not removed
+Package 'postgresql-12-postgis-3-scripts' is not installed, so not removed
+Package 'postgresql-12-powa' is not installed, so not removed
+Package 'postgresql-12-prefix' is not installed, so not removed
+Package 'postgresql-12-preprepare' is not installed, so not removed
+Package 'postgresql-12-prioritize' is not installed, so not removed
+Package 'postgresql-12-python3-multicorn' is not installed, so not removed
+Package 'postgresql-12-rational' is not installed, so not removed
+Package 'postgresql-12-rdkit' is not installed, so not removed
+Package 'postgresql-12-repack' is not installed, so not removed
+Package 'postgresql-12-repmgr' is not installed, so not removed
+Package 'postgresql-12-rum' is not installed, so not removed
+Package 'postgresql-12-similarity' is not installed, so not removed
+Package 'postgresql-12-slony1-2' is not installed, so not removed
+Package 'postgresql-12-snakeoil' is not installed, so not removed
+Package 'postgresql-12-toastinfo' is not installed, so not removed
+Package 'postgresql-12-unit' is not installed, so not removed
+Package 'postgresql-12-wal2json' is not installed, so not removed
+Package 'postgresql-autodoc' is not installed, so not removed
+Package 'postgresql-comparator' is not installed, so not removed
+Package 'postgresql-filedump' is not installed, so not removed
+Package 'postgresql-pgsphere' is not installed, so not removed
+Package 'postgresql-q3c' is not installed, so not removed
+Package 'postgresql' is not installed, so not removed
+Package 'postgresql-client' is not installed, so not removed
+Package 'postgresql-doc' is not installed, so not removed
+Package 'postgresql-doc-12' is not installed, so not removed
+Package 'postgresql-all' is not installed, so not removed
+Package 'postgresql-plperl-12' is not installed, so not removed
+Package 'postgresql-plpython3-12' is not installed, so not removed
+Package 'postgresql-pltcl-12' is not installed, so not removed
+Package 'postgresql-server-dev-12' is not installed, so not removed
+Package 'postgresql-server-dev-all' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+  sysstat
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  postgresql-12* postgresql-client-12* postgresql-client-common* postgresql-common* postgresql-contrib*
+0 upgraded, 0 newly installed, 5 to remove and 88 not upgraded.
+After this operation, 45.7 MB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 214931 files and directories currently installed.)
+Removing postgresql-contrib (12+214ubuntu0.1) ...
+Removing postgresql-12 (12.4-0ubuntu0.20.04.1) ...
+Removing postgresql-client-12 (12.4-0ubuntu0.20.04.1) ...
+Removing postgresql-common (214ubuntu0.1) ...
+Removing 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Removing postgresql-client-common (214ubuntu0.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+(Reading database ... 213185 files and directories currently installed.)
+Purging configuration files for postgresql-client-common (214ubuntu0.1) ...
+dpkg: warning: while removing postgresql-client-common, directory '/etc/postgresql-common' not empty so not removed
+Purging configuration files for postgresql-common (214ubuntu0.1) ...
+dpkg: warning: while removing postgresql-common, directory '/var/log/postgresql' not empty so not removed
+dpkg: warning: while removing postgresql-common, directory '/var/lib/postgresql' not empty so not removed
+dpkg: warning: while removing postgresql-common, directory '/etc/postgresql' not empty so not removed
+Purging configuration files for postgresql-12 (12.4-0ubuntu0.20.04.1) ...
+Processing triggers for systemd (245.4-4ubuntu3.2) ...
+(env) pouria@ubuntu:~/cascade$ sudo apt-get --purge remove postgresql\*
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'postgresql-12-postgis' for glob 'postgresql*'
+Note, selecting 'postgresql-common' for glob 'postgresql*'
+Note, selecting 'postgresql-12-bgw-replstatus' for glob 'postgresql*'
+Note, selecting 'postgresql-pgmp' for glob 'postgresql*'
+Note, selecting 'postgresql-12-preprepare' for glob 'postgresql*'
+Note, selecting 'postgresql-10-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-9.2-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-pltcl' for glob 'postgresql*'
+Note, selecting 'postgresql-contrib-12' for glob 'postgresql*'
+Note, selecting 'postgresql-server-dev-all' for glob 'postgresql*'
+Note, selecting 'postgresql-12-similarity' for glob 'postgresql*'
+Note, selecting 'postgresql-12-python-multicorn' for glob 'postgresql*'
+Note, selecting 'postgresql-12-icu-ext' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pllua' for glob 'postgresql*'
+Note, selecting 'postgresql-12-asn1oid' for glob 'postgresql*'
+Note, selecting 'postgresql-9.5-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-12-mysql-fdw' for glob 'postgresql*'
+Note, selecting 'postgresql-12-prioritize' for glob 'postgresql*'
+Note, selecting 'postgresql-filedump' for glob 'postgresql*'
+Note, selecting 'postgresql-12-cron' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgmp' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgq3' for glob 'postgresql*'
+Note, selecting 'postgresql-12-prefix' for glob 'postgresql*'
+Note, selecting 'postgresql-12-wal2json' for glob 'postgresql*'
+Note, selecting 'postgresql-python3-multicorn' for glob 'postgresql*'
+Note, selecting 'postgresql-postgis-java' for glob 'postgresql*'
+Note, selecting 'postgresql-12-hll' for glob 'postgresql*'
+Note, selecting 'postgresql-ogr-fdw' for glob 'postgresql*'
+Note, selecting 'postgresql-12-jsquery' for glob 'postgresql*'
+Note, selecting 'postgresql-postgis-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-12-ogr-fdw' for glob 'postgresql*'
+Note, selecting 'postgresql-12-plsh' for glob 'postgresql*'
+Note, selecting 'postgresql-doc-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-hypopg' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgsphere' for glob 'postgresql*'
+Note, selecting 'postgresql-12-toastinfo' for glob 'postgresql*'
+Note, selecting 'postgresql-12-rdkit' for glob 'postgresql*'
+Note, selecting 'postgresql-12-slony1' for glob 'postgresql*'
+Note, selecting 'postgresql-12-omnidb' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pg-checksums' for glob 'postgresql*'
+Note, selecting 'postgresql-all' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pldebugger' for glob 'postgresql*'
+Note, selecting 'postgresql-11-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-pgrouting-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-12-ip4r' for glob 'postgresql*'
+Note, selecting 'postgresql-9.3-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-12-powa' for glob 'postgresql*'
+Note, selecting 'postgresql-12-q3c' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgmemcache' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pg-qualstats' for glob 'postgresql*'
+Note, selecting 'postgresql-9.0-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-12-plr' for glob 'postgresql*'
+Note, selecting 'postgresql-doc' for glob 'postgresql*'
+Note, selecting 'postgresql-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-orafce' for glob 'postgresql*'
+Note, selecting 'postgresql-pgtap' for glob 'postgresql*'
+Note, selecting 'postgresql-9.1' for glob 'postgresql*'
+Note, selecting 'postgresql-9.3' for glob 'postgresql*'
+Note, selecting 'postgresql-9.4' for glob 'postgresql*'
+Note, selecting 'postgresql-9.5' for glob 'postgresql*'
+Note, selecting 'postgresql-9.6' for glob 'postgresql*'
+Note, selecting 'postgresql-client' for glob 'postgresql*'
+Note, selecting 'postgresql-12-first-last-agg' for glob 'postgresql*'
+Note, selecting 'postgresql-12-rum' for glob 'postgresql*'
+Note, selecting 'postgresql-12-repack' for glob 'postgresql*'
+Note, selecting 'postgresql-12-slony1-2' for glob 'postgresql*'
+Note, selecting 'postgresql-plperl' for glob 'postgresql*'
+Note, selecting 'postgresql-12-plproxy' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgextwlist' for glob 'postgresql*'
+Note, selecting 'postgresql-9.6-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgrouting-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pg-fact-loader' for glob 'postgresql*'
+Note, selecting 'postgresql-12-mimeo' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgrouting' for glob 'postgresql*'
+Note, selecting 'postgresql-12-python3-multicorn' for glob 'postgresql*'
+Note, selecting 'postgresql-contrib' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgaudit' for glob 'postgresql*'
+Note, selecting 'postgresql-plpython3' for glob 'postgresql*'
+Note, selecting 'postgresql-12-snakeoil' for glob 'postgresql*'
+Note, selecting 'postgresql-12-dirtyread' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgagent' for glob 'postgresql*'
+Note, selecting 'postgresql-12-numeral' for glob 'postgresql*'
+Note, selecting 'postgresql-12-periods' for glob 'postgresql*'
+Note, selecting 'postgresql-q3c' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgq-node' for glob 'postgresql*'
+Note, selecting 'postgresql-12-debversion' for glob 'postgresql*'
+Note, selecting 'postgresql-12-postgis-3-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-plr' for glob 'postgresql*'
+Note, selecting 'postgresql-autodoc' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgtap' for glob 'postgresql*'
+Note, selecting 'postgresql-pltcl-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgrouting-doc' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgfincore' for glob 'postgresql*'
+Note, selecting 'postgresql-comparator' for glob 'postgresql*'
+Note, selecting 'postgresql-12-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-9.4-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-pgsphere' for glob 'postgresql*'
+Note, selecting 'postgresql-12-cstore-fdw' for glob 'postgresql*'
+Note, selecting 'postgresql-12-rational' for glob 'postgresql*'
+Note, selecting 'postgresql-server-dev-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-partman' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgpool2' for glob 'postgresql*'
+Note, selecting 'postgresql-plperl-12' for glob 'postgresql*'
+Note, selecting 'postgresql-9.1-repmgr' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pglogical-ticker' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pg-stat-kcache' for glob 'postgresql*'
+Note, selecting 'postgresql-client-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pglogical' for glob 'postgresql*'
+Note, selecting 'postgresql-plpython3-12' for glob 'postgresql*'
+Note, selecting 'postgresql-12-postgis-3' for glob 'postgresql*'
+Note, selecting 'postgresql-12-postgis-scripts' for glob 'postgresql*'
+Note, selecting 'postgresql-postgis' for glob 'postgresql*'
+Note, selecting 'postgresql-pgrouting' for glob 'postgresql*'
+Note, selecting 'postgresql-12-unit' for glob 'postgresql*'
+Note, selecting 'postgresql-client-common' for glob 'postgresql*'
+Note, selecting 'postgresql-12-pgl-ddl-deploy' for glob 'postgresql*'
+Package 'postgresql-pgmp' is not installed, so not removed
+Note, selecting 'postgresql-12' instead of 'postgresql-contrib-12'
+Package 'postgresql-9.1' is not installed, so not removed
+Note, selecting 'postgresql-plperl-12' instead of 'postgresql-plperl'
+Package 'postgresql-9.3' is not installed, so not removed
+Package 'postgresql-9.4' is not installed, so not removed
+Package 'postgresql-9.5' is not installed, so not removed
+Package 'postgresql-9.6' is not installed, so not removed
+Note, selecting 'postgresql-12-pgrouting' instead of 'postgresql-pgrouting'
+Note, selecting 'postgresql-12-plr' instead of 'postgresql-plr'
+Package 'postgresql-postgis-java' is not installed, so not removed
+Note, selecting 'postgresql-12-postgis-3' instead of 'postgresql-postgis'
+Note, selecting 'postgresql-12-pgtap' instead of 'postgresql-pgtap'
+Note, selecting 'pgagent' instead of 'postgresql-12-pgagent'
+Note, selecting 'postgresql-12-ogr-fdw' instead of 'postgresql-ogr-fdw'
+Note, selecting 'postgresql-12-postgis-3' instead of 'postgresql-12-postgis'
+Note, selecting 'postgresql-12-postgis-3-scripts' instead of 'postgresql-12-postgis-scripts'
+Note, selecting 'postgresql-12-pgrouting-scripts' instead of 'postgresql-pgrouting-scripts'
+Note, selecting 'postgresql-12-postgis-3-scripts' instead of 'postgresql-postgis-scripts'
+Package 'postgresql-12-python-multicorn' is not installed, so not removed
+Note, selecting 'postgresql-12-python3-multicorn' instead of 'postgresql-python3-multicorn'
+Note, selecting 'postgresql-12-slony1-2' instead of 'postgresql-12-slony1'
+Note, selecting 'postgresql-pgsphere' instead of 'postgresql-12-pgsphere'
+Note, selecting 'postgresql-plpython3-12' instead of 'postgresql-plpython3'
+Note, selecting 'postgresql-pltcl-12' instead of 'postgresql-pltcl'
+Note, selecting 'postgresql-q3c' instead of 'postgresql-12-q3c'
+Package 'postgresql-11-repmgr' is not installed, so not removed
+Package 'postgresql-10-repmgr' is not installed, so not removed
+Package 'postgresql-9.6-repmgr' is not installed, so not removed
+Package 'postgresql-9.5-repmgr' is not installed, so not removed
+Package 'postgresql-9.4-repmgr' is not installed, so not removed
+Package 'postgresql-9.3-repmgr' is not installed, so not removed
+Package 'postgresql-9.2-repmgr' is not installed, so not removed
+Package 'postgresql-9.1-repmgr' is not installed, so not removed
+Package 'postgresql-9.0-repmgr' is not installed, so not removed
+Package 'postgresql-12-asn1oid' is not installed, so not removed
+Package 'postgresql-12-bgw-replstatus' is not installed, so not removed
+Package 'postgresql-12-cron' is not installed, so not removed
+Package 'postgresql-12-cstore-fdw' is not installed, so not removed
+Package 'postgresql-12-debversion' is not installed, so not removed
+Package 'postgresql-12-dirtyread' is not installed, so not removed
+Package 'postgresql-12-first-last-agg' is not installed, so not removed
+Package 'postgresql-12-hll' is not installed, so not removed
+Package 'postgresql-12-hypopg' is not installed, so not removed
+Package 'postgresql-12-icu-ext' is not installed, so not removed
+Package 'postgresql-12-ip4r' is not installed, so not removed
+Package 'postgresql-12-jsquery' is not installed, so not removed
+Package 'postgresql-12-mimeo' is not installed, so not removed
+Package 'postgresql-12-mysql-fdw' is not installed, so not removed
+Package 'postgresql-12-numeral' is not installed, so not removed
+Package 'postgresql-12-ogr-fdw' is not installed, so not removed
+Package 'postgresql-12-omnidb' is not installed, so not removed
+Package 'postgresql-12-orafce' is not installed, so not removed
+Package 'postgresql-12-partman' is not installed, so not removed
+Package 'postgresql-12-periods' is not installed, so not removed
+Package 'postgresql-12-pg-checksums' is not installed, so not removed
+Package 'postgresql-12-pg-fact-loader' is not installed, so not removed
+Package 'postgresql-12-pg-qualstats' is not installed, so not removed
+Package 'postgresql-12-pg-stat-kcache' is not installed, so not removed
+Package 'postgresql-12-pgaudit' is not installed, so not removed
+Package 'postgresql-12-pgextwlist' is not installed, so not removed
+Package 'postgresql-12-pgfincore' is not installed, so not removed
+Package 'postgresql-12-pgl-ddl-deploy' is not installed, so not removed
+Package 'postgresql-12-pglogical' is not installed, so not removed
+Package 'postgresql-12-pglogical-ticker' is not installed, so not removed
+Package 'postgresql-12-pgmemcache' is not installed, so not removed
+Package 'postgresql-12-pgmp' is not installed, so not removed
+Package 'postgresql-12-pgpool2' is not installed, so not removed
+Package 'postgresql-12-pgq-node' is not installed, so not removed
+Package 'postgresql-12-pgq3' is not installed, so not removed
+Package 'postgresql-12-pgrouting' is not installed, so not removed
+Package 'postgresql-12-pgrouting-doc' is not installed, so not removed
+Package 'postgresql-12-pgrouting-scripts' is not installed, so not removed
+Package 'postgresql-12-pgtap' is not installed, so not removed
+Package 'postgresql-12-pldebugger' is not installed, so not removed
+Package 'postgresql-12-pllua' is not installed, so not removed
+Package 'postgresql-12-plproxy' is not installed, so not removed
+Package 'postgresql-12-plr' is not installed, so not removed
+Package 'postgresql-12-plsh' is not installed, so not removed
+Package 'postgresql-12-postgis-3' is not installed, so not removed
+Package 'postgresql-12-postgis-3-scripts' is not installed, so not removed
+Package 'postgresql-12-powa' is not installed, so not removed
+Package 'postgresql-12-prefix' is not installed, so not removed
+Package 'postgresql-12-preprepare' is not installed, so not removed
+Package 'postgresql-12-prioritize' is not installed, so not removed
+Package 'postgresql-12-python3-multicorn' is not installed, so not removed
+Package 'postgresql-12-rational' is not installed, so not removed
+Package 'postgresql-12-rdkit' is not installed, so not removed
+Package 'postgresql-12-repack' is not installed, so not removed
+Package 'postgresql-12-repmgr' is not installed, so not removed
+Package 'postgresql-12-rum' is not installed, so not removed
+Package 'postgresql-12-similarity' is not installed, so not removed
+Package 'postgresql-12-slony1-2' is not installed, so not removed
+Package 'postgresql-12-snakeoil' is not installed, so not removed
+Package 'postgresql-12-toastinfo' is not installed, so not removed
+Package 'postgresql-12-unit' is not installed, so not removed
+Package 'postgresql-12-wal2json' is not installed, so not removed
+Package 'postgresql-autodoc' is not installed, so not removed
+Package 'postgresql-comparator' is not installed, so not removed
+Package 'postgresql-filedump' is not installed, so not removed
+Package 'postgresql-pgsphere' is not installed, so not removed
+Package 'postgresql-q3c' is not installed, so not removed
+Package 'postgresql' is not installed, so not removed
+Package 'postgresql-12' is not installed, so not removed
+Package 'postgresql-client' is not installed, so not removed
+Package 'postgresql-client-12' is not installed, so not removed
+Package 'postgresql-client-common' is not installed, so not removed
+Package 'postgresql-common' is not installed, so not removed
+Package 'postgresql-contrib' is not installed, so not removed
+Package 'postgresql-doc' is not installed, so not removed
+Package 'postgresql-doc-12' is not installed, so not removed
+Package 'postgresql-all' is not installed, so not removed
+Package 'postgresql-plperl-12' is not installed, so not removed
+Package 'postgresql-plpython3-12' is not installed, so not removed
+Package 'postgresql-pltcl-12' is not installed, so not removed
+Package 'postgresql-server-dev-12' is not installed, so not removed
+Package 'postgresql-server-dev-all' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+  sysstat
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 88 not upgraded.
+(env) pouria@ubuntu:~/cascade$ sudo rm -r /etc/postgresql/
+(env) pouria@ubuntu:~/cascade$ sudo rm -r /etc/postgresql-common/
+rm: cannot remove '/etc/postgresql-common/': No such file or directory
+(env) pouria@ubuntu:~/cascade$ sudo rm -r /var/lib/postgresql/
+(env) pouria@ubuntu:~/cascade$ sudo rm -r /var/run/postgres
+rm: cannot remove '/var/run/postgres': No such file or directory
+(env) pouria@ubuntu:~/cascade$ userdel -r postgres
+userdel: Permission denied.
+userdel: cannot lock /etc/passwd; try again later.
+(env) pouria@ubuntu:~/cascade$ sudo userdel -r postgres
+userdel: postgres mail spool (/var/mail/postgres) not found
+userdel: postgres home directory (/var/lib/postgresql) not found
+(env) pouria@ubuntu:~/cascade$ sudo userdel -r postgres
+userdel: user 'postgres' does not exist
+(env) pouria@ubuntu:~/cascade$ sudo apt-get update
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]                                                                                                                                 
+Hit:2 https://deb.nodesource.com/node_12.x focal InRelease                                                                                                                                                
+Hit:3 https://download.docker.com/linux/ubuntu focal InRelease                                                                                                                                            
+Hit:4 http://us.archive.ubuntu.com/ubuntu focal InRelease                                                                                                   
+Hit:5 http://dl.google.com/linux/chrome/deb stable InRelease                                                                          
+Get:6 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]                                                            
+Get:7 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]
+0% [Waiting for headers]^C                                                                                                                                                                                
+(env) pouria@ubuntu:~/cascade$ sudo apt-get install postgresql
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  postgresql-12 postgresql-client-12 postgresql-client-common postgresql-common
+Suggested packages:
+  postgresql-doc postgresql-doc-12 libjson-perl
+The following NEW packages will be installed:
+  postgresql postgresql-12 postgresql-client-12 postgresql-client-common postgresql-common
+0 upgraded, 5 newly installed, 0 to remove and 88 not upgraded.
+Need to get 14.7 MB of archives.
+After this operation, 45.7 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-client-common all 214ubuntu0.1 [28.2 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-client-12 amd64 12.4-0ubuntu0.20.04.1 [1,044 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-common all 214ubuntu0.1 [169 kB]                                                                                            
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-12 amd64 12.4-0ubuntu0.20.04.1 [13.4 MB]                                                                                    
+Get:5 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql all 12+214ubuntu0.1 [3,924 B]                                                                                               
+Fetched 14.7 MB in 50s (295 kB/s)                                                                                                                                                                         
+Preconfiguring packages ...
+Selecting previously unselected package postgresql-client-common.
+(Reading database ... 213175 files and directories currently installed.)
+Preparing to unpack .../postgresql-client-common_214ubuntu0.1_all.deb ...
+Unpacking postgresql-client-common (214ubuntu0.1) ...
+Selecting previously unselected package postgresql-client-12.
+Preparing to unpack .../postgresql-client-12_12.4-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking postgresql-client-12 (12.4-0ubuntu0.20.04.1) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../postgresql-common_214ubuntu0.1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Unpacking postgresql-common (214ubuntu0.1) ...
+Selecting previously unselected package postgresql-12.
+Preparing to unpack .../postgresql-12_12.4-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking postgresql-12 (12.4-0ubuntu0.20.04.1) ...
+Selecting previously unselected package postgresql.
+Preparing to unpack .../postgresql_12+214ubuntu0.1_all.deb ...
+Unpacking postgresql (12+214ubuntu0.1) ...
+Setting up postgresql-client-common (214ubuntu0.1) ...
+Setting up postgresql-client-12 (12.4-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/share/postgresql/12/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+Setting up postgresql-common (214ubuntu0.1) ...
+Adding user postgres to group ssl-cert
+
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+  en_us
+Removing obsolete dictionary files:
+Created symlink /etc/systemd/system/multi-user.target.wants/postgresql.service → /lib/systemd/system/postgresql.service.
+Setting up postgresql-12 (12.4-0ubuntu0.20.04.1) ...
+Creating new PostgreSQL cluster 12/main ...
+/usr/lib/postgresql/12/bin/initdb -D /var/lib/postgresql/12/main --auth-local peer --auth-host md5
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/12/main ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... America/Los_Angeles
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+Success. You can now start the database server using:
+
+    pg_ctlcluster 12 main start
+
+Ver Cluster Port Status Owner    Data directory              Log file
+12  main    5432 down   postgres /var/lib/postgresql/12/main /var/log/postgresql/postgresql-12-main.log
+update-alternatives: using /usr/share/postgresql/12/man/man1/postmaster.1.gz to provide /usr/share/man/man1/postmaster.1.gz (postmaster.1.gz) in auto mode
+Setting up postgresql (12+214ubuntu0.1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.2) ...
+(env) pouria@ubuntu:~/cascade$ sudo apt-get install postgresql-contrib
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  postgresql-contrib
+0 upgraded, 1 newly installed, 0 to remove and 88 not upgraded.
+Need to get 3,932 B of archives.
+After this operation, 67.6 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 postgresql-contrib all 12+214ubuntu0.1 [3,932 B]
+Fetched 3,932 B in 1s (5,906 B/s)       
+Selecting previously unselected package postgresql-contrib.
+(Reading database ... 214931 files and directories currently installed.)
+Preparing to unpack .../postgresql-contrib_12+214ubuntu0.1_all.deb ...
+Unpacking postgresql-contrib (12+214ubuntu0.1) ...
+Setting up postgresql-contrib (12+214ubuntu0.1) ...
+(env) pouria@ubuntu:~/cascade$ sudo su postgres
+postgres@ubuntu:/home/pouria/cascade$ ^C
+postgres@ubuntu:/home/pouria/cascade$ exit
+exit
+(env) pouria@ubuntu:~/cascade$ psql -d postgres -U postgres
+psql: error: could not connect to server: FATAL:  Peer authentication failed for user "postgres"
+(env) pouria@ubuntu:~/cascade$ sudo psql -d postgres -U postgres
+psql: error: could not connect to server: FATAL:  Peer authentication failed for user "postgres"
+(env) pouria@ubuntu:~/cascade$ sudo -u postgres psql
+psql (12.4 (Ubuntu 12.4-0ubuntu0.20.04.1))
+Type "help" for help.
+
+postgres=# CREATE DATABASE cascade;
+CREATE DATABASE
+postgres=# CREATE USER pouria WITH PASSWORD '123';
+CREATE ROLE
+postgres=# ALTER ROLE pouria SET client_encoding TO 'utf8';
+ALTER ROLE
+postgres=# ALTER ROLE pouria SET default_transaction_isolation TO 'read committed';
+ALTER ROLE
+postgres=# ALTER ROLE pouria SET timezone TO 'UTC';
+ALTER ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE cascade TO pouria;
+GRANT
+postgres=# /q
+postgres-# \q
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+No changes detected
+(env) pouria@ubuntu:~/cascade$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: DeviceManagement, admin, auth, contenttypes, sessions, snippet
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying DeviceManagement.0001_initial... OK
+  Applying DeviceManagement.0002_auto_20200824_1108... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+  Applying snippet.0001_initial... OK
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 12:32:39
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+Forbidden: /
+HTTP GET / 403 [0.74, 127.0.0.1:39934]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:39934]
+HTTP GET /static/rest_framework/css/default.css 304 [0.01, 127.0.0.1:39934]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:39936]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.01, 127.0.0.1:39962]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:39936]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.06, 127.0.0.1:39962]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.06, 127.0.0.1:39934]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:39964]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.02, 127.0.0.1:39966]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:39968]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.01, 127.0.0.1:39968]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.05, 127.0.0.1:39968]
+******************* Call method works :) ******************
+login
+HTTP GET /accounts/login/?next=/ 200 [0.10, 127.0.0.1:39968]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:39968]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.02, 127.0.0.1:39968]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:39966]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:39964]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:39964]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:39964]
+******************* Call method works :) ******************
+login
+HTTP POST /accounts/login/ 200 [0.46, 127.0.0.1:39964]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.01, 127.0.0.1:39964]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:39966]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.01, 127.0.0.1:39964]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:39968]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:39968]
+^C(env) pouria@ubuntu:~/cascade$ python manage.py createsuperuser
+Username (leave blank to use 'pouria'):  
+Email address: pouria@gmail.com
+Password: 
+Password (again): 
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 12:33:56
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+login
+HTTP POST /accounts/login/ 302 [0.94, 127.0.0.1:40476]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.26, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/default.css 304 [0.01, 127.0.0.1:40478]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:40500]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.05, 127.0.0.1:40502]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.05, 127.0.0.1:40504]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.05, 127.0.0.1:40500]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.05, 127.0.0.1:40506]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.05, 127.0.0.1:40476]
+******************* Call method works :) ******************
+logout
+HTTP GET /accounts/logout/?next=/ 302 [0.02, 127.0.0.1:40476]
+******************* Call method works :) ******************
+api-root
+Forbidden: /
+HTTP GET / 403 [0.08, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:40506]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:40500]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:40504]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:40502]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:40478]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:40506]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:40506]
+******************* Call method works :) ******************
+login
+HTTP GET /accounts/login/?next=/ 200 [0.04, 127.0.0.1:40506]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:40506]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:40506]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:40506]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:40476]
+******************* Call method works :) ******************
+login
+HTTP POST /accounts/login/ 302 [0.52, 127.0.0.1:40476]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.11, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:40506]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:40478]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:40478]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:40478]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:40502]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:40504]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:40500]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:40500]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.31, 127.0.0.1:40500]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.01, 127.0.0.1:40500]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:40500]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:40500]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:40504]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:40502]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:40506]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:40476]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:40478]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:40500]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:40504]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:40504]
+^C(env) pouria@ubuntu:~/cascadedaphne -b 0.0.0.0 -p 9001 main.asgi:application
+2020-09-13 12:35:13,999 INFO     Starting server at tcp:port=9001:interface=0.0.0.0
+2020-09-13 12:35:14,003 INFO     HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2020-09-13 12:35:14,003 INFO     Configuring endpoint tcp:port=9001:interface=0.0.0.0
+2020-09-13 12:35:14,004 INFO     Listening on TCP address 0.0.0.0:9001
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+127.0.0.1:47108 - - [13/Sep/2020:12:35:23] "GET /" 200 10219
+******************* Call method works :) ******************
+Not Found: /static/rest_framework/css/bootstrap.min.css
+2020-09-13 12:35:24,094 WARNING  Not Found: /static/rest_framework/css/bootstrap.min.css
+******************* Call method works :) ******************
+127.0.0.1:47108 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/css/bootstrap.min.css" 404 5512
+******************* Call method works :) ******************
+Not Found: /static/rest_framework/css/prettify.css
+2020-09-13 12:35:24,157 WARNING  Not Found: /static/rest_framework/css/prettify.css
+Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+2020-09-13 12:35:24,127 WARNING  Not Found: /static/rest_framework/css/bootstrap-tweaks.css
+******************* Call method works :) ******************
+******************* Call method works :) ******************
+Not Found: /static/rest_framework/css/default.css
+******************* Call method works :) ******************
+127.0.0.1:47110 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/css/bootstrap-tweaks.css" 404 5521
+127.0.0.1:47116 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/css/prettify.css" 404 5497
+******************* Call method works :) ******************
+******************* Call method works :) ******************
+2020-09-13 12:35:24,190 WARNING  Not Found: /static/rest_framework/css/default.css
+Not Found: /static/rest_framework/js/jquery-3.4.1.min.js
+2020-09-13 12:35:24,202 WARNING  Not Found: /static/rest_framework/js/jquery-3.4.1.min.js
+Not Found: /static/rest_framework/js/ajax-form.js
+2020-09-13 12:35:24,207 WARNING  Not Found: /static/rest_framework/js/ajax-form.js
+127.0.0.1:47118 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/css/default.css" 404 5494
+127.0.0.1:47120 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/jquery-3.4.1.min.js" 404 5515
+******************* Call method works :) ******************
+127.0.0.1:47122 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/ajax-form.js" 404 5494
+Not Found: /static/rest_framework/js/bootstrap.min.js
+2020-09-13 12:35:24,222 WARNING  Not Found: /static/rest_framework/js/bootstrap.min.js
+******************* Call method works :) ******************
+127.0.0.1:47110 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/bootstrap.min.js" 404 5506
+Not Found: /static/rest_framework/js/csrf.js
+2020-09-13 12:35:24,227 WARNING  Not Found: /static/rest_framework/js/csrf.js
+Not Found: /static/rest_framework/js/prettify-min.js
+2020-09-13 12:35:24,265 WARNING  Not Found: /static/rest_framework/js/prettify-min.js
+127.0.0.1:47116 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/prettify-min.js" 404 5503
+127.0.0.1:47108 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/csrf.js" 404 5479
+Not Found: /static/rest_framework/js/default.js
+2020-09-13 12:35:24,263 WARNING  Not Found: /static/rest_framework/js/default.js
+127.0.0.1:47118 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/default.js" 404 5488
+******************* Call method works :) ******************
+Not Found: /static/rest_framework/js/jquery-3.4.1.min.js
+2020-09-13 12:35:24,878 WARNING  Not Found: /static/rest_framework/js/jquery-3.4.1.min.js
+127.0.0.1:47118 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/jquery-3.4.1.min.js" 404 5515
+******************* Call method works :) ******************
+Not Found: /static/rest_framework/js/ajax-form.js
+2020-09-13 12:35:24,908 WARNING  Not Found: /static/rest_framework/js/ajax-form.js
+127.0.0.1:47118 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/ajax-form.js" 404 5494
+******************* Call method works :) ******************
+Not Found: /static/rest_framework/js/csrf.js
+2020-09-13 12:35:24,935 WARNING  Not Found: /static/rest_framework/js/csrf.js
+127.0.0.1:47118 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/csrf.js" 404 5479
+******************* Call method works :) ******************
+Not Found: /static/rest_framework/js/bootstrap.min.js
+2020-09-13 12:35:24,959 WARNING  Not Found: /static/rest_framework/js/bootstrap.min.js
+127.0.0.1:47118 - - [13/Sep/2020:12:35:24] "GET /static/rest_framework/js/bootstrap.min.js" 404 5506
+******************* Call method works :) ******************
+Not Found: /static/rest_framework/js/prettify-min.js
+2020-09-13 12:35:24,996 WARNING  Not Found: /static/rest_framework/js/prettify-min.js
+127.0.0.1:47118 - - [13/Sep/2020:12:35:25] "GET /static/rest_framework/js/prettify-min.js" 404 5503
+******************* Call method works :) ******************
+Not Found: /static/rest_framework/js/default.js
+2020-09-13 12:35:25,018 WARNING  Not Found: /static/rest_framework/js/default.js
+127.0.0.1:47118 - - [13/Sep/2020:12:35:25] "GET /static/rest_framework/js/default.js" 404 5488
+******************* Call method works :) ******************
+Not Found: /favicon.ico
+2020-09-13 12:35:25,188 WARNING  Not Found: /favicon.ico
+127.0.0.1:47118 - - [13/Sep/2020:12:35:25] "GET /favicon.ico" 404 5416
+127.0.0.1:47130 - - [13/Sep/2020:12:36:30] "WSCONNECTING /ws/remote/Devices/" - -
+Welcom to my channel :)
+127.0.0.1:47130 - - [13/Sep/2020:12:36:30] "WSCONNECT /ws/remote/Devices/" - -
+^C2020-09-13 13:53:47,604 INFO     Killed 1 pending application instances
+127.0.0.1:47130 - - [13/Sep/2020:13:53:47] "WSDISCONNECT /ws/remote/Devices/" - -
+(env) pouria@ubuntu:~/cascade$ cd ..
+(env) pouria@ubuntu:~$ cd tutorial
+(env) pouria@ubuntu:~/tutorial$ cd 2
+(env) pouria@ubuntu:~/tutorial/2$ cd tutorial
+(env) pouria@ubuntu:~/tutorial/2/tutorial$ cd ~
+(env) pouria@ubuntu:~$ cd tutorial/2/turorial
+bash: cd: tutorial/2/turorial: No such file or directory
+(env) pouria@ubuntu:~$ cd tutorial/2/tutorial
+(env) pouria@ubuntu:~/tutorial/2/tutorial$ ls
+db.sqlite3  manage.py  media  snippets  static  tutorial  uwsgi_params
+(env) pouria@ubuntu:~/tutorial/2/tutorial$ deactivate
+pouria@ubuntu:~/tutorial/2/tutorial$ cd..
+cd..: command not found
+pouria@ubuntu:~/tutorial/2/tutorial$ cd ..
+pouria@ubuntu:~/tutorial/2$ cd ..
+pouria@ubuntu:~/tutorial$ ls
+1  2  channel  danialehsani.com  login  venv
+pouria@ubuntu:~/tutorial$ cd
+pouria@ubuntu:~$ cd tutorial/2/tutorial
+pouria@ubuntu:~/tutorial/2/tutorial$ cd ..
+pouria@ubuntu:~/tutorial/2$ cd ..
+pouria@ubuntu:~/tutorial$ source venv/bin/activate
+(venv) pouria@ubuntu:~/tutorial$ cd 2/tutorial
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ ls
+db.sqlite3  manage.py  media  snippets  static  tutorial  uwsgi_params
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 25, in <module>
+    import psycopg2 as Database
+ModuleNotFoundError: No module named 'psycopg2'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 76, in raise_last_exception
+    raise _exception[1]
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/contrib/auth/models.py", line 2, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 48, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/base.py", line 122, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/base.py", line 326, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/options.py", line 206, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/__init__.py", line 28, in __getattr__
+    return getattr(connections[DEFAULT_DB_ALIAS], item)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/utils.py", line 214, in __getitem__
+    backend = load_backend(db['ENGINE'])
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/utils.py", line 111, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 29, in <module>
+    raise ImproperlyConfigured("Error loading psycopg2 module: %s" % e)
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
+/home/pouria/tutorial/2/tutorial/tutorial/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 1 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): snippets.
+Run 'python manage.py migrate' to apply them.
+September 13, 2020 - 13:57:21
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+^C(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py makemigraions
+Unknown command: 'makemigraions'. Did you mean makemigrations?
+Type 'manage.py help' for usage.
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py makemigrations
+No changes detected
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, snippets
+Running migrations:
+  Applying snippets.0003_snippet_extra_url... OK
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 13:58:09
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[13/Sep/2020 13:58:19] "GET / HTTP/1.1" 200 9993
+[13/Sep/2020 13:58:20] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[13/Sep/2020 13:58:20] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[13/Sep/2020 13:58:20] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[13/Sep/2020 13:58:20] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[13/Sep/2020 13:58:20] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[13/Sep/2020 13:58:20] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[13/Sep/2020 13:58:20] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[13/Sep/2020 13:58:21] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[13/Sep/2020 13:58:21] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[13/Sep/2020 13:58:21] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[13/Sep/2020 13:58:21] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+******************* Call method works :) ******************
+snippet-list
+[13/Sep/2020 13:58:26] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[13/Sep/2020 13:58:26] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+login
+[13/Sep/2020 13:58:31] "POST /accounts/login/ HTTP/1.1" 200 2949
+^C(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py createsuperuser
+Username: pouria
+Error: That username is already taken.
+Username: danial
+Error: That username is already taken.
+Username: ^C
+Operation cancelled.
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 13:59:47
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+login
+[13/Sep/2020 13:59:53] "POST /accounts/login/ HTTP/1.1" 200 2949
+******************* Call method works :) ******************
+login
+[13/Sep/2020 13:59:58] "POST /accounts/login/ HTTP/1.1" 200 2949
+******************* Call method works :) ******************
+login
+[13/Sep/2020 14:00:01] "POST /accounts/login/ HTTP/1.1" 200 2949
+******************* Call method works :) ******************
+login
+[13/Sep/2020 14:00:11] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[13/Sep/2020 14:00:12] "GET /snippets/ HTTP/1.1" 200 66544
+^[[B^C(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+^CTraceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/contrib/admin/__init__.py", line 10, in <module>
+    from django.contrib.admin.sites import AdminSite, site
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 17, in <module>
+    from django.views.decorators.cache import never_cache
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/views/decorators/cache.py", line 3, in <module>
+    from django.middleware.cache import CacheMiddleware
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 874, in get_code
+  File "<frozen importlib._bootstrap_external>", line 973, in get_data
+KeyboardInterrupt
+
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 377, in execute
+    django.setup()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/snippets/models.py", line 21, in <module>
+    Token.objects.get_or_create(user=user)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/query.py", line 573, in get_or_create
+    return self.get(**kwargs), False
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1458, in names_to_path
+    if field.is_relation and not field.related_model:
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/db/models/fields/related.py", line 95, in related_model
+    apps.check_models_ready()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/apps/registry.py", line 140, in check_models_ready
+    raise AppRegistryNotReady("Models aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Models aren't loaded yet.
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/__init__.py", line 377, in execute
+    django.setup()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/snippets/models.py", line 28
+    Token.objects.get_or_create(user=user)
+    ^
+IndentationError: expected an indented block
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py makemigrations
+No changes detected
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, authtoken, contenttypes, sessions, snippets
+Running migrations:
+  Applying authtoken.0001_initial... OK
+  Applying authtoken.0002_auto_20160226_1747... OK
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 05:04:14
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 05:04:28] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:04:37] "GET /accounts/login/?next=/ HTTP/1.1" 200 2701
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:04:39] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 05:04:39] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:04:47] "GET /snippets/ HTTP/1.1" 200 66315
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:04:55] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:04:57] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:04:58] "GET /snippets/ HTTP/1.1" 200 66315
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:05:02] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:05:04] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:05:05] "GET /snippets/ HTTP/1.1" 200 66315
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:05:09] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:05:11] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:05:11] "GET /snippets/ HTTP/1.1" 200 66315
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:05:54] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:05:56] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:05:58] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 05:06:00] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 05:06:03] "GET /users/ HTTP/1.1" 401 9549
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:06:05] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+login
+[14/Sep/2020 05:06:07] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 05:06:07] "GET /users/ HTTP/1.1" 401 9549
+^C(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py drf_create_token danial
+Generated token 670adb1f08b6e9d9fb29e55d87964087cf4470b9 for user danial
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 05:16:01
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 05:17:51] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 05:18:13] "GET / HTTP/1.1" 200 146
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:18:21] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+Not Found: /snippets
+[14/Sep/2020 05:18:25] "GET /snippets HTTP/1.1" 404 7008
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:19:08] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 05:19:17] "GET /users/ HTTP/1.1" 401 9549
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 05:19:21] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:19:50] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:19:59] "GET /snippets/ HTTP/1.1" 200 66315
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:20:16] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:20:36] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:20:39] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 05:20:42] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 05:21:06] "GET /users/ HTTP/1.1" 401 9549
+******************* Call method works :) ******************
+Not Found: /users/  'Authorization: Token 670adb1f08b6e9d9fb29e55d87964087cf4470b9'
+[14/Sep/2020 05:22:13] "GET /users/%20%20'Authorization:%20Token%20670adb1f08b6e9d9fb29e55d87964087cf4470b9' HTTP/1.1" 404 7235
+******************* Call method works :) ******************
+Not Found: /users/'Authorization: Token 670adb1f08b6e9d9fb29e55d87964087cf4470b9'
+[14/Sep/2020 05:23:07] "GET /users/'Authorization:%20Token%20670adb1f08b6e9d9fb29e55d87964087cf4470b9' HTTP/1.1" 404 7225
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 05:23:46] "GET /users/ HTTP/1.1" 401 9549
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 05:25:01] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 05:26:20] "GET /users/ HTTP/1.1" 302 0
+/home/pouria/tutorial/2/tutorial/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 05:29:09
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 05:29:50] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+api_token_auth
+Method Not Allowed: /api-token-auth/
+[14/Sep/2020 05:30:07] "GET /api-token-auth/ HTTP/1.1" 405 40
+******************* Call method works :) ******************
+Not Found: /api-token-auth
+[14/Sep/2020 05:30:15] "GET /api-token-auth HTTP/1.1" 404 7211
+******************* Call method works :) ******************
+api_token_auth
+Method Not Allowed: /api-token-auth/
+[14/Sep/2020 05:30:18] "GET /api-token-auth/ HTTP/1.1" 405 40
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 06:16:09] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+Not Found: /admin
+[14/Sep/2020 06:16:13] "GET /admin HTTP/1.1" 404 7184
+******************* Call method works :) ******************
+Not Found: /admin/
+[14/Sep/2020 06:16:18] "GET /admin/ HTTP/1.1" 404 7187
+/home/pouria/tutorial/2/tutorial/tutorial/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/tutorial/urls.py", line 30, in <module>
+    path('admin/', admin.site.urls),
+NameError: name 'admin' is not defined
+/home/pouria/tutorial/2/tutorial/tutorial/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 06:16:56
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+index
+[14/Sep/2020 06:17:01] "GET /admin/ HTTP/1.1" 200 3973
+[14/Sep/2020 06:17:01] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 1789
+[14/Sep/2020 06:17:01] "GET /static/admin/css/base.css HTTP/1.1" 200 16307
+[14/Sep/2020 06:17:01] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+[14/Sep/2020 06:17:01] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18617
+[14/Sep/2020 06:17:01] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+[14/Sep/2020 06:17:01] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[14/Sep/2020 06:17:01] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[14/Sep/2020 06:17:01] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[14/Sep/2020 06:17:02] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[14/Sep/2020 06:17:02] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[14/Sep/2020 06:17:02] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+******************* Call method works :) ******************
+authtoken_token_changelist
+[14/Sep/2020 06:17:04] "GET /admin/authtoken/token/ HTTP/1.1" 200 13516
+******************* Call method works :) ******************
+jsi18n
+[14/Sep/2020 06:17:04] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6284
+[14/Sep/2020 06:17:04] "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+[14/Sep/2020 06:17:04] "GET /static/admin/js/core.js HTTP/1.1" 200 5418
+[14/Sep/2020 06:17:04] "GET /static/admin/js/actions.js HTTP/1.1" 200 6783
+[14/Sep/2020 06:17:04] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[14/Sep/2020 06:17:04] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[14/Sep/2020 06:17:04] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8632
+[14/Sep/2020 06:17:04] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[14/Sep/2020 06:17:04] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6078
+[14/Sep/2020 06:17:04] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630
+[14/Sep/2020 06:17:05] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[14/Sep/2020 06:17:05] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 06:24:17] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+login
+[14/Sep/2020 06:24:19] "GET /accounts/login/?next=/ HTTP/1.1" 200 2701
+******************* Call method works :) ******************
+login
+[14/Sep/2020 06:24:22] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 06:24:22] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 06:24:31] "GET /users/ HTTP/1.1" 401 9549
+******************* Call method works :) ******************
+login
+[14/Sep/2020 06:24:34] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+login
+[14/Sep/2020 06:24:36] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 06:24:36] "GET /users/ HTTP/1.1" 401 9549
+/home/pouria/tutorial/2/tutorial/tutorial/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 07:34:44
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+^C(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py makemigrations
+No changes detected
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, authtoken, contenttypes, sessions, snippets
+Running migrations:
+  No migrations to apply.
+(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 07:34:55
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:35:02] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:35:05] "GET /accounts/login/?next=/ HTTP/1.1" 200 2701
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:35:07] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:35:07] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 07:35:10] "GET /users/ HTTP/1.1" 401 9571
+******************* Call method works :) ******************
+user-list
+/home/pouria/tutorial/venv/lib/python3.8/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'django.contrib.auth.models.User'> QuerySet.
+  paginator = self.django_paginator_class(queryset, page_size)
+[14/Sep/2020 07:35:22] "GET /users/ HTTP/1.1" 200 15613
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:35:32] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 07:35:35] "GET /snippets/ HTTP/1.1" 200 66315
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:35:38] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:35:40] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 07:35:40] "GET /snippets/ HTTP/1.1" 200 66315
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:35:44] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:35:47] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 07:35:47] "GET /snippets/ HTTP/1.1" 200 66315
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:35:49] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:35:53] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:35:56] "GET /users/ HTTP/1.1" 200 15613
+******************* Call method works :) ******************
+logout
+[14/Sep/2020 07:36:34] "GET /accounts/logout/?next=/users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:36:34] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:36:35] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:36:38] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:36:41] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:36:44] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:36:44] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:36:46] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:36:46] "GET /users/ HTTP/1.1" 200 15613
+******************* Call method works :) ******************
+logout
+[14/Sep/2020 07:36:53] "GET /accounts/logout/?next=/users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:36:53] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:36:53] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:36:56] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:36:58] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:37:01] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:37:01] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:37:04] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:37:04] "GET /users/ HTTP/1.1" 200 15613
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:37:14] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:37:18] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+change password-list
+Unauthorized: /change password/
+[14/Sep/2020 07:37:21] "GET /change%20password/ HTTP/1.1" 401 8373
+******************* Call method works :) ******************
+change password-list
+Method Not Allowed: /change password/
+[14/Sep/2020 07:37:21] "GET /change%20password/ HTTP/1.1" 405 12451
+******************* Call method works :) ******************
+logout
+[14/Sep/2020 07:37:27] "GET /accounts/logout/?next=/change%20password/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+change password-list
+[14/Sep/2020 07:37:27] "GET /change%20password/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:37:27] "GET /accounts/login/?next=/change%2520password/ HTTP/1.1" 200 2719
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:37:35] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:37:46] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:37:46] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:37:51] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:37:51] "GET /users/ HTTP/1.1" 200 15613
+[14/Sep/2020 07:38:02] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+logout
+[14/Sep/2020 07:38:12] "GET /accounts/logout/?next=/users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:38:12] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:38:12] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 07:38:13] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:38:19] "GET / HTTP/1.1" 200 9993
+[14/Sep/2020 07:38:20] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:38:21] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:38:22] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 07:38:22] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:38:28] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:38:28] "GET /users/ HTTP/1.1" 200 15613
+[14/Sep/2020 07:38:29] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+/home/pouria/tutorial/2/tutorial/tutorial/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 07:40:57
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:41:02] "GET / HTTP/1.1" 200 9993
+[14/Sep/2020 07:41:03] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+user-list
+/home/pouria/tutorial/venv/lib/python3.8/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'django.contrib.auth.models.User'> QuerySet.
+  paginator = self.django_paginator_class(queryset, page_size)
+[14/Sep/2020 07:41:08] "GET /users/ HTTP/1.1" 200 15613
+[14/Sep/2020 07:41:08] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+logout
+[14/Sep/2020 07:41:11] "GET /accounts/logout/?next=/users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:41:11] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:41:11] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 07:41:13] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:41:16] "GET / HTTP/1.1" 200 9993
+[14/Sep/2020 07:41:17] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:41:20] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:41:20] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 07:41:22] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:41:24] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:41:24] "GET /users/ HTTP/1.1" 200 15613
+[14/Sep/2020 07:41:25] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+/home/pouria/tutorial/2/tutorial/tutorial/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 07:41:53
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:41:56] "GET / HTTP/1.1" 200 9993
+[14/Sep/2020 07:41:57] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 07:42:00] "GET /users/ HTTP/1.1" 401 9549
+[14/Sep/2020 07:42:01] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:42:07] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 07:42:08] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:42:10] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 07:42:10] "GET /users/ HTTP/1.1" 401 9549
+[14/Sep/2020 07:42:11] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+Not Found: /admin
+[14/Sep/2020 07:43:14] "GET /admin HTTP/1.1" 404 7290
+******************* Call method works :) ******************
+index
+[14/Sep/2020 07:43:19] "GET /admin/ HTTP/1.1" 200 3973
+******************* Call method works :) ******************
+authtoken_token_changelist
+[14/Sep/2020 07:43:22] "GET /admin/authtoken/token/ HTTP/1.1" 200 13516
+******************* Call method works :) ******************
+jsi18n
+[14/Sep/2020 07:43:22] "GET /admin/jsi18n/ HTTP/1.1" 200 3187
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:45:04] "GET / HTTP/1.1" 200 146
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:45:19] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:45:20] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:46:13] "GET /users/?authentication=670adb1f08b6e9d9fb29e55d87964087cf4470b9 HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:46:13] "GET /accounts/login/?next=/users/%3Fauthentication%3D670adb1f08b6e9d9fb29e55d87964087cf4470b9 HTTP/1.1" 200 2763
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 07:48:33] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:48:33] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:48:46] "GET / HTTP/1.1" 200 146
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 07:49:08] "POST /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:49:08] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+******************* Call method works :) ******************
+Not Found: /snippets
+[14/Sep/2020 07:49:13] "POST /snippets HTTP/1.1" 404 7300
+******************* Call method works :) ******************
+Not Found: /snippets
+[14/Sep/2020 07:49:22] "GET /snippets HTTP/1.1" 404 7299
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 07:49:29] "GET /snippets/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:49:29] "GET /accounts/login/?next=/snippets/ HTTP/1.1" 200 2710
+/home/pouria/tutorial/2/tutorial/tutorial/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 07:53:40
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:53:50] "GET / HTTP/1.1" 200 10222
+******************* Call method works :) ******************
+logout
+[14/Sep/2020 07:53:56] "GET /accounts/logout/?next=/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:53:56] "GET / HTTP/1.1" 200 9993
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:53:59] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:53:59] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:54:02] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+/home/pouria/tutorial/venv/lib/python3.8/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'django.contrib.auth.models.User'> QuerySet.
+  paginator = self.django_paginator_class(queryset, page_size)
+[14/Sep/2020 07:54:02] "GET /users/ HTTP/1.1" 200 15613
+[14/Sep/2020 07:54:06] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:54:30] "GET / HTTP/1.1" 200 10222
+[14/Sep/2020 07:54:31] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+logout
+[14/Sep/2020 07:54:34] "GET /accounts/logout/?next=/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:54:34] "GET / HTTP/1.1" 200 9993
+[14/Sep/2020 07:54:35] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:54:37] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:54:37] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 07:54:38] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:54:40] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:54:40] "GET /users/ HTTP/1.1" 200 15613
+[14/Sep/2020 07:54:41] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+logout
+[14/Sep/2020 07:56:07] "GET /accounts/logout/?next=/users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:56:07] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:56:07] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 07:56:08] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:56:10] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 07:56:11] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 07:56:14] "GET / HTTP/1.1" 200 9993
+[14/Sep/2020 07:56:15] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:56:18] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:56:18] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 07:56:18] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+login
+[14/Sep/2020 07:56:21] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 07:56:21] "GET /users/ HTTP/1.1" 200 15613
+[14/Sep/2020 07:56:22] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+/home/pouria/tutorial/2/tutorial/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/tutorial/urls.py", line 30, in <module>
+    path('', include('snippets.urls')),
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/snippets/urls.py", line 2, in <module>
+    from snippets import views
+  File "/home/pouria/tutorial/2/tutorial/snippets/views.py", line 63, in <module>
+    class UserViewSet(viewsets.ReadOnlyModelViewSet):
+  File "/home/pouria/tutorial/2/tutorial/snippets/views.py", line 70, in UserViewSet
+    authentication_classes = [ TokenAuthentication]
+NameError: name 'TokenAuthentication' is not defined
+/home/pouria/tutorial/2/tutorial/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 08:10:10
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 08:10:36] "GET / HTTP/1.1" 200 10222
+[14/Sep/2020 08:10:39] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+logout
+[14/Sep/2020 08:11:36] "GET /accounts/logout/?next=/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 08:11:36] "GET / HTTP/1.1" 200 9993
+[14/Sep/2020 08:11:37] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+user-list
+[14/Sep/2020 08:12:12] "GET /users/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+login
+[14/Sep/2020 08:12:12] "GET /accounts/login/?next=/users/ HTTP/1.1" 200 2707
+[14/Sep/2020 08:12:13] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+login
+[14/Sep/2020 08:12:21] "POST /accounts/login/ HTTP/1.1" 302 0
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 08:12:22] "GET /users/ HTTP/1.1" 401 9549
+[14/Sep/2020 08:12:22] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+/home/pouria/tutorial/2/tutorial/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/tutorial/urls.py", line 30, in <module>
+    path('', include('snippets.urls')),
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/snippets/urls.py", line 2, in <module>
+    from snippets import views
+  File "/home/pouria/tutorial/2/tutorial/snippets/views.py", line 36, in <module>
+    @permission_classes((AllowAny,))
+NameError: name 'permission_classes' is not defined
+/home/pouria/tutorial/2/tutorial/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/tutorial/urls.py", line 30, in <module>
+    path('', include('snippets.urls')),
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/snippets/urls.py", line 2, in <module>
+    from snippets import views
+  File "/home/pouria/tutorial/2/tutorial/snippets/views.py", line 38, in <module>
+    from accounts.serializers import UserSerializer
+ModuleNotFoundError: No module named 'accounts'
+/home/pouria/tutorial/2/tutorial/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/tutorial/urls.py", line 30, in <module>
+    path('', include('snippets.urls')),
+  File "/home/pouria/tutorial/venv/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/snippets/urls.py", line 2, in <module>
+    from snippets import views
+  File "/home/pouria/tutorial/2/tutorial/snippets/views.py", line 38, in <module>
+    from accounts.serializers import UserSerializer
+ModuleNotFoundError: No module named 'accounts'
+/home/pouria/tutorial/2/tutorial/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 08:23:12
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+/home/pouria/tutorial/2/tutorial/snippets/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 08:26:10
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+/home/pouria/tutorial/2/tutorial/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 08:29:16
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+^C(venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 08:29:24
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[14/Sep/2020 08:29:28] "GET / HTTP/1.1" 200 9975
+[14/Sep/2020 08:29:29] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+user-list
+Unauthorized: /users/
+[14/Sep/2020 08:29:37] "GET /users/ HTTP/1.1" 401 9490
+[14/Sep/2020 08:29:38] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+[14/Sep/2020 08:29:45] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+snippet-list
+[14/Sep/2020 08:29:52] "GET /snippets/ HTTP/1.1" 200 66288
+[14/Sep/2020 08:29:53] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+[14/Sep/2020 08:29:56] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+Not Found: /accounts/login/
+[14/Sep/2020 08:30:06] "GET /accounts/login/ HTTP/1.1" 404 7320
+******************* Call method works :) ******************
+Not Found: /accounts/login
+[14/Sep/2020 08:30:12] "GET /accounts/login HTTP/1.1" 404 7317
+******************* Call method works :) ******************
+None
+Method Not Allowed: /accounts/
+[14/Sep/2020 08:30:19] "GET /accounts/ HTTP/1.1" 405 10089
+[14/Sep/2020 08:30:20] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+None
+[14/Sep/2020 08:30:58] "OPTIONS /accounts/ HTTP/1.1" 200 10354
+[14/Sep/2020 08:30:59] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+******************* Call method works :) ******************
+None
+Method Not Allowed: /accounts/
+[14/Sep/2020 08:31:07] "GET /accounts/ HTTP/1.1" 405 10089
+[14/Sep/2020 08:31:08] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+^C(venv) pouria@ubuntu:~/tutorial/2/tutorial$ cd ..
+(venv) pouria@ubuntu:~/tutorial/2$ cd ..
+(venv) pouria@ubuntu:~/tutorial$ cd login
+(venv) pouria@ubuntu:~/tutorial/login$ ls
+api  db.sqlite3  login  manage.py  todos
+(venv) pouria@ubuntu:~/tutorial/login$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 08:33:01
+Django version 3.1, using settings 'login.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Not Found: /
+[14/Sep/2020 08:33:06] "GET / HTTP/1.1" 404 2027
+[14/Sep/2020 08:33:18] "GET /api/v1/ HTTP/1.1" 200 13756
+[14/Sep/2020 08:33:19] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+[14/Sep/2020 08:33:39] "GET /admin HTTP/1.1" 301 0
+[14/Sep/2020 08:33:39] "GET /admin/ HTTP/1.1" 302 0
+[14/Sep/2020 08:33:39] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2194
+[14/Sep/2020 08:33:39] "GET /static/admin/css/login.css HTTP/1.1" 200 1185
+Not Found: /rest-auth/
+[14/Sep/2020 08:34:46] "GET /rest-auth/ HTTP/1.1" 404 2075
+Not Found: /rest-auth
+[14/Sep/2020 08:34:51] "GET /rest-auth HTTP/1.1" 404 2072
+Not Found: /api/v1/rest-auth
+[14/Sep/2020 08:35:16] "GET /api/v1/rest-auth HTTP/1.1" 404 2473
+Not Found: /api/v1/rest-auth/
+[14/Sep/2020 08:35:20] "GET /api/v1/rest-auth/ HTTP/1.1" 404 3820
+Method Not Allowed: /api/v1/rest-auth/login/
+[14/Sep/2020 08:38:22] "GET /api/v1/rest-auth/login/ HTTP/1.1" 405 12576
+[14/Sep/2020 08:38:26] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+^C(venv) pouria@ubuntu:~/tutorial/loginsudo systemctl restart nginx
+[sudo] password for pouria: 
+(venv) pouria@ubuntu:~/tutorial/login$ sudo systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2020-09-14 01:41:15 PDT; 7s ago
+       Docs: man:nginx(8)
+    Process: 31771 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 31787 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 31788 (nginx)
+      Tasks: 2 (limit: 4624)
+     Memory: 7.0M
+     CGroup: /system.slice/nginx.service
+             ├─31788 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             └─31789 nginx: worker process
+
+Sep 14 01:41:14 ubuntu systemd[1]: Stopped A high performance web server and a reverse proxy server.
+Sep 14 01:41:15 ubuntu systemd[1]: Starting A high performance web server and a reverse proxy server...
+Sep 14 01:41:15 ubuntu systemd[1]: Started A high performance web server and a reverse proxy server.
+(venv) pouria@ubuntu:~/tutorial/login$ sudo systemctl restart gunicorn
+(venv) pouria@ubuntu:~/tutorial/login$ sudo systemctl status  gunicorn
+● gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2020-09-14 01:42:33 PDT; 11s ago
+TriggeredBy: ● gunicorn.socket
+   Main PID: 31839 (gunicorn)
+      Tasks: 4 (limit: 4624)
+     Memory: 86.3M
+     CGroup: /system.slice/gunicorn.service
+             ├─31839 /home/pouria/cascade/env/bin/python /home/pouria/cascade/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock main.wsgi:application
+             ├─31867 /home/pouria/cascade/env/bin/python /home/pouria/cascade/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock main.wsgi:application
+             ├─31869 /home/pouria/cascade/env/bin/python /home/pouria/cascade/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock main.wsgi:application
+             └─31870 /home/pouria/cascade/env/bin/python /home/pouria/cascade/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock main.wsgi:application
+
+Sep 14 01:42:33 ubuntu systemd[1]: Stopped gunicorn daemon.
+Sep 14 01:42:33 ubuntu systemd[1]: Started gunicorn daemon.
+Sep 14 01:42:38 ubuntu gunicorn[31839]: [2020-09-14 01:42:38 -0700] [31839] [INFO] Starting gunicorn 20.0.4
+Sep 14 01:42:38 ubuntu gunicorn[31839]: [2020-09-14 01:42:38 -0700] [31839] [INFO] Listening at: unix:/run/gunicorn.sock (31839)
+Sep 14 01:42:38 ubuntu gunicorn[31839]: [2020-09-14 01:42:38 -0700] [31839] [INFO] Using worker: sync
+Sep 14 01:42:38 ubuntu gunicorn[31867]: [2020-09-14 01:42:38 -0700] [31867] [INFO] Booting worker with pid: 31867
+Sep 14 01:42:38 ubuntu gunicorn[31869]: [2020-09-14 01:42:38 -0700] [31869] [INFO] Booting worker with pid: 31869
+Sep 14 01:42:38 ubuntu gunicorn[31870]: [2020-09-14 01:42:38 -0700] [31870] [INFO] Booting worker with pid: 31870
+(venv) pouria@ubuntu:~/tutorial/login$ sudo systemctl restart cascade-daphne
+(venv) pouria@ubuntu:~/tutorial/login$ sudo systemctl status cascade-daphne
+● cascade-daphne.service - cascade Daphne Service
+     Loaded: loaded (/etc/systemd/system/cascade-daphne.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2020-09-14 01:44:01 PDT; 9s ago
+   Main PID: 31931 (daphne)
+      Tasks: 1 (limit: 4624)
+     Memory: 65.5M
+     CGroup: /system.slice/cascade-daphne.service
+             └─31931 /home/pouria/cascade/env/bin/python /home/pouria/cascade/env/bin/daphne -p 9002 main.asgi:application
+
+Sep 14 01:44:01 ubuntu systemd[1]: Stopped cascade Daphne Service.
+Sep 14 01:44:01 ubuntu systemd[1]: Started cascade Daphne Service.
+Sep 14 01:44:04 ubuntu daphne[31931]: 2020-09-14 08:44:04,138 INFO     Starting server at tcp:port=9002:interface=127.0.0.1
+Sep 14 01:44:04 ubuntu daphne[31931]: 2020-09-14 08:44:04,140 INFO     HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Sep 14 01:44:04 ubuntu daphne[31931]: 2020-09-14 08:44:04,140 INFO     Configuring endpoint tcp:port=9002:interface=127.0.0.1
+Sep 14 01:44:04 ubuntu daphne[31931]: 2020-09-14 08:44:04,143 INFO     Listening on TCP address 127.0.0.1:9002
+(venv) pouria@ubuntu:~/tutorial/login$ sudo systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2020-09-14 01:41:15 PDT; 3min 1s ago
+       Docs: man:nginx(8)
+    Process: 31771 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 31787 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 31788 (nginx)
+      Tasks: 2 (limit: 4624)
+     Memory: 4.1M
+     CGroup: /system.slice/nginx.service
+             ├─31788 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             └─31789 nginx: worker process
+
+Sep 14 01:41:14 ubuntu systemd[1]: Stopped A high performance web server and a reverse proxy server.
+Sep 14 01:41:15 ubuntu systemd[1]: Starting A high performance web server and a reverse proxy server...
+Sep 14 01:41:15 ubuntu systemd[1]: Started A high performance web server and a reverse proxy server.
+(venv) pouria@ubuntu:~/tutorial/login$ cd ..
+(venv) pouria@ubuntu:~/tutorial$ cd ~
+(venv) pouria@ubuntu:~$ deactivate
+pouria@ubuntu:~$ cd cascade
+pouria@ubuntu:~/cascade$ source env/bin/activate
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): authtoken.
+Run 'python manage.py migrate' to apply them.
+September 14, 2020 - 08:45:10
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(env) pouria@ubuntu:~/cascade$ sudo systemctl restart cascade-daphne
+(env) pouria@ubuntu:~/cascade$ sudo systemctl restart gunicorn
+(env) pouria@ubuntu:~/cascade$ sudo systemctl restart nginx
+(env) pouria@ubuntu:~/cascade$ cd /etc/nginx/
+(env) pouria@ubuntu:/etc/nginx$ ls
+conf.d        fastcgi_params  koi-win     modules-available  nginx.conf    scgi_params      sites-enabled  uwsgi_params
+fastcgi.conf  koi-utf         mime.types  modules-enabled    proxy_params  sites-available  snippets       win-utf
+(env) pouria@ubuntu:/etc/nginx$ cd sites-env
+bash: cd: sites-env: No such file or directory
+(env) pouria@ubuntu:/etc/nginx$ cd sites-enabled/
+(env) pouria@ubuntu:/etc/nginx/sites-enabled$ ls
+default  main
+(env) pouria@ubuntu:/etc/nginx/sites-enabled$ nano main
+(env) pouria@ubuntu:/etc/nginx/sites-enabled$ cd ~/cascade
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/module_loading.py", line 20, in import_string
+    return getattr(module, class_name)
+AttributeError: module 'rest_framework.authentication' has no attribute 'sessionAuthentication'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 177, in import_from_string
+    return import_string(val)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/module_loading.py", line 22, in import_string
+    raise ImportError('Module "%s" does not define a "%s" attribute/class' % (
+ImportError: Module "rest_framework.authentication" does not define a "sessionAuthentication" attribute/class
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/urls.py", line 42, in <module>
+    from rest_framework.routers import DefaultRouter
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/routers.py", line 23, in <module>
+    from rest_framework import views
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 17, in <module>
+    from rest_framework.schemas import DefaultSchema
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/schemas/__init__.py", line 33, in <module>
+    authentication_classes=api_settings.DEFAULT_AUTHENTICATION_CLASSES,
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 220, in __getattr__
+    val = perform_import(val, attr)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return [import_from_string(item, setting_name) for item in val]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 168, in <listcomp>
+    return [import_from_string(item, setting_name) for item in val]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 180, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'rest_framework.authentication.sessionAuthentication' for API setting 'DEFAULT_AUTHENTICATION_CLASSES'. ImportError: Module "rest_framework.authentication" does not define a "sessionAuthentication" attribute/class.
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'rest_framework' isn't unique. You may not be able to reverse all URLs in this namespace
+
+System check identified 1 issue (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): authtoken.
+Run 'python manage.py migrate' to apply them.
+September 14, 2020 - 08:54:10
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/pouria/cascade/DeviceManagement/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 2 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): authtoken.
+Run 'python manage.py migrate' to apply them.
+September 14, 2020 - 08:55:02
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+Forbidden: /
+HTTP GET / 403 [0.30, 127.0.0.1:51340]
+^C(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+No changes detected
+(env) pouria@ubuntu:~/cascade$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: DeviceManagement, admin, auth, authtoken, contenttypes, sessions, snippet
+Running migrations:
+  Applying authtoken.0001_initial... OK
+  Applying authtoken.0002_auto_20160226_1747... OK
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 08:56:20
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+login
+HTTP GET /accounts/login/?next=/ 200 [0.10, 127.0.0.1:51900]
+******************* Call method works :) ******************
+login
+HTTP POST /accounts/login/ 200 [0.25, 127.0.0.1:51900]
+******************* Call method works :) ******************
+login
+HTTP POST /accounts/login/ 302 [0.32, 127.0.0.1:51900]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.18, 127.0.0.1:51900]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.29, 127.0.0.1:51900]
+^C(env) pouria@ubuntu:~/cascadesudo systemctl restart gunicorn
+(env) pouria@ubuntu:~/cascade$ sudo systemctl restart nginx
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 377, in execute
+    django.setup()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/DeviceManagement/models.py", line 15, in <module>
+    Token.objects.get_or_create(user=user)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 573, in get_or_create
+    return self.get(**kwargs), False
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 418, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1458, in names_to_path
+    if field.is_relation and not field.related_model:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/fields/related.py", line 95, in related_model
+    apps.check_models_ready()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 140, in check_models_ready
+    raise AppRegistryNotReady("Models aren't loaded yet.")
+django.core.exceptions.AppRegistryNotReady: Models aren't loaded yet.
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+No changes detected
+(env) pouria@ubuntu:~/cascade$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: DeviceManagement, admin, auth, authtoken, contenttypes, sessions, snippet
+Running migrations:
+  No migrations to apply.
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 09:10:44
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(env) pouria@ubuntu:~/cascade$ sudo systemctl restart gunicorn
+(env) pouria@ubuntu:~/cascade$ sudo systemctl restart nginx
+(env) pouria@ubuntu:~/cascade$ python manage.py createsuperuser
+Username: root
+Email address: root@gmail.com
+Password: 
+Password (again): 
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(env) pouria@ubuntu:~/cascade$ sudo systemctl restart gunicorn
+(env) pouria@ubuntu:~/cascade$ 
+(env) pouria@ubuntu:~/cascade$ sudo systemctl restart nginx
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 14, 2020 - 09:18:59
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(env) pouria@ubuntu:~/cascade$ 
+

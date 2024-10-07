@@ -1,0 +1,13 @@
+[Unit]
+Description=HA_checker Service
+After=network.target
+
+[Service]
+User=ngfw
+Group=ngfw
+WorkingDirectory=/opt/narin/api/ha_checker
+ExecStart=/opt/narin/.env/bin/python /opt/narin/api/ha_checker/run.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

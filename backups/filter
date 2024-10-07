@@ -1,0 +1,2303 @@
+pouria@ubuntu:~$ cd cascade
+pouria@ubuntu:~/cascade$ source env/bin/activate
+(env) pouria@ubuntu:~/cascade$ python3 -c 'import channels; print(channels.__version__)'
+2.4.0
+(env) pouria@ubuntu:~/cascade$ free -m
+              total        used        free      shared  buff/cache   available
+Mem:           3908        3100         198          50         608         517
+Swap:           923         833          90
+(env) pouria@ubuntu:~/cascade$ sudo systemctl restart gunicorn
+[sudo] password for pouria: 
+(env) pouria@ubuntu:~/cascade$ cd ~/backup
+bash: cd: /home/pouria/backup: No such file or directory
+(env) pouria@ubuntu:~/cascade$ cd ~/backups
+(env) pouria@ubuntu:~/backups$ touch terminal_password_dest
+(env) pouria@ubuntu:~/backups$ gedit terminal_password_dest 
+(env) pouria@ubuntu:~/backups$ cd ~/cascade
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 345, in execute
+    settings.INSTALLED_APPS
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 83, in __getattr__
+    self._setup(name)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/settings.py", line 142
+    'PAGE_SIZE': 10
+               ^
+SyntaxError: invalid syntax
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 345, in execute
+    settings.INSTALLED_APPS
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 83, in __getattr__
+    self._setup(name)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/settings.py", line 142
+    'PAGE_SIZE': 10,
+               ^
+SyntaxError: invalid syntax
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 06:42:07
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.12, 127.0.0.1:44372]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.02, 127.0.0.1:44380]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44380]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:44382]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 200 [0.15, 127.0.0.1:44374]
+HTTP GET /static/rest_framework/css/prettify.css 200 [0.14, 127.0.0.1:44376]
+HTTP GET /static/rest_framework/css/default.css 200 [0.14, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 200 [0.22, 127.0.0.1:44372]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:44376]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/img/grid.png 200 [0.04, 127.0.0.1:44374]
+******************* Call method works :) ******************
+Not Found: /favicon.ico
+******************* Call method works :) ******************
+device-list
+Forbidden: /ws/Devices/
+HTTP GET /ws/Devices/ 403 [0.02, 127.0.0.1:44372]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:44376]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:44376]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:44380]
+******************* Call method works :) ******************
+login
+HTTP GET /api-auth/login/?next=/ws/Devices/ 200 [0.11, 127.0.0.1:44372]
+******************* Call method works :) ******************
+login
+HTTP POST /api-auth/login/ 302 [0.37, 127.0.0.1:44372]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.12, 127.0.0.1:44372]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:44376]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44378]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?limit=10&offset=11 200 [0.09, 127.0.0.1:44372]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:44378]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44378]
+******************* Call method works :) ******************
+device-detail
+HTTP GET /ws/Devices/28/ 200 [0.08, 127.0.0.1:44418]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44422]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44422]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:44422]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:44422]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:44422]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44418]
+******************* Call method works :) ******************
+device-detail
+PING 192.168.6.142 (192.168.6.142) 56(84) bytes of data.
+64 bytes from 192.168.6.142: icmp_seq=1 ttl=128 time=2.30 ms
+64 bytes from 192.168.6.142: icmp_seq=2 ttl=128 time=2.90 ms
+64 bytes from 192.168.6.142: icmp_seq=3 ttl=128 time=1.70 ms
+
+--- 192.168.6.142 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 1.701/2.297/2.897/0.488 ms
+HTTP PUT /ws/Devices/28/ 200 [2.15, 127.0.0.1:44418]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44422]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44422]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:44422]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:44422]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:44418]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44422]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.32, 127.0.0.1:44526]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:44526]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:44526]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:44526]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:44530]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44534]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:44532]
+******************* Call method works :) ******************
+Not Found: /ws/Devices
+HTTP GET /ws/Devices?id=3 404 [0.01, 127.0.0.1:44526]
+******************* Call method works :) ******************
+Not Found: /ws/Devices
+HTTP GET /ws/Devices?id=3/ 404 [0.01, 127.0.0.1:44526]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?id=3 200 [0.10, 127.0.0.1:44526]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44530]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44534]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:44532]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:44530]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:44534]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44532]
+/home/pouria/cascade/main/settings.py changed, reloading.
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 345, in execute
+    settings.INSTALLED_APPS
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 83, in __getattr__
+    self._setup(name)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/settings.py", line 141
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
+                             ^
+SyntaxError: invalid syntax
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 07:53:23
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.16, 127.0.0.1:44566]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.02, 127.0.0.1:44566]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.07, 127.0.0.1:44570]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.05, 127.0.0.1:44572]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.05, 127.0.0.1:44574]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:44566]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.05, 127.0.0.1:44576]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.09, 127.0.0.1:44566]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44570]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:44572]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:44574]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44576]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:44570]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:44572]
+^C(env) pouria@ubuntu:~/cascade$ pip install django-filter
+Requirement already satisfied: django-filter in ./env/lib/python3.8/site-packages (2.3.0)
+Requirement already satisfied: Django>=2.2 in ./env/lib/python3.8/site-packages (from django-filter) (3.1)
+Requirement already satisfied: sqlparse>=0.2.2 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-filter) (0.3.1)
+Requirement already satisfied: asgiref~=3.2.10 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-filter) (3.2.10)
+Requirement already satisfied: pytz in ./env/lib/python3.8/site-packages (from Django>=2.2->django-filter) (2020.1)
+(env) pouria@ubuntu:~/cascade$ sudo apt-get update
+[sudo] password for pouria: 
+Hit:1 http://us.archive.ubuntu.com/ubuntu focal InRelease                                                                                                                                                 
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]                                                                                                                                 
+Hit:3 http://dl.google.com/linux/chrome/deb stable InRelease                                                                                                                                              
+Get:4 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]                                                                                                                                
+Hit:5 http://packages.microsoft.com/repos/vscode stable InRelease                                                                                                                          
+Hit:6 https://download.docker.com/linux/ubuntu focal InRelease                                                                                                                             
+Hit:7 https://deb.nodesource.com/node_12.x focal InRelease                                                    
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]           
+Get:9 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [24.3 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [326 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [52.2 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [196 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [196 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [184 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [2,468 B]
+Get:16 http://us.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [1,972 B]
+Fetched 1,299 kB in 6s (227 kB/s)                                        
+Reading package lists... Done
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 76, in raise_last_exception
+    raise _exception[1]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django-filter'
+^C(env) pouria@ubuntu:~/cascade$ pip install django-filter
+Requirement already satisfied: django-filter in ./env/lib/python3.8/site-packages (2.3.0)
+Requirement already satisfied: Django>=2.2 in ./env/lib/python3.8/site-packages (from django-filter) (3.1)
+Requirement already satisfied: asgiref~=3.2.10 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-filter) (3.2.10)
+Requirement already satisfied: pytz in ./env/lib/python3.8/site-packages (from Django>=2.2->django-filter) (2020.1)
+Requirement already satisfied: sqlparse>=0.2.2 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-filter) (0.3.1)
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 76, in raise_last_exception
+    raise _exception[1]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django-filter'
+^C(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 377, in execute
+    django.setup()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django-filter'
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 377, in execute
+    django.setup()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django-filters'
+(env) pouria@ubuntu:~/cascade$ pip install django-filters
+ERROR: Could not find a version that satisfies the requirement django-filters (from versions: none)
+ERROR: No matching distribution found for django-filters
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+No changes detected
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 08:26:18
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.08, 127.0.0.1:44666]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:44668]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44668]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:44668]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44668]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44672]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:44666]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.18, 127.0.0.1:44666]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44668]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:44672]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:44668]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44672]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:44668]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44672]
+******************* Call method works :) ******************
+Not Found: /ws/Devices/search
+HTTP GET /ws/Devices/search 404 [0.07, 127.0.0.1:44666]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 08:51:33
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+Not Found: /ws/Devices
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.19, 127.0.0.1:44738]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.07, 127.0.0.1:44738]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.05, 127.0.0.1:44742]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.05, 127.0.0.1:44744]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:44748]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.05, 127.0.0.1:44746]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:44750]
+******************* Call method works :) ******************
+Not Found: /ws/Devices
+HTTP GET /ws/Devices?search=hellolenovo 404 [0.01, 127.0.0.1:44756]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?search=hellolenovo 200 [0.10, 127.0.0.1:44756]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:44756]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44756]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:44756]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44762]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:44756]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44764]
+******************* Call method works :) ******************
+Not Found: /ws/Devices
+HTTP GET /ws/Devices?search 404 [0.01, 127.0.0.1:44756]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/urls.py", line 20, in <module>
+    path('', include('DeviceManagement.urls')),
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/DeviceManagement/urls.py", line 2, in <module>
+    from DeviceManagement import views
+  File "/home/pouria/cascade/DeviceManagement/views.py", line 73, in <module>
+    class UserViewSet(viewsets.ReadOnlyModelViewSet):
+  File "/home/pouria/cascade/DeviceManagement/views.py", line 83, in UserViewSet
+    filter_backends = [filters.SearchFilter]
+AttributeError: module 'django_filters.rest_framework' has no attribute 'SearchFilter'
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/urls.py", line 20, in <module>
+    path('', include('DeviceManagement.urls')),
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/DeviceManagement/urls.py", line 2, in <module>
+    from DeviceManagement import views
+  File "/home/pouria/cascade/DeviceManagement/views.py", line 73, in <module>
+    class UserViewSet(viewsets.ReadOnlyModelViewSet):
+  File "/home/pouria/cascade/DeviceManagement/views.py", line 83, in UserViewSet
+    filter_backends = [filters.SearchFilter]
+AttributeError: module 'django_filters.rest_framework' has no attribute 'SearchFilter'
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 09:28:29
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.07, 127.0.0.1:44882]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44882]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:44882]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.03, 127.0.0.1:44882]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:44890]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:44888]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44892]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.22, 127.0.0.1:44882]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:44890]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.02, 127.0.0.1:44888]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:44892]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:44890]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:44882]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:44888]
+HTTP GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 200 [0.05, 127.0.0.1:44896]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=192.168.6.142&port=&status= 200 [0.08, 127.0.0.1:44882]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44896]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44896]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:44892]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44896]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:44896]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:44890]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=&port=80&status= 200 [1.25, 127.0.0.1:45022]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45022]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45022]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45026]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:45022]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.08, 127.0.0.1:45026]
+HTTP GET /static/rest_framework/js/default.js 304 [0.08, 127.0.0.1:45028]
+/home/pouria/cascade/main/settings.py changed, reloading.
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 345, in execute
+    settings.INSTALLED_APPS
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 83, in __getattr__
+    self._setup(name)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/settings.py", line 143
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    ^
+SyntaxError: invalid syntax
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 11:01:39
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.11, 127.0.0.1:45058]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45058]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.02, 127.0.0.1:45062]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.03, 127.0.0.1:45058]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:45064]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45066]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:45068]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.19, 127.0.0.1:45058]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45062]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45064]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45066]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:45068]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45062]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45064]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=192.168.6.142&port=&status= 200 [0.09, 127.0.0.1:45058]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45066]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45068]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45062]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45064]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45066]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45068]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?ip=192.168.6.142 200 [0.08, 127.0.0.1:45058]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45062]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45064]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45066]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45068]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45062]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45064]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?ip=192.168.6.141 200 [0.08, 127.0.0.1:45058]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45066]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45068]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45062]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45064]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45068]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45066]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 11:03:42
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?ip=192.168.6.141 200 [0.11, 127.0.0.1:45094]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45094]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45098]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45094]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45098]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45100]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45098]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.10, 127.0.0.1:45094]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45100]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45098]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45100]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45098]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45100]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45098]
+/home/pouria/cascade/DeviceManagement/models.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 11:08:30
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Migrations for 'DeviceManagement':
+  DeviceManagement/migrations/0002_auto_20200824_1108.py
+    - Alter field url on device
+(env) pouria@ubuntu:~/cascade$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: DeviceManagement, admin, auth, contenttypes, sessions, snippet
+Running migrations:
+  Applying DeviceManagement.0002_auto_20200824_1108... OK
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 11:09:01
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.15, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.03, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.04, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45140]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=192.168.203.139&port=&status=&address= 200 [0.09, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45138]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=192.168.203.139&port=&status=&address=/20 200 [0.09, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45136]
+******************* Call method works :) ******************
+Not Found: /ws/Devices/20
+HTTP GET /ws/Devices/20 404 [0.06, 127.0.0.1:45130]
+******************* Call method works :) ******************
+device-detail
+HTTP GET /ws/Devices/20/ 200 [0.09, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.04, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45138]
+******************* Call method works :) ******************
+device-detail
+Bad Request: /ws/Devices/20/
+HTTP PUT /ws/Devices/20/ 400 [0.11, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45136]
+******************* Call method works :) ******************
+device-detail
+Bad Request: /ws/Devices/20/
+HTTP PUT /ws/Devices/20/ 400 [0.13, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45138]
+******************* Call method works :) ******************
+device-detail
+Bad Request: /ws/Devices/20/
+HTTP PUT /ws/Devices/20/ 400 [0.11, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45136]
+******************* Call method works :) ******************
+device-detail
+HTTP GET /ws/Devices/20/ 200 [0.09, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45138]
+******************* Call method works :) ******************
+device-detail
+Bad Request: /ws/Devices/20/
+HTTP PUT /ws/Devices/20/ 400 [0.09, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45136]
+******************* Call method works :) ******************
+device-detail
+Bad Request: /ws/Devices/20/
+HTTP PUT /ws/Devices/20/ 400 [0.22, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45138]
+******************* Call method works :) ******************
+device-detail
+HTTP GET /ws/Devices/20/ 200 [0.11, 127.0.0.1:45130]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45136]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.10, 127.0.0.1:45134]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.05, 127.0.0.1:45138]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.05, 127.0.0.1:45140]
+HTTP GET /static/rest_framework/js/default.js 304 [0.05, 127.0.0.1:45136]
+******************* Call method works :) ******************
+device-detail
+Bad Request: /ws/Devices/20/
+HTTP PUT /ws/Devices/20/ 400 [0.07, 127.0.0.1:45176]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45176]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45180]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45180]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45176]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45180]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45176]
+******************* Call method works :) ******************
+device-detail
+Bad Request: /ws/Devices/20/
+HTTP PUT /ws/Devices/20/ 400 [0.08, 127.0.0.1:45176]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45180]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45180]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45180]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45180]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45180]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45180]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.23, 127.0.0.1:45208]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.02, 127.0.0.1:45208]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45208]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45208]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45212]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45208]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45214]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 11:44:14
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.12, 127.0.0.1:45236]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.02, 127.0.0.1:45236]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45242]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.02, 127.0.0.1:45240]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:45236]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:45244]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45246]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.11, 127.0.0.1:45236]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45242]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45240]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45244]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45246]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45242]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45240]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type inet: "192"
+LINE 1: ...nt_device" WHERE "DeviceManagement_device"."ip" = '192'::ine...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/pagination.py", line 206, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/paginator.py", line 73, in page
+    number = self.validate_number(number)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/paginator.py", line 94, in count
+    return c()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1154, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: invalid input syntax for type inet: "192"
+LINE 1: ...nt_device" WHERE "DeviceManagement_device"."ip" = '192'::ine...
+                                                             ^
+
+HTTP GET /ws/Devices/?name=&ip=192&port=&status=&address= 500 [0.30, 127.0.0.1:45236]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=192.168.203.139&port=&status=&address= 200 [0.08, 127.0.0.1:45236]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45244]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45246]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45242]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45240]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45244]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45246]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 11:45:01
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-detail
+HTTP GET /ws/Devices/20/ 200 [0.12, 127.0.0.1:45260]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.10, 127.0.0.1:45260]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45268]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45268]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.07, 127.0.0.1:45268]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.06, 127.0.0.1:45270]
+HTTP GET /static/rest_framework/js/default.js 304 [0.06, 127.0.0.1:45272]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.06, 127.0.0.1:45260]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type inet: "192"
+LINE 1: ...nt_device" WHERE "DeviceManagement_device"."ip" = '192'::ine...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/pagination.py", line 206, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/paginator.py", line 73, in page
+    number = self.validate_number(number)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/paginator.py", line 94, in count
+    return c()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1154, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.DataError: invalid input syntax for type inet: "192"
+LINE 1: ...nt_device" WHERE "DeviceManagement_device"."ip" = '192'::ine...
+                                                             ^
+
+HTTP GET /ws/Devices/?name=&ip=192&port=&status=&address= 500 [0.12, 127.0.0.1:45260]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/urls.py", line 20, in <module>
+    path('', include('DeviceManagement.urls')),
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/DeviceManagement/urls.py", line 2, in <module>
+    from DeviceManagement import views
+  File "/home/pouria/cascade/DeviceManagement/views.py", line 39, in <module>
+    class DeviceViewSet(viewsets.ModelViewSet):
+  File "/home/pouria/cascade/DeviceManagement/views.py", line 51, in DeviceViewSet
+    filter_backends = (filters.SearchFilter,)
+AttributeError: module 'django_filters.rest_framework' has no attribute 'SearchFilter'
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 69, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/urls.py", line 20, in <module>
+    path('', include('DeviceManagement.urls')),
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/DeviceManagement/urls.py", line 2, in <module>
+    from DeviceManagement import views
+  File "/home/pouria/cascade/DeviceManagement/views.py", line 34, in <module>
+    class DeviceFilter(filters.FilterSet):
+AttributeError: module 'rest_framework.filters' has no attribute 'FilterSet'
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 11:49:28
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.08, 127.0.0.1:45326]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45326]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.02, 127.0.0.1:45330]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:45326]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45334]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:45332]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45336]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.11, 127.0.0.1:45326]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45330]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45334]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:45332]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45336]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45330]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45334]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:16:58
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.25, 127.0.0.1:45444]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45444]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45444]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45448]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45448]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45450]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45444]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1156, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+HTTP GET /ws/Devices/?search=hello 500 [0.14, 127.0.0.1:45444]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=&port=&status=&address=&created=&id=&owner=1&url= 200 [0.11, 127.0.0.1:45444]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45448]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45450]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.03, 127.0.0.1:45448]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45450]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45444]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45462]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1156, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+HTTP GET /ws/Devices/?search=123 500 [0.10, 127.0.0.1:45444]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1156, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+HTTP GET /ws/Devices/?search=ip 500 [0.09, 127.0.0.1:45444]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?search= 200 [0.13, 127.0.0.1:45444]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45448]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45450]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45462]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45448]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45450]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45462]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1156, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+HTTP GET /ws/Devices/?search=2331lenovo 500 [0.08, 127.0.0.1:45444]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1156, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+HTTP GET /ws/Devices/?search=3 500 [0.12, 127.0.0.1:45444]
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:23:54
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.09, 127.0.0.1:45490]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45490]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45490]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45490]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45494]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45490]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45494]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.11, 127.0.0.1:45490]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45494]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45494]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45494]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45494]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45494]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45494]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1156, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+HTTP GET /ws/Devices/?search=pouria 500 [0.10, 127.0.0.1:45490]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:29:59
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.09, 127.0.0.1:45522]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45522]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45522]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45522]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45528]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45522]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45528]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.11, 127.0.0.1:45522]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45530]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45528]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45530]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45528]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45530]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45528]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=&port=&status=&address=&created=&id=&owner=&url= 200 [0.13, 127.0.0.1:45522]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45530]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45528]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45530]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45528]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:45530]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45522]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=&port=&status=&address=&created=&id=&owner=&url= 200 [0.14, 127.0.0.1:45522]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45528]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45530]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45528]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45530]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45528]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45530]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=&port=&status=&address=&created=&id=&owner=&url= 200 [0.13, 127.0.0.1:45542]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45542]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45546]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45546]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45546]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45542]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45548]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'Device' into field. Choices are: address, created, id, ip, name, owner, owner_id, port, status, url
+HTTP GET /ws/Devices/?search=hellolenovo 500 [0.08, 127.0.0.1:45542]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:34:57
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.10, 127.0.0.1:45558]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.02, 127.0.0.1:45558]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.06, 127.0.0.1:45566]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:45570]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.05, 127.0.0.1:45568]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:45572]
+HTTP GET /static/rest_framework/js/default.js 304 [0.04, 127.0.0.1:45574]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.12, 127.0.0.1:45558]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45566]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45570]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45568]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:45572]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45566]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45574]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=&port=&status=&address=&created=&id=&owner=&url= 200 [0.15, 127.0.0.1:45558]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45570]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45568]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:45572]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45566]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45574]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45570]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:36:17
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1156, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+HTTP GET /ws/Devices/?search=3 500 [0.10, 127.0.0.1:45594]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1156, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+HTTP GET /ws/Devices/?search=lenovo 500 [0.08, 127.0.0.1:45594]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1156, in build_lookup
+    raise FieldError('Related Field got invalid lookup: {}'.format(lookup_name))
+django.core.exceptions.FieldError: Related Field got invalid lookup: icontains
+HTTP GET /ws/Devices/?search=hello 500 [0.09, 127.0.0.1:45594]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:41:45
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.07, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45626]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.12, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45626]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45626]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45632]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?search=pending 200 [0.18, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45626]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45632]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45626]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45632]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?search=pend 200 [0.11, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45626]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45632]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45626]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45632]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?search=192 200 [0.12, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45626]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45632]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45626]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45620]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?search=hello 200 [0.17, 127.0.0.1:45620]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45632]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45626]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45632]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45624]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45626]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:48:14
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.07, 127.0.0.1:45666]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:45666]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45666]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.05, 127.0.0.1:45670]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:45672]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:45666]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:45674]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.11, 127.0.0.1:45666]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45670]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45672]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45674]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45670]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:45672]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45674]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'auth.User' into field. Choices are: address, created, id, ip, name, owner, owner_id, port, status, url
+HTTP GET /ws/Devices/?search=192 500 [0.13, 127.0.0.1:45666]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:48:47
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'User' into field. Choices are: address, created, id, ip, name, owner, owner_id, port, status, url
+HTTP GET /ws/Devices/?search=192 500 [0.11, 127.0.0.1:45688]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:53:26
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?search=192 200 [0.15, 127.0.0.1:45716]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45716]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45716]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45716]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45716]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45720]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:45722]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=&port=123&status=&address=&created=&id=&owner=&url= 200 [0.12, 127.0.0.1:45716]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45720]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:45722]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:45720]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:45722]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:45716]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:45730]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?name=&ip=&port=123&status=&address=&created=&id=&owner=2&url= 200 [0.10, 127.0.0.1:45716]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45720]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45722]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:45730]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:45720]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:45722]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45730]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 12:59:40
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.13, 127.0.0.1:45744]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45746]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.08, 127.0.0.1:45746]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45754]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.08, 127.0.0.1:45744]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:45750]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.05, 127.0.0.1:45752]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.14, 127.0.0.1:45744]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:45746]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:45754]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:45750]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:45752]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:45746]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:45754]
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'owner_Device' into field. Choices are: address, created, id, ip, name, owner, owner_id, port, status, url
+HTTP GET /ws/Devices/?search=192 500 [0.12, 127.0.0.1:45744]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+^CTraceback (most recent call last):
+  File "<frozen importlib._bootstrap_external>", line 93, in _path_is_mode_type
+  File "<frozen importlib._bootstrap_external>", line 87, in _path_stat
+FileNotFoundError: [Errno 2] No such file or directory: '/home/pouria/cascade/env/lib/python3.8/site-packages/cryptography/hazmat/primitives/ciphers/__init__.cpython-38-x86_64-linux-gnu.so'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 116, in create
+    mod = import_module(mod_path)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/apps.py", line 6, in <module>
+    import daphne.server
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/server.py", line 5, in <module>
+    from twisted.internet import asyncioreactor  # isort:skip
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/asyncioreactor.py", line 17, in <module>
+    from twisted.internet.posixbase import (PosixReactorBase, _NO_FILEDESC,
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/posixbase.py", line 18, in <module>
+^C
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 13:06:47
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+Internal Server Error: /ws/Devices/
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/filters.py", line 121, in filter_queryset
+    queryset = queryset.filter(reduce(operator.and_, conditions))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1237, in build_filter
+    return self._add_q(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'owner_username' into field. Choices are: address, created, id, ip, name, owner, owner_id, port, status, url
+HTTP GET /ws/Devices/?search=192 500 [0.31, 127.0.0.1:45830]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 24, 2020 - 13:07:13
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/?search=192 200 [0.31, 127.0.0.1:45840]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.03, 127.0.0.1:45840]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.02, 127.0.0.1:45844]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:45846]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:45848]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:45852]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:45850]
+^C(env) pouria@ubuntu:~/cascade$ 
+

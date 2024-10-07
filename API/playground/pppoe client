@@ -1,0 +1,3 @@
+sudo nmcli connection add con-name ens18 ifname ens18 type PPPOE autoconnect yes username naghdi password 123qwe!
+
+sudo nmcli connection up ens18

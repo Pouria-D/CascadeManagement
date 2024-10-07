@@ -1,0 +1,17 @@
+redis-server
+network-manager
+ntp
+ipset
+vtun
+nginx
+python3-venv
+ntpdate
+rsyslog-gnutls
+snmpd
+ntpdate
+conntrack
+pcs
+psmisc
+bridge-utils
+vlan
+sshpass

@@ -1,0 +1,1224 @@
+pouria@ubuntu:~$ cd cascade
+pouria@ubuntu:~/cascade$ source env/bin/activate
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/makemigrations.py", line 101, in handle
+    loader.check_consistent_history(connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 290, in check_consistent_history
+    applied = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/makemigrations.py", line 101, in handle
+    loader.check_consistent_history(connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 290, in check_consistent_history
+    applied = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/makemigrations.py", line 101, in handle
+    loader.check_consistent_history(connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 290, in check_consistent_history
+    applied = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/makemigrations.py", line 101, in handle
+    loader.check_consistent_history(connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 290, in check_consistent_history
+    applied = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+(env) pouria@ubuntu:~/cascade$ sudo systemctl start postgresql
+[sudo] password for pouria: 
+(env) pouria@ubuntu:~/cascade$ sudo systemctl enable postgresql
+Synchronizing state of postgresql.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable postgresql
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/makemigrations.py", line 101, in handle
+    loader.check_consistent_history(connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 290, in check_consistent_history
+    applied = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/makemigrations.py", line 101, in handle
+    loader.check_consistent_history(connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 290, in check_consistent_history
+    applied = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver 127.0.0.1:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 70, in inner_run
+    self.check_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 459, in check_migrations
+    executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/executor.py", line 18, in __init__
+    self.loader = MigrationLoader(self.connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 53, in __init__
+    self.build_graph()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 216, in build_graph
+    self.applied_migrations = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+^C(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations auth_app
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/makemigrations.py", line 101, in handle
+    loader.check_consistent_history(connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 290, in check_consistent_history
+    applied = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations DeviceManagement
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/makemigrations.py", line 101, in handle
+    loader.check_consistent_history(connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 290, in check_consistent_history
+    applied = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+No changes detected
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations AUTH_APP
+No installed app with label 'AUTH_APP'.
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations auth_app
+No changes detected in app 'auth_app'
+(env) pouria@ubuntu:~/cascade$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: DeviceManagement, admin, auth, auth_app, contenttypes, sessions, snippet
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying DeviceManagement.0001_initial... OK
+  Applying DeviceManagement.0002_auto_20200824_1108... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying auth_app.0001_initial... OK
+  Applying auth_app.0002_auto_20180818_1600... OK
+  Applying sessions.0001_initial... OK
+  Applying snippet.0001_initial... OK
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 06:20:00
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.03, 127.0.0.1:44088]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44088]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /api 500 [0.00, 127.0.0.1:44088]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44088]
+^C(env) pouria@ubuntu:~/cascade$ pip install django-cors-headers
+Requirement already satisfied: django-cors-headers in ./env/lib/python3.8/site-packages (3.5.0)
+Requirement already satisfied: Django>=2.2 in ./env/lib/python3.8/site-packages (from django-cors-headers) (3.1)
+Requirement already satisfied: asgiref~=3.2.10 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-cors-headers) (3.2.10)
+Requirement already satisfied: pytz in ./env/lib/python3.8/site-packages (from Django>=2.2->django-cors-headers) (2020.1)
+Requirement already satisfied: sqlparse>=0.2.2 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-cors-headers) (0.3.1)
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 06:22:25
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44100]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44100]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44100]
+^C(env) pouria@ubuntu:~/cascade$ dactivate
+dactivate: command not found
+(env) pouria@ubuntu:~/cascade$ dectivate
+dectivate: command not found
+(env) pouria@ubuntu:~/cascade$ deactivate
+pouria@ubuntu:~/cascade$ python -m pip install django-cors-headers
+
+Command 'python' not found, did you mean:
+
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+
+pouria@ubuntu:~/cascade$ python3 -m pip install django-cors-headers
+Defaulting to user installation because normal site-packages is not writeable
+Collecting django-cors-headers
+  Using cached django_cors_headers-3.5.0-py3-none-any.whl (11 kB)
+Requirement already satisfied: Django>=2.2 in /usr/lib/python3/dist-packages (from django-cors-headers) (2.2.12)
+Installing collected packages: django-cors-headers
+Successfully installed django-cors-headers-3.5.0
+WARNING: You are using pip version 20.2.1; however, version 20.2.3 is available.
+You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
+pouria@ubuntu:~/cascade$ source env/bin/activate
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 06:34:27
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44144]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.01, 127.0.0.1:44144]
+^C(env) pouria@ubuntu:~/cascadesudo systemctl restart daphne
+[sudo] password for pouria: 
+Failed to restart daphne.service: Unit daphne.service not found.
+(env) pouria@ubuntu:~/cascade$ sudo systemctl start daphne
+Failed to start daphne.service: Unit daphne.service not found.
+(env) pouria@ubuntu:~/cascade$ sudo systemctl restart cascade-daphne
+(env) pouria@ubuntu:~/cascade$ daphne main.asgi:channel_layer
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/bin/daphne", line 8, in <module>
+    sys.exit(CommandLineInterface.entrypoint())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/cli.py", line 191, in entrypoint
+    cls().run(sys.argv[1:])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/cli.py", line 252, in run
+    application = import_by_path(args.application)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/utils.py", line 14, in import_by_path
+    target = getattr(target, bit)
+AttributeError: module 'main.asgi' has no attribute 'channel_layer'
+(env) pouria@ubuntu:~/cascade$ daphne main.asgi
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/bin/daphne", line 8, in <module>
+    sys.exit(CommandLineInterface.entrypoint())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/cli.py", line 191, in entrypoint
+    cls().run(sys.argv[1:])
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/cli.py", line 252, in run
+    application = import_by_path(args.application)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/utils.py", line 11, in import_by_path
+    module_path, object_path = path.split(":", 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+(env) pouria@ubuntu:~/cascade$ daphne -b 0.0.0.0 -p 9002 main.asgi:application
+2020-09-13 06:48:37,667 INFO     Starting server at tcp:port=9002:interface=0.0.0.0
+2020-09-13 06:48:37,672 INFO     HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2020-09-13 06:48:37,672 INFO     Configuring endpoint tcp:port=9002:interface=0.0.0.0
+2020-09-13 06:48:37,672 CRITICAL Listen failure: Couldn't listen on 0.0.0.0:9002: [Errno 98] Address already in use.
+(env) pouria@ubuntu:~/cascade$ daphne -b 0.0.0.0 -p 9003 main.asgi:application
+2020-09-13 06:48:49,558 INFO     Starting server at tcp:port=9003:interface=0.0.0.0
+2020-09-13 06:48:49,558 INFO     HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2020-09-13 06:48:49,560 INFO     Configuring endpoint tcp:port=9003:interface=0.0.0.0
+2020-09-13 06:48:49,560 INFO     Listening on TCP address 0.0.0.0:9003
+2020-09-13 06:49:01,964 ERROR    Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+127.0.0.1:38628 - - [13/Sep/2020:06:49:01] "GET /" 500 452
+2020-09-13 06:49:02,389 ERROR    Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+127.0.0.1:38628 - - [13/Sep/2020:06:49:02] "GET /favicon.ico" 500 452
+^C2020-09-13 07:00:37,266 INFO     Killed 0 pending application instances
+(env) pouria@ubuntu:~/cascade$ daphne -b 0.0.0.0 -p 9003 main.asgi:application
+2020-09-13 07:01:12,283 INFO     Starting server at tcp:port=9003:interface=0.0.0.0
+2020-09-13 07:01:12,284 INFO     HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+2020-09-13 07:01:12,284 INFO     Configuring endpoint tcp:port=9003:interface=0.0.0.0
+2020-09-13 07:01:12,284 INFO     Listening on TCP address 0.0.0.0:9003
+2020-09-13 07:01:21,315 ERROR    Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+127.0.0.1:38724 - - [13/Sep/2020:07:01:21] "GET /" 500 452
+2020-09-13 07:01:21,834 ERROR    Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+127.0.0.1:38724 - - [13/Sep/2020:07:01:21] "GET /favicon.ico" 500 452
+^C2020-09-13 07:01:26,064 INFO     Killed 0 pending application instances
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:01:36
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44290]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44290]
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:04:39
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:05:33
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(env) pouria@ubuntu:~/cascadesudo systemctl restart cascade-daphne
+[sudo] password for pouria: 
+(env) pouria@ubuntu:~/cascade$ sudo systemctl status cascade-daphne
+● cascade-daphne.service - cascade Daphne Service
+     Loaded: loaded (/etc/systemd/system/cascade-daphne.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2020-09-13 00:07:19 PDT; 14s ago
+   Main PID: 7024 (daphne)
+      Tasks: 1 (limit: 4624)
+     Memory: 51.5M
+     CGroup: /system.slice/cascade-daphne.service
+             └─7024 /home/pouria/cascade/env/bin/python /home/pouria/cascade/env/bin/daphne -p 9002 main.asgi:application
+
+Sep 13 00:07:19 ubuntu systemd[1]: cascade-daphne.service: Succeeded.
+Sep 13 00:07:19 ubuntu systemd[1]: Stopped cascade Daphne Service.
+Sep 13 00:07:19 ubuntu systemd[1]: Started cascade Daphne Service.
+Sep 13 00:07:21 ubuntu daphne[7024]: 2020-09-13 07:07:21,057 INFO     Starting server at tcp:port=9002:interface=127.0.0.1
+Sep 13 00:07:21 ubuntu daphne[7024]: 2020-09-13 07:07:21,059 INFO     HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+Sep 13 00:07:21 ubuntu daphne[7024]: 2020-09-13 07:07:21,059 INFO     Configuring endpoint tcp:port=9002:interface=127.0.0.1
+Sep 13 00:07:21 ubuntu daphne[7024]: 2020-09-13 07:07:21,067 INFO     Listening on TCP address 127.0.0.1:9002
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+No changes detected
+(env) pouria@ubuntu:~/cascade$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: DeviceManagement, admin, auth, auth_app, contenttypes, sessions, snippet
+Running migrations:
+  No migrations to apply.
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:11:34
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44388]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44388]
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 76, in raise_last_exception
+    raise _exception[1]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'coreheadersdjango_extensions'
+/home/pouria/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 76, in raise_last_exception
+    raise _exception[1]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute
+    autoreload.check_errors(django.setup)()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'coreheaders'
+^C(env) pouria@ubuntu:~/cascade$ pip install coreheaders
+ERROR: Could not find a version that satisfies the requirement coreheaders (from versions: none)
+ERROR: No matching distribution found for coreheaders
+(env) pouria@ubuntu:~/cascade$ python -m pip install django-cors-headers
+Requirement already satisfied: django-cors-headers in ./env/lib/python3.8/site-packages (3.5.0)
+Requirement already satisfied: Django>=2.2 in ./env/lib/python3.8/site-packages (from django-cors-headers) (3.1)
+Requirement already satisfied: asgiref~=3.2.10 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-cors-headers) (3.2.10)
+Requirement already satisfied: pytz in ./env/lib/python3.8/site-packages (from Django>=2.2->django-cors-headers) (2020.1)
+Requirement already satisfied: sqlparse>=0.2.2 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-cors-headers) (0.3.1)
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:14:14
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44412]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44412]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44468]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.01, 127.0.0.1:44468]
+^C(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:32:16
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44482]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44482]
+^C(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:32:33
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(env) pouria@ubuntu:~/cascadesudo docker run -p 6379:6379 -d redis:5
+[sudo] password for pouria: 
+e99837afd916bba73faa831734053a32d4c7a767cf93c47ab51eabcebd1af116
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:35:25
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44510]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44510]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /api/auth 500 [0.00, 127.0.0.1:44510]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44510]
+^C(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:52:45
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:44584]
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET /favicon.ico 500 [0.00, 127.0.0.1:44584]
+^C(env) pouria@ubuntu:~/cascade$ ssh raymon@192.168.6.130
+The authenticity of host '192.168.6.130 (192.168.6.130)' can't be established.
+ECDSA key fingerprint is SHA256:au9lvMQ3Yaj48jfgE8C3vYF9GXQBdZWOdZjYHviUkjk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Failed to add the host to the list of known hosts (/home/pouria/.ssh/known_hosts).
+raymon@192.168.6.130's password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun 13 Sep 2020 07:55:10 AM UTC
+
+  System load:  0.03               Processes:                292
+  Usage of /:   14.0% of 48.47GB   Users logged in:          1
+  Memory usage: 49%                IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                 IPv4 address for ens160:  192.168.6.130
+
+
+34 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Sun Sep 13 05:45:08 2020 from 192.168.6.124
+raymon@raymon:~$ http http://127.0.0.1:8000
+
+Command 'http' not found, but can be installed with:
+
+sudo apt install httpie
+
+raymon@raymon:~$ sudo apt install httpie
+[sudo] password for raymon: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  python3-pygments
+Suggested packages:
+  python-pygments-doc ttf-bitstream-vera
+The following NEW packages will be installed:
+  httpie python3-pygments
+0 upgraded, 2 newly installed, 0 to remove and 33 not upgraded.
+Need to get 648 kB of archives.
+After this operation, 3,486 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Err:1 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-pygments all 2.3.1+dfsg-1ubuntu2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Could not connect to archive.ubuntu.com:80 (91.189.88.142), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.88.152), connection timed out
+Err:2 http://archive.ubuntu.com/ubuntu focal/universe amd64 httpie all 1.0.3-2
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable)
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pygments/python3-pygments_2.3.1+dfsg-1ubuntu2_all.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Could not connect to archive.ubuntu.com:80 (91.189.88.142), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.88.152), connection timed out
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/h/httpie/httpie_1.0.3-2_all.deb  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable)
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+raymon@raymon:~$ sudo apt-get update
+0% [Connecting to archive.ubuntu.com (2001:67c:1562::18)] [Connecting to download.docker.com (2600:9000:2038:ec00:3:db06:4200:93a1)]^C
+raymon@raymon:~$ sudo apt-get update
+Err:1 http://archive.ubuntu.com/ubuntu focal InRelease                                                                                   
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable) Could not connect to archive.ubuntu.com:80 (91.189.88.152), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.88.142), connection timed out
+Err:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease                                                                           
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable)
+Err:3 http://archive.ubuntu.com/ubuntu focal-backports InRelease                                                                
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable)
+Err:4 http://archive.ubuntu.com/ubuntu focal-security InRelease                                                                     
+  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable)
+Err:5 https://download.docker.com/linux/ubuntu focal InRelease                                                                      
+  Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:c800:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:1e00:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:b200:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:6a00:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:e600:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:2200:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:8800:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:ec00:3:db06:4200:93a1). - connect (101: Network is unreachable) Could not connect to download.docker.com:443 (52.85.47.84), connection timed out Could not connect to download.docker.com:443 (52.85.47.18), connection timed out Could not connect to download.docker.com:443 (52.85.47.36), connection timed out Could not connect to download.docker.com:443 (52.85.47.75), connection timed out
+Reading package lists... Done                                                
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal/InRelease  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable) Could not connect to archive.ubuntu.com:80 (91.189.88.152), connection timed out Could not connect to archive.ubuntu.com:80 (91.189.88.142), connection timed out
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-updates/InRelease  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable)
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRelease  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable)
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-security/InRelease  Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::23). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::18). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1562::15). - connect (101: Network is unreachable) Cannot initiate the connection to archive.ubuntu.com:80 (2001:67c:1360:8001::24). - connect (101: Network is unreachable)
+W: Failed to fetch https://download.docker.com/linux/ubuntu/dists/focal/InRelease  Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:c800:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:1e00:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:b200:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:6a00:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:e600:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:2200:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:8800:3:db06:4200:93a1). - connect (101: Network is unreachable) Cannot initiate the connection to download.docker.com:443 (2600:9000:2038:ec00:3:db06:4200:93a1). - connect (101: Network is unreachable) Could not connect to download.docker.com:443 (52.85.47.84), connection timed out Could not connect to download.docker.com:443 (52.85.47.18), connection timed out Could not connect to download.docker.com:443 (52.85.47.36), connection timed out Could not connect to download.docker.com:443 (52.85.47.75), connection timed out
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+raymon@raymon:~$ curl http://127.0.0.1:8000
+ <html> <head> <title>500 Internal Server Error</title> <style>  body { font-family: sans-serif; margin: 0; padding: 0; }  h1 { padding: 0.6em 0 0.2em 20px; color: #896868; margin: 0; }  p { padding: 0 0 0.3em 20px; margin: 0; }  footer { padding: 1em 0 0.3em 20px; color: #999; font-size: 80%; font-style: italic; } </style> </head> <body> <h1>500 Internal Server Error</h1> <p>Daphne HTTP processing error</p> <footer>Daphne</footer> </body> </html> raymon@raymon:~$ ^C
+raymon@raymon:~$ curl http://127.0.0.1:8001
+ <html> <head> <title>500 Internal Server Error</title> <style>  body { font-family: sans-serif; margin: 0; padding: 0; }  h1 { padding: 0.6em 0 0.2em 20px; color: #896868; margin: 0; }  p { padding: 0 0 0.3em 20px; margin: 0; }  footer { padding: 1em 0 0.3em 20px; color: #999; font-size: 80%; font-style: italic; } </style> </head> <body> <h1>500 Internal Server Error</h1> <p>Daphne HTTP processing error</p> <footer>Daphne</footer> </body> </html> raymon@raymon:~$

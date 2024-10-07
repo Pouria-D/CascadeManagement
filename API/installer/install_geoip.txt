@@ -1,0 +1,10 @@
+# source: https://daenney.github.io/2017/01/07/geoip-filtering-iptables.html
+
+apt-get install xtables-addons-common libtext-csv-xs-perl
+
+mkdir /usr/share/xt_geoip
+
+tempdir=$(mktemp -d)
+cd $tempdir
+/usr/lib/xtables-addons/xt_geoip_dl
+/usr/lib/xtables-addons/xt_geoip_build GeoIPCountryWhois.csv -D /usr/share/xt_geoip

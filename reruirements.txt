@@ -1,0 +1,884 @@
+python3
+python3-pip
+python3-venv
+django
+djangorestframework
+markdown       
+django-filter
+	
+channels
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+chrome driver ; https://sites.google.com/a/chromium.org/chromedriver/getting-started
+
+$ python3 -m pip install selenium
+
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+ 
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+docker run -p 6379:6379 -d redis:5
+
+python3 -m pip install channels_redis
+
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable nightly test"
+
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+
+pouria@ubuntu:~$ cd tutorial
+pouria@ubuntu:~/tutorial$ l
+1/  2/
+pouria@ubuntu:~/tutorial$ cd 1
+pouria@ubuntu:~/tutorial/1$ source my_venv/bin/activate
+(my_venv) pouria@ubuntu:~/tutorial/1$ cd ..
+(my_venv) pouria@ubuntu:~/tutorial$ cd 2
+(my_venv) pouria@ubuntu:~/tutorial/2$ ls
+my_venv  tutorial
+(my_venv) pouria@ubuntu:~/tutorial/2$ cd tutorial
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ ls
+db.sqlite3  manage.py  snippets  tutorial
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py migrate
+
+Command 'python' not found, did you mean:
+
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ cd ..
+(my_venv) pouria@ubuntu:~/tutorial/2$ cd ..
+(my_venv) pouria@ubuntu:~/tutorial$ cd ..
+(my_venv) pouria@ubuntu:~$ python3 -m venv my_venv
+(my_venv) pouria@ubuntu:~$ deactive
+deactive: command not found
+(my_venv) pouria@ubuntu:~$ deactivate
+pouria@ubuntu:~$ source my_venv/bin/activate
+(my_venv) pouria@ubuntu:~$ sudo apt install python3
+[sudo] password for pouria: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3 is already the newest version (3.8.2-0ubuntu2).
+python3 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 260 not upgraded.
+(my_venv) pouria@ubuntu:~$ sudo apt install python3-pip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3-pip is already the newest version (20.0.2-5ubuntu1).
+0 upgraded, 0 newly installed, 0 to remove and 260 not upgraded.
+(my_venv) pouria@ubuntu:~$ pip install django
+Collecting django
+  Using cached Django-3.1-py3-none-any.whl (7.8 MB)
+Collecting sqlparse>=0.2.2
+  Using cached sqlparse-0.3.1-py2.py3-none-any.whl (40 kB)
+Collecting pytz
+  Using cached pytz-2020.1-py2.py3-none-any.whl (510 kB)
+Collecting asgiref~=3.2.10
+  Using cached asgiref-3.2.10-py3-none-any.whl (19 kB)
+Installing collected packages: sqlparse, pytz, asgiref, django
+Successfully installed asgiref-3.2.10 django-3.1 pytz-2020.1 sqlparse-0.3.1
+(my_venv) pouria@ubuntu:~$ pip install djangorestframework
+Collecting djangorestframework
+  Using cached djangorestframework-3.11.0-py3-none-any.whl (911 kB)
+Requirement already satisfied: django>=1.11 in ./my_venv/lib/python3.8/site-packages (from djangorestframework) (3.1)
+Requirement already satisfied: asgiref~=3.2.10 in ./my_venv/lib/python3.8/site-packages (from django>=1.11->djangorestframework) (3.2.10)
+Requirement already satisfied: sqlparse>=0.2.2 in ./my_venv/lib/python3.8/site-packages (from django>=1.11->djangorestframework) (0.3.1)
+Requirement already satisfied: pytz in ./my_venv/lib/python3.8/site-packages (from django>=1.11->djangorestframework) (2020.1)
+Installing collected packages: djangorestframework
+Successfully installed djangorestframework-3.11.0
+(my_venv) pouria@ubuntu:~$ djangorestframework
+djangorestframework: command not found
+(my_venv) pouria@ubuntu:~$ pip install markdown
+Collecting markdown
+  Using cached Markdown-3.2.2-py3-none-any.whl (88 kB)
+Installing collected packages: markdown
+Successfully installed markdown-3.2.2
+(my_venv) pouria@ubuntu:~$ pip install django-filter
+Collecting django-filter
+  Using cached django_filter-2.3.0-py3-none-any.whl (73 kB)
+Requirement already satisfied: Django>=2.2 in ./my_venv/lib/python3.8/site-packages (from django-filter) (3.1)
+Requirement already satisfied: asgiref~=3.2.10 in ./my_venv/lib/python3.8/site-packages (from Django>=2.2->django-filter) (3.2.10)
+Requirement already satisfied: sqlparse>=0.2.2 in ./my_venv/lib/python3.8/site-packages (from Django>=2.2->django-filter) (0.3.1)
+Requirement already satisfied: pytz in ./my_venv/lib/python3.8/site-packages (from Django>=2.2->django-filter) (2020.1)
+Installing collected packages: django-filter
+Successfully installed django-filter-2.3.0
+(my_venv) pouria@ubuntu:~$ Pygments
+Pygments: command not found
+(my_venv) pouria@ubuntu:~$ pip install Pygments
+Collecting Pygments
+  Downloading Pygments-2.6.1-py3-none-any.whl (914 kB)
+     |████████████████████████████████| 914 kB 146 kB/s 
+Installing collected packages: Pygments
+Successfully installed Pygments-2.6.1
+(my_venv) pouria@ubuntu:~$ cd tutorial
+(my_venv) pouria@ubuntu:~/tutorial$ cd 2
+(my_venv) pouria@ubuntu:~/tutorial/2$ ls
+tutorial
+(my_venv) pouria@ubuntu:~/tutorial/2$ cd tutorial
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ ls
+db.sqlite3  manage.py  snippets  tutorial
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py makemigrations snippets
+No changes detected in app 'snippets'
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, snippets
+Running migrations:
+  Applying auth.0012_alter_user_first_name_max_length... OK
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ pip install httpie
+Collecting httpie
+  Downloading httpie-2.2.0-py3-none-any.whl (70 kB)
+     |████████████████████████████████| 70 kB 151 kB/s 
+Requirement already satisfied: Pygments>=2.5.2 in /home/pouria/my_venv/lib/python3.8/site-packages (from httpie) (2.6.1)
+Collecting requests>=2.22.0
+  Downloading requests-2.24.0-py2.py3-none-any.whl (61 kB)
+     |████████████████████████████████| 61 kB 238 kB/s 
+Collecting certifi>=2017.4.17
+  Downloading certifi-2020.6.20-py2.py3-none-any.whl (156 kB)
+     |████████████████████████████████| 156 kB 431 kB/s 
+Collecting idna<3,>=2.5
+  Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+     |████████████████████████████████| 58 kB 5.7 MB/s 
+Collecting chardet<4,>=3.0.2
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+     |████████████████████████████████| 133 kB 431 kB/s 
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading urllib3-1.25.10-py2.py3-none-any.whl (127 kB)
+     |████████████████████████████████| 127 kB 421 kB/s 
+Installing collected packages: certifi, idna, chardet, urllib3, requests, httpie
+Successfully installed certifi-2020.6.20 chardet-3.0.4 httpie-2.2.0 idna-2.10 requests-2.24.0 urllib3-1.25.10
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ pip install curl
+Collecting curl
+  Downloading curl-0.0.1-py3-none-any.whl (1.1 kB)
+Installing collected packages: curl
+Successfully installed curl-0.0.1
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ ls
+db.sqlite3  manage.py  snippets  tutorial
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 04, 2020 - 10:16:50
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[04/Aug/2020 10:21:55] "GET / HTTP/1.1" 200 9993
+[04/Aug/2020 10:21:55] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[04/Aug/2020 10:21:55] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[04/Aug/2020 10:21:55] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[04/Aug/2020 10:21:55] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[04/Aug/2020 10:21:56] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[04/Aug/2020 10:21:56] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[04/Aug/2020 10:21:56] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[04/Aug/2020 10:21:56] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[04/Aug/2020 10:21:56] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[04/Aug/2020 10:21:56] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[04/Aug/2020 10:21:56] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+[04/Aug/2020 10:21:57] "GET /favicon.ico HTTP/1.1" 404 5744
+[04/Aug/2020 10:22:01] "GET /api-auth/login/?next=/ HTTP/1.1" 200 2701
+[04/Aug/2020 10:22:10] "POST /api-auth/login/ HTTP/1.1" 200 2940
+[04/Aug/2020 10:22:22] "GET / HTTP/1.1" 200 9993
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+[04/Aug/2020 10:22:22] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+[04/Aug/2020 10:22:23] "GET /favicon.ico HTTP/1.1" 404 5744
+[04/Aug/2020 10:22:25] "POST /api-auth/login/ HTTP/1.1" 200 2940
+[04/Aug/2020 10:22:44] "GET /api-auth/login/?next=/ HTTP/1.1" 200 2701
+Internal Server Error: /snippets/
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 393, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 331, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'snippet-detail' not found. 'snippet-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 529, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 408, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "snippet-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+[04/Aug/2020 10:22:47] "GET /snippets/ HTTP/1.1" 500 190529
+/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'django.contrib.auth.models.User'> QuerySet.
+  paginator = self.django_paginator_class(queryset, page_size)
+Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 393, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 331, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user-detail' not found. 'user-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 529, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 408, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "user-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+[04/Aug/2020 10:22:54] "GET /users/ HTTP/1.1" 500 153854
+Method Not Allowed: /change password/
+[04/Aug/2020 10:26:40] "GET /change%20password/ HTTP/1.1" 405 8593
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[04/Aug/2020 10:26:40] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+^C(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py createsuperuser
+Username: pouria
+Error: That username is already taken.
+Username: parham
+Error: That username is already taken.
+Username: you
+Email address: 1@2.com
+Password: 
+Password (again): 
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 04, 2020 - 10:27:40
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Method Not Allowed: /change password/
+[04/Aug/2020 10:27:43] "GET /change%20password/ HTTP/1.1" 405 8593
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[04/Aug/2020 10:27:43] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[04/Aug/2020 10:27:45] "GET /api-auth/login/?next=/change%20password/ HTTP/1.1" 200 2717
+[04/Aug/2020 10:27:45] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[04/Aug/2020 10:27:55] "POST /api-auth/login/ HTTP/1.1" 302 0
+Method Not Allowed: /change password/
+[04/Aug/2020 10:27:55] "GET /change%20password/ HTTP/1.1" 405 12448
+[04/Aug/2020 10:28:01] "GET / HTTP/1.1" 200 10219
+Internal Server Error: /snippets/
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 393, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 331, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'snippet-detail' not found. 'snippet-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 529, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 408, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "snippet-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+[04/Aug/2020 10:28:03] "GET /snippets/ HTTP/1.1" 500 190740
+/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'django.contrib.auth.models.User'> QuerySet.
+  paginator = self.django_paginator_class(queryset, page_size)
+Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 393, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 331, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'user-detail' not found. 'user-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 529, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 408, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "user-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+[04/Aug/2020 10:28:42] "GET /users/ HTTP/1.1" 500 154084
+[04/Aug/2020 10:28:47] "GET /api-auth/logout/?next=/ HTTP/1.1" 302 0
+[04/Aug/2020 10:28:47] "GET / HTTP/1.1" 200 9993
+[04/Aug/2020 10:28:50] "GET /api-auth/login/?next=/ HTTP/1.1" 200 2701
+[04/Aug/2020 10:28:59] "POST /api-auth/login/ HTTP/1.1" 302 0
+[04/Aug/2020 10:28:59] "GET / HTTP/1.1" 200 10222
+Internal Server Error: /snippets/
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 393, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 331, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'snippet-detail' not found. 'snippet-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 529, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 408, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "snippet-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+[04/Aug/2020 10:29:03] "GET /snippets/ HTTP/1.1" 500 190743
+Internal Server Error: /snippets/
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 393, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 331, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'snippet-detail' not found. 'snippet-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 529, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 408, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "snippet-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+[04/Aug/2020 10:30:33] "GET /snippets/ HTTP/1.1" 500 190743
+[04/Aug/2020 10:32:27] "GET /snippets HTTP/1.1" 301 0
+Internal Server Error: /snippets/
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 393, in to_representation
+    url = self.get_url(value, self.view_name, request, format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 331, in get_url
+    return self.reverse(view_name, kwargs=kwargs, request=request, format=format)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/base.py", line 87, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 685, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'snippet-detail' not found. 'snippet-detail' is not a valid view function or pattern name.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 760, in data
+    ret = super().data
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 260, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 677, in to_representation
+    return [
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 678, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 529, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/relations.py", line 408, in to_representation
+    raise ImproperlyConfigured(msg % self.view_name)
+django.core.exceptions.ImproperlyConfigured: Could not resolve URL for hyperlinked relationship using view name "snippet-detail". You may have failed to include the related model in your API, or incorrectly configured the `lookup_field` attribute on this field.
+[04/Aug/2020 10:32:28] "GET /snippets/ HTTP/1.1" 500 190599
+/home/pouria/tutorial/2/tutorial/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 04, 2020 - 11:47:31
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[04/Aug/2020 11:47:41] "GET / HTTP/1.1" 200 10065
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[04/Aug/2020 11:47:42] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'django.contrib.auth.models.User'> QuerySet.
+  paginator = self.django_paginator_class(queryset, page_size)
+[04/Aug/2020 11:47:45] "GET /users/ HTTP/1.1" 200 15670
+Method Not Allowed: /api/change-password/
+[04/Aug/2020 11:48:25] "GET /api/change-password/ HTTP/1.1" 405 12467
+[04/Aug/2020 11:48:34] "PUT /api/change-password/ HTTP/1.1" 200 12542
+Forbidden: /api/change-password/
+[04/Aug/2020 11:48:42] "PUT /api/change-password/ HTTP/1.1" 403 8519
+[04/Aug/2020 11:48:50] "GET /api-auth/login/?next=/api/change-password/ HTTP/1.1" 200 2721
+[04/Aug/2020 11:48:56] "POST /api-auth/login/ HTTP/1.1" 200 2960
+[04/Aug/2020 11:49:03] "POST /api-auth/login/ HTTP/1.1" 302 0
+Method Not Allowed: /api/change-password/
+[04/Aug/2020 11:49:03] "GET /api/change-password/ HTTP/1.1" 405 12467
+[04/Aug/2020 11:49:13] "PUT /api/change-password/ HTTP/1.1" 200 12542
+/home/pouria/tutorial/2/tutorial/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 04, 2020 - 11:50:31
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[04/Aug/2020 11:50:45] "GET / HTTP/1.1" 200 9836
+/home/pouria/tutorial/2/tutorial/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 04, 2020 - 11:50:58
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 04, 2020 - 11:51:04
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[04/Aug/2020 11:51:09] "GET / HTTP/1.1" 200 9836
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:09] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[04/Aug/2020 11:51:12] "GET /snippets/ HTTP/1.1" 200 17573
+/home/pouria/tutorial/2/tutorial/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 04, 2020 - 11:51:36
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[04/Aug/2020 11:51:45] "GET / HTTP/1.1" 200 9738
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[04/Aug/2020 11:51:45] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+/home/pouria/tutorial/2/tutorial/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 04, 2020 - 11:52:15
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[04/Aug/2020 11:52:19] "GET / HTTP/1.1" 200 9993
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[04/Aug/2020 11:52:19] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Method Not Allowed: /change password/
+[04/Aug/2020 11:52:22] "GET /change%20password/ HTTP/1.1" 405 8593
+[04/Aug/2020 11:52:30] "GET /api-auth/login/?next=/change%20password/ HTTP/1.1" 200 2717
+[04/Aug/2020 11:52:35] "POST /api-auth/login/ HTTP/1.1" 302 0
+Method Not Allowed: /change password/
+[04/Aug/2020 11:52:35] "GET /change%20password/ HTTP/1.1" 405 12451
+[04/Aug/2020 11:52:38] "GET / HTTP/1.1" 200 10222
+/home/pouria/my_venv/lib/python3.8/site-packages/rest_framework/pagination.py:200: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'django.contrib.auth.models.User'> QuerySet.
+  paginator = self.django_paginator_class(queryset, page_size)
+[04/Aug/2020 11:52:40] "GET /users/ HTTP/1.1" 200 15670
+[04/Aug/2020 11:52:48] "GET / HTTP/1.1" 200 10222
+[04/Aug/2020 11:52:50] "GET /snippets/ HTTP/1.1" 200 65121
+[04/Aug/2020 11:52:55] "GET / HTTP/1.1" 200 10222
+Method Not Allowed: /change password/
+[04/Aug/2020 11:52:56] "GET /change%20password/ HTTP/1.1" 405 12451
+[04/Aug/2020 11:52:58] "GET / HTTP/1.1" 200 10222
+^C(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ python -m pip install -U channs
+Collecting channels
+  Downloading channels-2.4.0-py2.py3-none-any.whl (37 kB)
+Requirement already satisfied, skipping upgrade: asgiref~=3.2 in /home/pouria/my_venv/lib/python3.8/site-packages (from channels) (3.2.10)
+Requirement already satisfied, skipping upgrade: Django>=2.2 in /home/pouria/my_venv/lib/python3.8/site-packages (from channels) (3.1)
+Collecting daphne~=2.3
+  Downloading daphne-2.5.0-py2.py3-none-any.whl (26 kB)
+Requirement already satisfied, skipping upgrade: pytz in /home/pouria/my_venv/lib/python3.8/site-packages (from Django>=2.2->channels) (2020.1)
+Requirement already satisfied, skipping upgrade: sqlparse>=0.2.2 in /home/pouria/my_venv/lib/python3.8/site-packages (from Django>=2.2->channels) (0.3.1)
+Collecting autobahn>=0.18
+  Downloading autobahn-20.7.1-py2.py3-none-any.whl (1.5 MB)
+     |████████████████████████████████| 1.5 MB 225 kB/s 
+Collecting twisted[tls]>=18.7
+  Downloading Twisted-20.3.0.tar.bz2 (3.1 MB)
+     |████████████████████████████████| 3.1 MB 628 kB/s 
+Collecting cryptography>=2.7
+  Downloading cryptography-3.0-cp35-abi3-manylinux2010_x86_64.whl (2.7 MB)
+     |████████████████████████████████| 2.7 MB 150 kB/s 
+Collecting txaio>=20.3.1
+  Downloading txaio-20.4.1-py2.py3-none-any.whl (30 kB)
+Collecting Automat>=0.3.0
+  Downloading Automat-20.2.0-py2.py3-none-any.whl (31 kB)
+Collecting PyHamcrest!=1.10.0,>=1.9.0
+  Downloading PyHamcrest-2.0.2-py3-none-any.whl (52 kB)
+     |████████████████████████████████| 52 kB 26 kB/s 
+Collecting attrs>=19.2.0
+  Downloading attrs-19.3.0-py2.py3-none-any.whl (39 kB)
+Collecting constantly>=15.1
+  Downloading constantly-15.1.0-py2.py3-none-any.whl (7.9 kB)
+Collecting hyperlink>=17.1.1
+  Downloading hyperlink-20.0.0-py2.py3-none-any.whl (48 kB)
+     |████████████████████████████████| 48 kB 112 kB/s 
+Collecting incremental>=16.10.1
+  Using cached incremental-17.5.0-py2.py3-none-any.whl (16 kB)
+Collecting zope.interface>=4.4.2
+  Downloading zope.interface-5.1.0-cp38-cp38-manylinux2010_x86_64.whl (243 kB)
+     |████████████████████████████████| 243 kB 112 kB/s 
+Requirement already satisfied, skipping upgrade: idna!=2.3,>=0.6 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (2.10)
+Collecting pyopenssl>=16.0.0
+  Downloading pyOpenSSL-19.1.0-py2.py3-none-any.whl (53 kB)
+     |████████████████████████████████| 53 kB 133 kB/s 
+Collecting service_identity>=18.1.0
+  Downloading service_identity-18.1.0-py2.py3-none-any.whl (11 kB)
+Collecting cffi!=1.11.3,>=1.8
+  Downloading cffi-1.14.1-cp38-cp38-manylinux1_x86_64.whl (409 kB)
+     |████████████████████████████████| 409 kB 40 kB/s 
+Collecting six>=1.4.1
+  Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting typing
+  Downloading typing-3.7.4.3.tar.gz (78 kB)
+     |████████████████████████████████| 78 kB 107 kB/s 
+Requirement already satisfied, skipping upgrade: setuptools in /home/pouria/my_venv/lib/python3.8/site-packages (from zope.interface>=4.4.2->twisted[tls]>=18.7->daphne~=2.3->channels) (44.0.0)
+Collecting pyasn1
+  Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+     |████████████████████████████████| 77 kB 119 kB/s 
+Collecting pyasn1-modules
+  Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+     |████████████████████████████████| 155 kB 64 kB/s 
+Collecting pycparser
+  Downloading pycparser-2.20-py2.py3-none-any.whl (112 kB)
+     |████████████████████████████████| 112 kB 83 kB/s 
+Building wheels for collected packages: twisted, typing
+  Building wheel for twisted (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /home/pouria/my_venv/bin/python -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-2o3eplbo/twisted/setup.py'"'"'; __file__='"'"'/tmp/pip-install-2o3eplbo/twisted/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-nen45xj2
+       cwd: /tmp/pip-install-2o3eplbo/twisted/
+  Complete output (7 lines):
+  WARNING: The wheel package is not available.
+  usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: setup.py --help [cmd1 cmd2 ...]
+     or: setup.py --help-commands
+     or: setup.py cmd --help
+  
+  error: invalid command 'bdist_wheel'
+  ----------------------------------------
+  ERROR: Failed building wheel for twisted
+  Running setup.py clean for twisted
+  Building wheel for typing (setup.py) ... error
+  ERROR: Command errored out with exit status 1:
+   command: /home/pouria/my_venv/bin/python -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-2o3eplbo/typing/setup.py'"'"'; __file__='"'"'/tmp/pip-install-2o3eplbo/typing/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' bdist_wheel -d /tmp/pip-wheel-kbbcg2z1
+       cwd: /tmp/pip-install-2o3eplbo/typing/
+  Complete output (6 lines):
+  usage: setup.py [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+     or: setup.py --help [cmd1 cmd2 ...]
+     or: setup.py --help-commands
+     or: setup.py cmd --help
+  
+  error: invalid command 'bdist_wheel'
+  ----------------------------------------
+  ERROR: Failed building wheel for typing
+  Running setup.py clean for typing
+Failed to build twisted typing
+Installing collected packages: pycparser, cffi, six, cryptography, txaio, autobahn, attrs, Automat, PyHamcrest, constantly, typing, hyperlink, incremental, zope.interface, pyopenssl, pyasn1, pyasn1-modules, service-identity, twisted, daphne, channels
+    Running setup.py install for typing ... done
+    Running setup.py install for twisted ... done
+Successfully installed Automat-20.2.0 PyHamcrest-2.0.2 attrs-19.3.0 autobahn-20.7.1 cffi-1.14.1 channels-2.4.0 constantly-15.1.0 cryptography-3.0 daphne-2.5.0 hyperlink-20.0.0 incremental-17.5.0 pyasn1-0.4.8 pyasn1-modules-0.2.8 pycparser-2.20 pyopenssl-19.1.0 service-identity-18.1.0 six-1.15.0 twisted-20.3.0 txaio-20.4.1 typing-3.7.4.3 zope.interface-5.1.0
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ python -m pip install -U channels
+Requirement already up-to-date: channels in /home/pouria/my_venv/lib/python3.8/site-packages (2.4.0)
+Requirement already satisfied, skipping upgrade: daphne~=2.3 in /home/pouria/my_venv/lib/python3.8/site-packages (from channels) (2.5.0)
+Requirement already satisfied, skipping upgrade: asgiref~=3.2 in /home/pouria/my_venv/lib/python3.8/site-packages (from channels) (3.2.10)
+Requirement already satisfied, skipping upgrade: Django>=2.2 in /home/pouria/my_venv/lib/python3.8/site-packages (from channels) (3.1)
+Requirement already satisfied, skipping upgrade: twisted[tls]>=18.7 in /home/pouria/my_venv/lib/python3.8/site-packages (from daphne~=2.3->channels) (20.3.0)
+Requirement already satisfied, skipping upgrade: autobahn>=0.18 in /home/pouria/my_venv/lib/python3.8/site-packages (from daphne~=2.3->channels) (20.7.1)
+Requirement already satisfied, skipping upgrade: sqlparse>=0.2.2 in /home/pouria/my_venv/lib/python3.8/site-packages (from Django>=2.2->channels) (0.3.1)
+Requirement already satisfied, skipping upgrade: pytz in /home/pouria/my_venv/lib/python3.8/site-packages (from Django>=2.2->channels) (2020.1)
+Requirement already satisfied, skipping upgrade: Automat>=0.3.0 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (20.2.0)
+Requirement already satisfied, skipping upgrade: PyHamcrest!=1.10.0,>=1.9.0 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (2.0.2)
+Requirement already satisfied, skipping upgrade: attrs>=19.2.0 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (19.3.0)
+Requirement already satisfied, skipping upgrade: constantly>=15.1 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (15.1.0)
+Requirement already satisfied, skipping upgrade: hyperlink>=17.1.1 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (20.0.0)
+Requirement already satisfied, skipping upgrade: incremental>=16.10.1 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (17.5.0)
+Requirement already satisfied, skipping upgrade: zope.interface>=4.4.2 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (5.1.0)
+Requirement already satisfied, skipping upgrade: idna!=2.3,>=0.6 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (2.10)
+Requirement already satisfied, skipping upgrade: pyopenssl>=16.0.0 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (19.1.0)
+Requirement already satisfied, skipping upgrade: service_identity>=18.1.0 in /home/pouria/my_venv/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels) (18.1.0)
+Requirement already satisfied, skipping upgrade: txaio>=20.3.1 in /home/pouria/my_venv/lib/python3.8/site-packages (from autobahn>=0.18->daphne~=2.3->channels) (20.4.1)
+Requirement already satisfied, skipping upgrade: cryptography>=2.7 in /home/pouria/my_venv/lib/python3.8/site-packages (from autobahn>=0.18->daphne~=2.3->channels) (3.0)
+Requirement already satisfied, skipping upgrade: six in /home/pouria/my_venv/lib/python3.8/site-packages (from Automat>=0.3.0->twisted[tls]>=18.7->daphne~=2.3->channels) (1.15.0)
+Requirement already satisfied, skipping upgrade: typing in /home/pouria/my_venv/lib/python3.8/site-packages (from hyperlink>=17.1.1->twisted[tls]>=18.7->daphne~=2.3->channels) (3.7.4.3)
+Requirement already satisfied, skipping upgrade: setuptools in /home/pouria/my_venv/lib/python3.8/site-packages (from zope.interface>=4.4.2->twisted[tls]>=18.7->daphne~=2.3->channels) (44.0.0)
+Requirement already satisfied, skipping upgrade: pyasn1 in /home/pouria/my_venv/lib/python3.8/site-packages (from service_identity>=18.1.0->twisted[tls]>=18.7->daphne~=2.3->channels) (0.4.8)
+Requirement already satisfied, skipping upgrade: pyasn1-modules in /home/pouria/my_venv/lib/python3.8/site-packages (from service_identity>=18.1.0->twisted[tls]>=18.7->daphne~=2.3->channels) (0.2.8)
+Requirement already satisfied, skipping upgrade: cffi!=1.11.3,>=1.8 in /home/pouria/my_venv/lib/python3.8/site-packages (from cryptography>=2.7->autobahn>=0.18->daphne~=2.3->channels) (1.14.1)
+Requirement already satisfied, skipping upgrade: pycparser in /home/pouria/my_venv/lib/python3.8/site-packages (from cffi!=1.11.3,>=1.8->cryptography>=2.7->autobahn>=0.18->daphne~=2.3->channels) (2.20)
+(my_venv) pouria@ubuntu:~/tutorial/2/tutorial$ 7

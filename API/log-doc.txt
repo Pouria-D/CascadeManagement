@@ -1,0 +1,15 @@
+loggers:
+    - config
+    - entity
+    - firewall
+    - qos
+    - user
+    - vpn
+
+
+log message structure:
+    - config:
+        -interface:
+            - add to db: 'interface <name> added to db'
+            - update: 'interface <name> updated'
+            - delete from: 'interface <name> deleted to db'

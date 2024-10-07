@@ -1,0 +1,54 @@
+The network is working on some rules:
+1. Adding unknown interfaces in API's db (This is done in watcher in set_system_interface)
+2. Check each interface configuration and apply changes if there is some unset configs (This is done in watcher too...)
+3. In main function (config_network_interface) the following steps will comes for each network interface:
+    a. Check if the network interface is default gateway!
+    b. Check the connection name, related to this network interface.
+    Note: Important note here is the name of connection must be <interface_name>_con e.g. ETH0_con
+    c. Change the connection name if it does not follow the above rule.
+    d. Change the connection base on the following algorithm:
+                            Is there any relate connection to this network?
+                            |                                             |
+                           |                                               |
+                          |                                                 |
+                         Yes                                                No
+                          |                                                 |
+                        is it enabled?                                    is it enabled?
+                        |            |                                    |            |
+                       |              |                                  |              |
+                      Yes             No                                Yes             No
+                       |               |                                 |               |
+          Is something changed?         |                         Add connection       Finish
+          |                   |          |                               |
+         |                     |     Delete it.                     Finish
+        Yes                    No
+         |                     |
+ Delete old connection       Finish
+         |
+ Add connection with new parameters
+         |
+       Finish
+
+    Note: The modify connection does not work in some cases! (may be a bug in network interfaces), so we delete and add
+    a connection to modify it.
+    e. Change the route table if the interface should be the default gateway.
+    f. Down/Up the connection if there is some changes.
+
+We have two important concepts in nmcli (Network-Manager)
+1. Device:
+    The real interface names in system.
+2. Connections:
+    The nmcli connections that are connected to a real Device in system.
+
+From Device, we can know the current state of a real interface. e.g. The real state of a connection (for example 30 that
+means disconnected). The complete reference for these states is in
+https://developer.gnome.org/NetworkManager/stable/nm-dbus-types.html#NMDeviceState
+Some of important states are this:
+NM_DEVICE_STATE_UNAVAILABLE     =   20  the device is managed by NetworkManager, but is not available for use.
+    Reasons may include the wireless switched off, missing firmware, no ethernet carrier,
+    missing supplicant or modem manager, etc. (Usually Cable is not connected)
+NM_DEVICE_STATE_IP_CONFIG       =   70  the device is requesting IPv4 and/or IPv6 addresses and routing information
+    from the network. (Usually Trying to get ip address from DHCP)
+NM_DEVICE_STATE_ACTIVATED       =   100 the device has a network connection, either local or global. (Usually everything
+    is OK and the device is connected successfully and connected)
+

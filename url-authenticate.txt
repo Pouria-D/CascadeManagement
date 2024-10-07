@@ -1,0 +1,132 @@
+1- First simply want to have a url in my device fields :
+
+$ ways of hyperlinking and relation ships between entities in rest which is indicating in rest website!
+
+	Using primary keys.
+	Using hyperlinking between entities.
+	Using a unique identifying slug field on the related entity.
+	Using the default string representation of the related entity.
+	Nesting the related entity inside the parent representation.
+	Some other custom representation.
+
+$ But there is no need for these complex ways ! for this aim we just need to add a urlfield to our device model ... 
+It would work properly for now and it just open the url which user has been set ; and for deploying the url it will check the format be correct ..
+
+2- Now we want to aply 2 options ;
+
+~* the destiantion want user / pass authentication . we want to circumvent it and directly get information in json form 
+
+$ So let's try and search possible ways ...
+
+$$ in (https://www.django-rest-framework.org/api-guide/testing/#forcing-csrf-validation) talked about testing api and there it needed to force authentication for test user
+by force_authenticate() method :
+	
+	from rest_framework.test import force_authenticate
+
+	factory = APIRequestFactory()
+	user = User.objects.get(username='olivia')
+	view = AccountDetail.as_view()
+
+	# Make an authenticated request to the view...
+	request = factory.get('/accounts/django-superstars/')
+	force_authenticate(request, user=user)
+	response = view(request)
+	
+and for force CSRF-validation :
+	
+	factory = APIRequestFactory(enforce_csrf_checks=True)
+
+**NOTICE ; 	most of these suggestions is about RequestFactory that is used in the beginning of titorial for making a test for api ! so becareful ...
+
+$ another important thing in this site is APIclient :
+
+	from rest_framework.test import APIClient
+
+	client = APIClient()	
+	client.post('/notes/', {'title': 'new idea'}, format='json')
+
+loging in our client ! :
+
+	# Make all requests in the context of a logged in session.
+	client = APIClient()
+	client.login(username='lauren', password='secret')
+
+and log out :
+	
+	# Log out
+	client.logout()
+
+and the rest of site ...
+BUT as you seen it's for test not real and i don't think these method exist for real app and users ... !
+
+$ another useful source is here ( https://docs.djangoproject.com/en/3.0/topics/http/middleware/#view-middleware ) 
+first you become familiar with middleware and it's concepts and further for our purpose it talks about process_view() which contains CsrfViewMiddleware( hold csrf_exempt() & csrf_protect())
+
+the most related one is csrf_exempt() . this middleware says the following view doesn't need protection ! but we want this option just for a specific url not anyone
+maybe we should write our own middleware which is based on csrf_exempt but for one user ! ...
+
+PATH :
+	1ST API                              2ND API                
+	LOGIN PAGE                           USER LOGIN 
+	SOME VIEWS                           DEVICE INSTANCE
+	5TH VIEW  ......(SKIP LOGIN)........ URL 
+
+$ in USER part of that site ()
+we have good information about User Objects and their different sets of permissions .
+
+	Authentication in Web requests¶
+	Django uses sessions and middleware to hook the authentication system into request objects.
+
+	These provide a request.user attribute on every request which represents the current user. If the current user has not logged in,
+	this attribute will be set to an instance of AnonymousUser, otherwise it will be an instance of User.
+
+	You can tell them apart with is_authenticated, like so:
+
+	if request.user.is_authenticated:
+		# Do something for authenticated users.
+		...
+	else:
+		# Do something for anonymous users.
+		...
+		
+and LOG a user IN , manually ; 
+	
+	https://docs.djangoproject.com/en/3.0/topics/auth/default/#how-to-log-a-user-in
+
+and login_required () :
+
+	from django.contrib.auth.decorators import login_required
+
+	@login_required(redirect_field_name='my_redirect_field')
+	def my_view(request):
+		...
+
+$ Another most relative topic is Authentication using REMOTE_USER :
+it's about server authentication , which is provided by web servers ... :
+	This document describes how to make use of external authentication sources (where the Web server sets the REMOTE_USER environment variable) in your Django applications.
+	This type of authentication solution is typically seen on intranet sites, with single sign-on solutions such as IIS and Integrated Windows Authentication or
+	Apache and mod_authnz_ldap, CAS, Cosign, WebAuth, mod_auth_sspi, etc.
+
+	When the Web server takes care of authentication it typically sets the REMOTE_USER environment variable for use in the underlying application. In Django, REMOTE_USER
+	is made available in the request.META attribute. Django can be configured to make use of the REMOTE_USER value using the RemoteUserMiddleware or PersistentRemoteUserMiddleware,
+	and RemoteUserBackend classes found in django.contrib.auth.
+	
+	https://docs.djangoproject.com/en/3.0/howto/auth-remote-user/
+	
+$ NOW let's go to main part which is CSRF ! :
+	Cross Site Request Forgery protection
+	
+If you disabled 'django.middleware.csrf.CsrfViewMiddleware' , which is not recommended, you can use csrf_protect() on particular views you want to protect (see below).
+
+https://docs.djangoproject.com/en/3.0/ref/csrf/#django.views.decorators.csrf.csrf_exempt
+
+from this part to bottom of the page has very related and effective information.
+senarios and ...
+
+$ At last I faced Cross Origin Resource Sharing ( CORS )
+	the topic is so attractive to our aim but it didn't explain a lot !
+	
+A bad point for this topic is that testing these ideas is not easy or even commonly possible for me ! because the destination API is not on my system and main changes
+as I've realized is on destiantion server ! :(
+
+

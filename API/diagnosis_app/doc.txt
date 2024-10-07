@@ -1,0 +1,69 @@
+Diagnosis:
+    - installation : mtr, ping, conntrack,  psutil
+    - functionality requirements:
+        * ping {} -w 5 // send ICMP ECHO_REQUEST to network hosts
+
+        * ping -I {} {} -w 5 // check exists link between source address to specified interface address
+
+              -W timeout
+                   Time to wait for a response, in seconds. The option affects only timeout in absence of
+                   any responses, otherwise ping waits for two RTTs.
+
+
+              -I interface
+                   interface is either an address, or an interface name. If interface is an address, it
+                   sets source address to specified interface address. If interface in an interface name,
+                   it sets source interface to specified interface.
+
+        * mtr -r {}  -o "LSDR NBAW VG JMXI" // a network diagnostic tool
+
+              -r, --report
+                This  option  puts  mtr  into report mode.
+
+              -o FIELDS, --order FIELDS
+                  Use this option to specify which fields to display and in which order.  You may use
+                  one or more space characters to separate fields.
+                  Available fields:
+                           ┌──┬─────────────────────┐
+                           │L │ Loss ratio          │
+                           ├──┼─────────────────────┤
+                           │D │ Dropped packets     │
+                           ├──┼─────────────────────┤
+                           │R │ Received packets    │
+                           ├──┼─────────────────────┤
+                           │S │ Sent Packets        │
+                           ├──┼─────────────────────┤
+                           │N │ Newest RTT(ms)      │
+                           ├──┼─────────────────────┤
+                           │B │ Min/Best RTT(ms)    │
+                           ├──┼─────────────────────┤
+                           │A │ Average RTT(ms)     │
+                           ├──┼─────────────────────┤
+                           │W │ Max/Worst RTT(ms)   │
+                           ├──┼─────────────────────┤
+                           │V │ Standard Deviation  │
+                           ├──┼─────────────────────┤
+                           │G │ Geometric Mean      │
+                           ├──┼─────────────────────┤
+                           │J │ Current Jitter      │
+                           ├──┼─────────────────────┤
+                           │M │ Jitter Mean/Avg.    │
+                           ├──┼─────────────────────┤
+                           │X │ Worst Jitter        │
+                           ├──┼─────────────────────┤
+                           │I │ Interarrival Jitter │
+                           └──┴─────────────────────┘
+        *conntrack − command line interface for netfilter connection tracking
+            for get count connection established :
+
+                -run command : conntrack -L | grep 'ASSURED' | wc -l // Show the connection tracking table in /proc/net/ip_conntrack format
+                    -L => List connection tracking or expectation table
+
+                 after install conntrack you must check exists nf_conntrack_ipv4 by command : lsmod | grep conn #check exsis nf_conntrack_ipv4
+                 if is not you must active it : active sudo modprobe ip_conntrack (for delete it :  remove sudo modprobe -r ip_conntrack)
+                 if you procced do at reboot system put command "sudo modprobe ip_conntrack"  in installer
+
+        * get info cpu/ram by percent
+            psutil.cpu_percent()
+            psutil.virtual_memory().percent
+

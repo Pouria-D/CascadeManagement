@@ -1,0 +1,110 @@
+[
+  {
+    "model": "config_app.interface",
+    "pk": 1,
+    "fields": {
+      "name": "ens18",
+      "description": null,
+      "alias": null,
+      "ip_list": [
+        {
+          "mask": "255.255.255.0",
+          "ip": "192.168.15.70"
+        }
+      ],
+      "gateway": null,
+      "is_default_gateway": false,
+      "is_dhcp_enabled": false,
+      "type": "",
+      "is_enabled": true,
+      "link_type": "Ethernet",
+      "pppoe_username": null,
+      "pppoe_password": null,
+      "mtu": 1500
+    }
+  },
+  {
+    "model": "config_app.interface",
+    "pk": 2,
+    "fields": {
+      "name": "ens19",
+      "description": null,
+      "alias": null,
+      "ip_list": "",
+      "gateway": null,
+      "is_default_gateway": false,
+      "is_dhcp_enabled": false,
+      "type": "",
+      "is_enabled": true,
+      "link_type": "Ethernet",
+      "pppoe_username": null,
+      "pppoe_password": null,
+      "mtu": 1500
+    }
+  },
+  {
+    "model": "config_app.interface",
+    "pk": 5,
+    "fields": {
+      "name": "ens20",
+      "description": "",
+      "alias": "ens20",
+      "ip_list": [],
+      "gateway": null,
+      "is_default_gateway": false,
+      "is_dhcp_enabled": true,
+      "type": "WAN",
+      "is_enabled": true,
+      "link_type": "PPPOE",
+      "pppoe_username": "naghdi",
+      "pppoe_password": "123qwe!",
+      "mtu": 1500
+    }
+  },
+  {
+    "model": "config_app.interface",
+    "pk": 67,
+    "fields": {
+      "name": "enp2s0",
+      "description": null,
+      "alias": "enp2s0",
+      "ip_list": [
+        {
+          "ip": "192.168.15.144",
+          "mask": "255.255.255.0"
+        }
+      ],
+      "gateway": "192.168.15.10",
+      "is_default_gateway": true,
+      "is_dhcp_enabled": true,
+      "type": "",
+      "is_enabled": false,
+      "link_type": "Ethernet",
+      "pppoe_username": null,
+      "pppoe_password": null,
+      "mtu": 1500
+    }
+  },
+  {
+    "model": "config_app.interface",
+    "pk": 23,
+    "fields": {
+      "name": "ens80",
+      "description": "",
+      "alias": "ens80",
+      "ip_list": [],
+      "gateway": null,
+      "is_default_gateway": false,
+      "is_dhcp_enabled": true,
+      "type": "WAN",
+      "is_enabled": true,
+      "link_type": "PPPOE",
+      "pppoe_username": "naghdi",
+      "pppoe_password": "123qwe!",
+      "mtu": 1500,
+      "download_bandwidth": 8000,
+      "upload_bandwidth": 6000,
+      "qos_status":"succeeded"
+    }
+  }
+]

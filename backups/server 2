@@ -1,0 +1,604 @@
+pouria@ubuntu:~$ ssh raymon@192.168.6.130 
+The authenticity of host '192.168.6.130 (192.168.6.130)' can't be established.
+ECDSA key fingerprint is SHA256:au9lvMQ3Yaj48jfgE8C3vYF9GXQBdZWOdZjYHviUkjk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Failed to add the host to the list of known hosts (/home/pouria/.ssh/known_hosts).
+raymon@192.168.6.130's password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun 13 Sep 2020 05:03:44 AM UTC
+
+  System load:  0.4                Processes:                282
+  Usage of /:   14.0% of 48.47GB   Users logged in:          1
+  Memory usage: 43%                IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                 IPv4 address for ens160:  192.168.6.130
+
+
+34 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Sat Sep 12 09:08:44 2020 from 192.168.6.153
+raymon@raymon:~$ cd cascade
+raymon@raymon:~/cascade$ ls
+auth_app          env   manage.py         snippet  utils
+DeviceManagement  main  requirements.txt  static
+raymon@raymon:~/cascade$ cd utils
+raymon@raymon:~/cascade/utils$ ls
+__pycache__  serializers.py
+raymon@raymon:~/cascade/utils$ cd ..
+raymon@raymon:~/cascade$ cd auth-app
+-bash: cd: auth-app: No such file or directory
+raymon@raymon:~/cascade$ cd auth_app
+raymon@raymon:~/cascade/auth_app$ ls
+admin.py  __init__.py  models.py    rest_captcha  urls.py   views.py
+apps.py   migrations   __pycache__  tests.py      utils.py
+raymon@raymon:~/cascade/auth_app$ cd ..
+raymon@raymon:~/cascade$ ls
+auth_app          env   manage.py         snippet  utils
+DeviceManagement  main  requirements.txt  static
+raymon@raymon:~/cascade$ cd main
+raymon@raymon:~/cascade/main$ ls
+asgi.py  __init__.py  __pycache__  routing.py  settings.py  urls.py  wsgi.py
+raymon@raymon:~/cascade/main$ nan urls.py
+
+Command 'nan' not found, did you mean:
+
+  command 'na6' from deb ipv6toolkit (2.0-1)
+  command 'nano' from deb nano (4.8-1ubuntu1)
+  command 'nnn' from deb nnn (3.0-2)
+  command 'man' from deb man-db (2.9.1-1)
+  command 'dan' from deb emboss (6.6.0+dfsg-7ubuntu2)
+  command 'pan' from deb pan (0.146-1build1)
+  command 'nn' from deb nn (6.7.3-12)
+  command 'an' from deb an (1.2-6build2)
+  command 'nant' from deb nant (0.92~rc1+dfsg-7)
+  command 'nam' from deb nam (1.15-5build1)
+
+Try: sudo apt install <deb name>
+
+raymon@raymon:~/cascade/main$ nano urls.py
+raymon@raymon:~/cascade/main$ cd ..
+raymon@raymon:~/cascade$ scp -r raymon@192.168.6.130:~/cascade/auth_app pouria@192.168.6.124:~/cascade/auth_app
+The authenticity of host '192.168.6.130 (192.168.6.130)' can't be established.
+ECDSA key fingerprint is SHA256:au9lvMQ3Yaj48jfgE8C3vYF9GXQBdZWOdZjYHviUkjk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.6.130' (ECDSA) to the list of known hosts.
+raymon@192.168.6.130's password: 
+ssh: connect to host 192.168.6.124 port 22: Connection timed out
+lost connection
+raymon@raymon:~/cascade$ scp -r raymon@192.168.6.130:~/cascade/auth_app pouria@192.168.6.124:~/cascade
+raymon@192.168.6.130's password: 
+^Craymon@raymon:~/cascade$ scp -r  pouria@192.168.6.124:~/cascade/auth_app ~/auth_app
+/home/raymon/auth_app: No such file or directory
+raymon@raymon:~/cascade$ scp -r ra pouria@192.168.6.124:~/cascade/auth_app ~/cascade/auth_app
+cp: cannot stat 'ra': No such file or directory
+^[[A^Craymon@raymon:~/cascade$ scp -r  pouria@192.168.6.124:~/cascade/auth_app ~/cascade/auth_app
+^Craymon@raymon:~/cascade$ exit
+logout
+Connection to 192.168.6.130 closed.
+pouria@ubuntu:~$ cd cascade
+pouria@ubuntu:~/cascade$ scp raymon@192.168.6.130:~/cascade/auth_app ~/cascade
+The authenticity of host '192.168.6.130 (192.168.6.130)' can't be established.
+ECDSA key fingerprint is SHA256:au9lvMQ3Yaj48jfgE8C3vYF9GXQBdZWOdZjYHviUkjk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Failed to add the host to the list of known hosts (/home/pouria/.ssh/known_hosts).
+raymon@192.168.6.130's password: 
+scp: /home/raymon/cascade/auth_app: not a regular file
+pouria@ubuntu:~/cascade$ scp -r raymon@192.168.6.130:~/cascade/auth_app ~/cascade
+The authenticity of host '192.168.6.130 (192.168.6.130)' can't be established.
+ECDSA key fingerprint is SHA256:au9lvMQ3Yaj48jfgE8C3vYF9GXQBdZWOdZjYHviUkjk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Failed to add the host to the list of known hosts (/home/pouria/.ssh/known_hosts).
+raymon@192.168.6.130's password: 
+admin.py                                                                                                                                                                 100%  149    73.3KB/s   00:00    
+views.py                                                                                                                                                                 100% 3072     1.7MB/s   00:00    
+__init__.py                                                                                                                                                              100%    0     0.0KB/s   00:00    
+models.py                                                                                                                                                                100% 1185     1.4MB/s   00:00    
+urls.py                                                                                                                                                                  100%  926     1.5MB/s   00:00    
+tests.py                                                                                                                                                                 100%   26    19.5KB/s   00:00    
+__init__.py                                                                                                                                                              100%    0     0.0KB/s   00:00    
+0001_initial.py                                                                                                                                                          100% 1468     1.3MB/s   00:00    
+0002_auto_20180818_1600.cpython-38.pyc                                                                                                                                   100%  588   130.4KB/s   00:00    
+__init__.cpython-38.pyc                                                                                                                                                  100%  143   186.4KB/s   00:00    
+0001_initial.cpython-38.pyc                                                                                                                                              100% 1293     1.6MB/s   00:00    
+0002_auto_20180818_1600.py                                                                                                                                               100%  395   225.3KB/s   00:00    
+apps.py                                                                                                                                                                  100%   90    72.5KB/s   00:00    
+views.py                                                                                                                                                                 100% 2461     1.8MB/s   00:00    
+__init__.py                                                                                                                                                              100%  200    67.0KB/s   00:00    
+urls.py                                                                                                                                                                  100%  163   131.6KB/s   00:00    
+captcha_py2.png                                                                                                                                                          100% 1312     1.4MB/s   00:00    
+tests.py                                                                                                                                                                 100% 5180     3.6MB/s   00:00    
+serializers.py                                                                                                                                                           100% 1169     1.5MB/s   00:00    
+settings.py                                                                                                                                                              100% 1112     1.5MB/s   00:00    
+captcha.py                                                                                                                                                               100% 2802     1.1MB/s   00:00    
+BRoya.ttf                                                                                                                                                                100%   54KB   9.3MB/s   00:00    
+README.TXT                                                                                                                                                               100%  320   231.8KB/s   00:00    
+COPYRIGHT.TXT                                                                                                                                                            100% 5953     3.2MB/s   00:00    
+Vera.ttf                                                                                                                                                                 100%   64KB  24.2MB/s   00:00    
+BRoyaBd.ttf                                                                                                                                                              100%   59KB  20.0MB/s   00:00    
+utils.py                                                                                                                                                                 100% 1056   848.7KB/s   00:00    
+views.cpython-38.pyc                                                                                                                                                     100% 2108     1.5MB/s   00:00    
+utils.cpython-38.pyc                                                                                                                                                     100% 4228     4.0MB/s   00:00    
+urls.cpython-38.pyc                                                                                                                                                      100% 1146     1.1MB/s   00:00    
+admin.cpython-38.pyc                                                                                                                                                     100%  289   276.2KB/s   00:00    
+models.cpython-38.pyc                                                                                                                                                    100% 1986     1.8MB/s   00:00    
+__init__.cpython-38.pyc                                                                                                                                                  100%  132    90.6KB/s   00:00    
+utils.py                                                                                                                                                                 100% 4496     2.5MB/s   00:00    
+pouria@ubuntu:~/cascade$ ls
+auth_app  DeviceManagement  env  main  manage.py  requirements.txt  snippet  static  utils
+pouria@ubuntu:~/cascade$ ssh raymon@192.168.6.130
+The authenticity of host '192.168.6.130 (192.168.6.130)' can't be established.
+ECDSA key fingerprint is SHA256:au9lvMQ3Yaj48jfgE8C3vYF9GXQBdZWOdZjYHviUkjk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Failed to add the host to the list of known hosts (/home/pouria/.ssh/known_hosts).
+raymon@192.168.6.130's password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun 13 Sep 2020 05:27:04 AM UTC
+
+  System load:  0.08               Processes:                288
+  Usage of /:   14.0% of 48.47GB   Users logged in:          1
+  Memory usage: 44%                IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                 IPv4 address for ens160:  192.168.6.130
+
+
+34 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Sun Sep 13 05:03:45 2020 from 192.168.6.124
+raymon@raymon:~$ cd cascade
+raymon@raymon:~/cascade$ ca main
+ca: command not found
+raymon@raymon:~/cascade$ cd main
+raymon@raymon:~/cascade/main$ nano settings.py
+raymon@raymon:~/cascade/main$ nano urlspy
+raymon@raymon:~/cascade/main$ nano urls.py
+raymon@raymon:~/cascade/main$ nano settings.py
+raymon@raymon:~/cascade/main$ exit
+logout
+Connection to 192.168.6.130 closed.
+pouria@ubuntu:~/cascade$ source env/bin/activate
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 377, in execute
+    django.setup()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'corsheaders'
+(env) pouria@ubuntu:~/cascade$ pip install corsheaders
+ERROR: Could not find a version that satisfies the requirement corsheaders (from versions: none)
+ERROR: No matching distribution found for corsheaders
+(env) pouria@ubuntu:~/cascade$ pip install django_extensions
+Collecting django_extensions
+  Downloading django_extensions-3.0.8-py3-none-any.whl (221 kB)
+     |████████████████████████████████| 221 kB 186 kB/s 
+Installing collected packages: django-extensions
+Successfully installed django-extensions-3.0.8
+(env) pouria@ubuntu:~/cascade$ pip install corsheaders
+ERROR: Could not find a version that satisfies the requirement corsheaders (from versions: none)
+ERROR: No matching distribution found for corsheaders
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 377, in execute
+    django.setup()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/apps/config.py", line 90, in create
+    module = import_module(entry)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'corsheaders'
+(env) pouria@ubuntu:~/cascade$ python -m pip install django-cors-headers
+Collecting django-cors-headers
+  Downloading django_cors_headers-3.5.0-py3-none-any.whl (11 kB)
+Requirement already satisfied: Django>=2.2 in ./env/lib/python3.8/site-packages (from django-cors-headers) (3.1)
+Requirement already satisfied: sqlparse>=0.2.2 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-cors-headers) (0.3.1)
+Requirement already satisfied: asgiref~=3.2.10 in ./env/lib/python3.8/site-packages (from Django>=2.2->django-cors-headers) (3.2.10)
+Requirement already satisfied: pytz in ./env/lib/python3.8/site-packages (from Django>=2.2->django-cors-headers) (2020.1)
+Installing collected packages: django-cors-headers
+Successfully installed django-cors-headers-3.5.0
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 177, in import_from_string
+    return import_string(val)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/auth_app/utils.py", line 9, in <module>
+    import requests_unixsocket
+ModuleNotFoundError: No module named 'requests_unixsocket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 368, in execute
+    self.check()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/urls.py", line 40, in <module>
+    from auth_app.views import ObtainExpiringAuthToken, logout
+  File "/home/pouria/cascade/auth_app/views.py", line 5, in <module>
+    from rest_framework import status, viewsets, serializers
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 27, in <module>
+    from rest_framework import generics, mixins, views
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 9, in <module>
+    from rest_framework import mixins, views
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 17, in <module>
+    from rest_framework.schemas import DefaultSchema
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/schemas/__init__.py", line 33, in <module>
+    authentication_classes=api_settings.DEFAULT_AUTHENTICATION_CLASSES,
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 220, in __getattr__
+    val = perform_import(val, attr)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return [import_from_string(item, setting_name) for item in val]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 168, in <listcomp>
+    return [import_from_string(item, setting_name) for item in val]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 180, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'auth_app.utils.IgnoreAuthForLocalhost' for API setting 'DEFAULT_AUTHENTICATION_CLASSES'. ModuleNotFoundError: No module named 'requests_unixsocket'.
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations auth_app
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 177, in import_from_string
+    return import_string(val)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/auth_app/utils.py", line 9, in <module>
+    import requests_unixsocket
+ModuleNotFoundError: No module named 'requests_unixsocket'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 368, in execute
+    self.check()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/urls.py", line 40, in <module>
+    from auth_app.views import ObtainExpiringAuthToken, logout
+  File "/home/pouria/cascade/auth_app/views.py", line 5, in <module>
+    from rest_framework import status, viewsets, serializers
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/viewsets.py", line 27, in <module>
+    from rest_framework import generics, mixins, views
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/generics.py", line 9, in <module>
+    from rest_framework import mixins, views
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/views.py", line 17, in <module>
+    from rest_framework.schemas import DefaultSchema
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/schemas/__init__.py", line 33, in <module>
+    authentication_classes=api_settings.DEFAULT_AUTHENTICATION_CLASSES,
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 220, in __getattr__
+    val = perform_import(val, attr)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 168, in perform_import
+    return [import_from_string(item, setting_name) for item in val]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 168, in <listcomp>
+    return [import_from_string(item, setting_name) for item in val]
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/rest_framework/settings.py", line 180, in import_from_string
+    raise ImportError(msg)
+ImportError: Could not import 'auth_app.utils.IgnoreAuthForLocalhost' for API setting 'DEFAULT_AUTHENTICATION_CLASSES'. ModuleNotFoundError: No module named 'requests_unixsocket'.
+(env) pouria@ubuntu:~/cascade$ pip install requests_unixsocket
+Collecting requests_unixsocket
+  Downloading requests_unixsocket-0.2.0-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: urllib3>=1.8 in ./env/lib/python3.8/site-packages (from requests_unixsocket) (1.25.10)
+Collecting requests>=1.1
+  Using cached requests-2.24.0-py2.py3-none-any.whl (61 kB)
+Requirement already satisfied: idna<3,>=2.5 in ./env/lib/python3.8/site-packages (from requests>=1.1->requests_unixsocket) (2.10)
+Collecting chardet<4,>=3.0.2
+  Using cached chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2020.6.20-py2.py3-none-any.whl (156 kB)
+Installing collected packages: chardet, certifi, requests, requests-unixsocket
+Successfully installed certifi-2020.6.20 chardet-3.0.4 requests-2.24.0 requests-unixsocket-0.2.0
+(env) pouria@ubuntu:~/cascade$ python manage.py makemigrations
+System check identified some issues:
+
+WARNINGS:
+?: (urls.W005) URL namespace 'rest_framework' isn't unique. You may not be able to reverse all URLs in this namespace
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute
+    output = self.handle(*args, **options)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 85, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/makemigrations.py", line 101, in handle
+    loader.check_consistent_history(connection)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/loader.py", line 290, in check_consistent_history
+    applied = recorder.applied_migrations()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 77, in applied_migrations
+    if self.has_table():
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/migrations/recorder.py", line 55, in has_table
+    with self.connection.cursor() as cursor:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 259, in cursor
+    return self._cursor()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 235, in _cursor
+    self.ensure_connection()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 219, in ensure_connection
+    self.connect()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/base/base.py", line 200, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/db/backends/postgresql/base.py", line 187, in get_new_connection
+    connection = Database.connect(**conn_params)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/psycopg2/__init__.py", line 127, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+django.db.utils.OperationalError: could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+
+(env) pouria@ubuntu:~/cascade$ ssh raymon@192.168.6.130
+The authenticity of host '192.168.6.130 (192.168.6.130)' can't be established.
+ECDSA key fingerprint is SHA256:au9lvMQ3Yaj48jfgE8C3vYF9GXQBdZWOdZjYHviUkjk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Failed to add the host to the list of known hosts (/home/pouria/.ssh/known_hosts).
+raymon@192.168.6.130's password: 
+Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun 13 Sep 2020 05:45:07 AM UTC
+
+  System load:  0.0                Processes:                286
+  Usage of /:   14.0% of 48.47GB   Users logged in:          1
+  Memory usage: 43%                IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                 IPv4 address for ens160:  192.168.6.130
+
+
+34 updates can be installed immediately.
+0 of these updates are security updates.
+To see these additional updates run: apt list --upgradable
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+
+Last login: Sun Sep 13 05:27:04 2020 from 192.168.6.124
+raymon@raymon:~$ cd cascade
+raymon@raymon:~/cascade$ cd DeviceManagement/
+raymon@raymon:~/cascade/DeviceManagement$ nano yrls.py
+raymon@raymon:~/cascade/DeviceManagement$ nano urls.py
+raymon@raymon:~/cascade/DeviceManagement$ nano views.py
+raymon@raymon:~/cascade/DeviceManagement$ nano urls.py
+raymon@raymon:~/cascade/DeviceManagement$ cd ..
+raymon@raymon:~/cascade$ cd main
+raymon@raymon:~/cascade/main$ ls
+asgi.py  __init__.py  __pycache__  routing.py  settings.py  urls.py  wsgi.py
+raymon@raymon:~/cascade/main$ nano settings.py 
+raymon@raymon:~/cascade/main$ nano settings.py 
+raymon@raymon:~/cascade/main$ ls
+asgi.py  __init__.py  __pycache__  routing.py  settings.py  urls.py  wsgi.py
+raymon@raymon:~/cascade/main$ nano __init__.py 
+raymon@raymon:~/cascade/main$ cd..
+cd..: command not found
+raymon@raymon:~/cascade/main$ cd ..
+raymon@raymon:~/cascade$ cd De
+-bash: cd: De: No such file or directory
+raymon@raymon:~/cascade$ cd DeviceManagement/
+raymon@raymon:~/cascade/DeviceManagement$ ls
+admin.py  apps.py  consumers.py  __init__.py  middleware.py  migrations  models.py  permissions.py  __pycache__  routing.py  serializers.py  tests.py  urls.py  views.py  views.py.save
+raymon@raymon:~/cascade/DeviceManagement$ nano views.py.save 
+raymon@raymon:~/cascade/DeviceManagement$ nano views.py.
+raymon@raymon:~/cascade/DeviceManagement$ nano views.py
+raymon@raymon:~/cascade/DeviceManagement$ cd ..
+raymon@raymon:~/cascade$ cd main
+raymon@raymon:~/cascade/main$ nano settings.py 
+raymon@raymon:~/cascade/main$ cd ..
+raymon@raymon:~/cascade$ source env/bin/activate
+(env) raymon@raymon:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 07:54:42
+Django version 3.1.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Listen failure: Couldn't listen on 127.0.0.1:8000: [Errno 98] Address already in use.
+^C(env) raymon@raymon:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 08:04:11
+Django version 3.1.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Listen failure: Couldn't listen on 127.0.0.1:8000: [Errno 98] Address already in use.
+^C(env) raymon@raymon:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 08:04:44
+Django version 3.1.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Listen failure: Couldn't listen on 127.0.0.1:8000: [Errno 98] Address already in use.
+^C(env) raymon@raymon:~/cascade$ python manage.py runserver 0.0.0.0:8001
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 08:05:22
+Django version 3.1.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/home/raymon/cascade/env/lib/python3.8/site-packages/daphne/http_protocol.py", line 163, in process
+    self.application_queue = yield maybeDeferred(
+ModuleNotFoundError: No module named 'coreheaders'
+
+HTTP GET / 500 [0.00, 127.0.0.1:60828]
+/home/raymon/cascade/main/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 13, 2020 - 09:17:22
+Django version 3.1.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://0.0.0.0:8001/
+Quit the server with CONTROL-C.
+

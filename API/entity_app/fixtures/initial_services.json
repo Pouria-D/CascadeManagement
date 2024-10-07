@@ -1,0 +1,1025 @@
+[
+  {
+    "pk": 2,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "All-TCP",
+      "description": "all tcp protocols",
+      "is_user_defined": "False",
+      "protocol": {
+        "tcp": {}
+      }
+    }
+  },
+  {
+    "pk": 3,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "All-UDP",
+      "description": "all udp protocols",
+      "is_user_defined": "False",
+      "protocol": {
+        "udp": {}
+      }
+    }
+  },
+  {
+    "pk": 4,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "All-ICMP",
+      "description": "all udp protocols",
+      "is_user_defined": "False",
+      "protocol": {
+        "icmp": {}
+      }
+    }
+  },
+  {
+    "pk": 5,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "HTTP",
+      "description": "web access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "80"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 6,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "HTTPS",
+      "description": "web access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "443"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 7,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "AFS3",
+      "description": "file access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "7000-7009"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "7000-7009"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 8,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "FTP",
+      "description": "file access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "21"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 9,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "FTP_GET",
+      "description": "file access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "21"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 10,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "FTP_PUT",
+      "description": "file access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "21"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 11,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "NFS",
+      "description": "file access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "111",
+            "2049"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "111",
+            "2049"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 12,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SAMBA",
+      "description": "file access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "139"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 13,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SMB",
+      "description": "file access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "445"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 14,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "TFTP",
+      "description": "file access",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "dst": [
+            "69"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 15,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "IMAP",
+      "description": "email",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "143"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 16,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "IMAPS",
+      "description": "email",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "993"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 17,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "POP3",
+      "description": "email",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "110"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 18,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "POP3S",
+      "description": "email",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "995"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 19,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SMTP",
+      "description": "email",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "25"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 20,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SMTPS",
+      "description": "email",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "465"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 21,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "BGP",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "179"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 22,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "DHCP",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "dst": [
+            "67-68"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 23,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "DHCP6",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "dst": [
+            "546-547"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 24,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "DNS",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "53"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "53"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 25,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "NTP",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "123"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "123"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 26,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "OSPF",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "ip": {
+          "protocol_number": "89"
+        }
+      }
+    }
+  },
+  {
+    "pk": 27,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "PING",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "icmp": {
+          "type": "8"
+        }
+      }
+    }
+  },
+  {
+    "pk": 28,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "RIP",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "dst": [
+            "520"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 29,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SNMP",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "161-162"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "161-162"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 30,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SYSLOG",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "dst": [
+            "514"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 31,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "TRACEROUTE",
+      "description": "network services",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "dst": [
+            "33434-33535"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 32,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "KERBEROS",
+      "description": "authentication",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "88",
+            "464"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "88",
+            "464"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 33,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "LDAP",
+      "description": "authentication",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "389"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 34,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "LDAP_UDP",
+      "description": "authentication",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "dst": [
+            "389"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 35,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "RADIUS",
+      "description": "authentication",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "dst": [
+            "1812",
+            "1813"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 36,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "DCE-RPC",
+      "description": "remote access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "135"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "135"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 37,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "ONC-RPC",
+      "description": "remote access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "111"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "111"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 38,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "PC-Anywhere",
+      "description": "remote access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "5631"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "5632"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 39,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "RDP",
+      "description": "remote access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "3389"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 40,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SSH",
+      "description": "remote access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "22"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 41,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "TELNET",
+      "description": "remote access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "23"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 42,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "VNC",
+      "description": "remote access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "5900"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 43,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "WINS",
+      "description": "remote access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "1512"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "1512"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 44,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "X-WINDOWS",
+      "description": "remote access",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "6000-6063"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 45,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "AH",
+      "description": "tunneling",
+      "is_user_defined": "True",
+      "protocol": {
+        "ip": {
+          "protocol_number": "51"
+        }
+      }
+    }
+  },
+  {
+    "pk": 46,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "ESP",
+      "description": "tunneling",
+      "is_user_defined": "True",
+      "protocol": {
+        "ip": {
+          "protocol_number": "50"
+        }
+      }
+    }
+  },
+  {
+    "pk": 47,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "GRE",
+      "description": "tunneling",
+      "is_user_defined": "True",
+      "protocol": {
+        "ip": {
+          "protocol_number": "47"
+        }
+      }
+    }
+  },
+  {
+    "pk": 48,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "IKE",
+      "description": "tunneling",
+      "is_user_defined": "True",
+      "protocol": {
+        "udp": {
+          "dst": [
+            "500",
+            "4500"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 49,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "L2TP",
+      "description": "tunneling",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "1701"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "1701"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 50,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "PPTP",
+      "description": "tunneling",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "1723"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 51,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SOCKS",
+      "description": "tunneling",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "1080"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "1080"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 52,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SQUID",
+      "description": "tunneling",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "3128"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 53,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "H323",
+      "description": "VoIP, messaging and other applications",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "1720",
+            "1503"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "1719"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 54,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "IRC",
+      "description": "VoIP, messaging and other applications",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "6660-6669"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 55,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "MS-SQL",
+      "description": "VoIP, messaging and other applications",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "1433",
+            "1434"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 56,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "MYSQL",
+      "description": "VoIP, messaging and other applications",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "3306"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 57,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "RTSP",
+      "description": "VoIP, messaging and other applications",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "554",
+            "7070",
+            "8554"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "554"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 58,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SCCP",
+      "description": "VoIP, messaging and other applications",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "2000"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 59,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SIP",
+      "description": "VoIP, messaging and other applications",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "5060"
+          ]
+        },
+        "udp": {
+          "dst": [
+            "5060"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 60,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "SIP-MSNmessenger",
+      "description": "VoIP, messaging and other applications",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "1863"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "pk": 61,
+    "model": "entity_app.Service",
+    "fields": {
+      "name": "OFTP",
+      "description": "VoIP, messaging and other applications",
+      "is_user_defined": "True",
+      "protocol": {
+        "tcp": {
+          "dst": [
+            "514"
+          ]
+        }
+      }
+    }
+  }
+]

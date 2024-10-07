@@ -1,0 +1,2500 @@
+pouria@ubuntu:~$ cd cascade
+pouria@ubuntu:~/cascade$ source env/bin/activatet
+bash: env/bin/activatet: No such file or directory
+pouria@ubuntu:~/cascade$ source env/bin/activate
+(env) pouria@ubuntu:~/cascade$ deactivate
+pouria@ubuntu:~/cascade$ cd ~
+pouria@ubuntu:~$ sudo apt install torbrowser-launcher
+[sudo] password for pouria: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libfprint-2-tod1 libllvm9 python3-click python3-colorama
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libdouble-conversion3 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite libqt5svg5 libqt5test5
+  libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-gpg python3-pyqt5 python3-sip python3-socks qt5-gtk-platformtheme qttranslations5-l10n tor tor-geoipdb torsocks
+Suggested packages:
+  qt5-image-formats-plugins qtwayland5 python3-pyqt5-dbg mixmaster socat tor-arm apparmor-utils obfs4proxy
+The following NEW packages will be installed:
+  libdouble-conversion3 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite libqt5svg5 libqt5test5
+  libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-gpg python3-pyqt5 python3-sip python3-socks qt5-gtk-platformtheme qttranslations5-l10n tor tor-geoipdb torbrowser-launcher torsocks
+0 upgraded, 27 newly installed, 0 to remove and 47 not upgraded.
+Need to get 18.7 MB of archives.
+After this operation, 84.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libdouble-conversion3 amd64 3.1.5-4ubuntu1 [37.9 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpcre2-16-0 amd64 10.34-7 [181 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5core5a amd64 5.12.8+dfsg-0ubuntu1 [2,005 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5dbus5 amd64 5.12.8+dfsg-0ubuntu1 [208 kB]                                                                                            
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5network5 amd64 5.12.8+dfsg-0ubuntu1 [674 kB]                                                                                         
+Get:6 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxcb-xinerama0 amd64 1.14-2 [5,260 B]                                                                                                        
+Get:7 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxcb-xinput0 amd64 1.14-2 [29.3 kB]                                                                                                          
+Get:8 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5gui5 amd64 5.12.8+dfsg-0ubuntu1 [2,971 kB]                                                                                           
+Get:9 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5widgets5 amd64 5.12.8+dfsg-0ubuntu1 [2,293 kB]                                                                                       
+Get:10 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5svg5 amd64 5.12.8-0ubuntu1 [131 kB]                                                                                                 
+Get:11 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5xml5 amd64 5.12.8+dfsg-0ubuntu1 [105 kB]                                                                                            
+Get:12 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5designer5 amd64 5.12.8-0ubuntu1 [2,778 kB]                                                                                          
+Get:13 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5sql5 amd64 5.12.8+dfsg-0ubuntu1 [121 kB]                                                                                            
+Get:14 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5help5 amd64 5.12.8-0ubuntu1 [134 kB]                                                                                                
+Get:15 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5printsupport5 amd64 5.12.8+dfsg-0ubuntu1 [193 kB]                                                                                   
+Get:16 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5sql5-sqlite amd64 5.12.8+dfsg-0ubuntu1 [47.5 kB]                                                                                    
+Get:17 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libqt5test5 amd64 5.12.8+dfsg-0ubuntu1 [131 kB]                                                                                           
+Get:18 http://us.archive.ubuntu.com/ubuntu focal/main amd64 python3-gpg amd64 1.13.1-7ubuntu2 [165 kB]                                                                                                    
+Get:19 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 python3-sip amd64 4.19.21+dfsg-1build1 [87.9 kB]                                                                                          
+Get:20 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 python3-pyqt5 amd64 5.14.1+dfsg-3build1 [2,318 kB]                                                                                        
+Get:21 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 python3-socks all 1.6.8+dfsg-1ubuntu1 [18.5 kB]                                                                                           
+Get:22 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 qt5-gtk-platformtheme amd64 5.12.8+dfsg-0ubuntu1 [124 kB]                                                                                 
+Get:23 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 qttranslations5-l10n all 5.12.8-0ubuntu1 [1,486 kB]                                                                                       
+Get:24 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 tor amd64 0.4.2.7-1 [1,410 kB]                                                                                                            
+Get:25 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 torbrowser-launcher amd64 0.3.2-9 [45.8 kB]                                                                                               
+Get:26 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 torsocks amd64 2.3.0-2 [61.5 kB]                                                                                                          
+Get:27 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 tor-geoipdb all 0.4.2.7-1 [968 kB]                                                                                                        
+Fetched 18.7 MB in 1min 14s (255 kB/s)                                                                                                                                                                    
+Selecting previously unselected package libdouble-conversion3:amd64.
+(Reading database ... 203934 files and directories currently installed.)
+Preparing to unpack .../00-libdouble-conversion3_3.1.5-4ubuntu1_amd64.deb ...
+Unpacking libdouble-conversion3:amd64 (3.1.5-4ubuntu1) ...
+Selecting previously unselected package libpcre2-16-0:amd64.
+Preparing to unpack .../01-libpcre2-16-0_10.34-7_amd64.deb ...
+Unpacking libpcre2-16-0:amd64 (10.34-7) ...
+Selecting previously unselected package libqt5core5a:amd64.
+Preparing to unpack .../02-libqt5core5a_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5core5a:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package libqt5dbus5:amd64.
+Preparing to unpack .../03-libqt5dbus5_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5dbus5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package libqt5network5:amd64.
+Preparing to unpack .../04-libqt5network5_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5network5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package libxcb-xinerama0:amd64.
+Preparing to unpack .../05-libxcb-xinerama0_1.14-2_amd64.deb ...
+Unpacking libxcb-xinerama0:amd64 (1.14-2) ...
+Selecting previously unselected package libxcb-xinput0:amd64.
+Preparing to unpack .../06-libxcb-xinput0_1.14-2_amd64.deb ...
+Unpacking libxcb-xinput0:amd64 (1.14-2) ...
+Selecting previously unselected package libqt5gui5:amd64.
+Preparing to unpack .../07-libqt5gui5_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5gui5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package libqt5widgets5:amd64.
+Preparing to unpack .../08-libqt5widgets5_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5widgets5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package libqt5svg5:amd64.
+Preparing to unpack .../09-libqt5svg5_5.12.8-0ubuntu1_amd64.deb ...
+Unpacking libqt5svg5:amd64 (5.12.8-0ubuntu1) ...
+Selecting previously unselected package libqt5xml5:amd64.
+Preparing to unpack .../10-libqt5xml5_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5xml5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package libqt5designer5:amd64.
+Preparing to unpack .../11-libqt5designer5_5.12.8-0ubuntu1_amd64.deb ...
+Unpacking libqt5designer5:amd64 (5.12.8-0ubuntu1) ...
+Selecting previously unselected package libqt5sql5:amd64.
+Preparing to unpack .../12-libqt5sql5_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5sql5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package libqt5help5:amd64.
+Preparing to unpack .../13-libqt5help5_5.12.8-0ubuntu1_amd64.deb ...
+Unpacking libqt5help5:amd64 (5.12.8-0ubuntu1) ...
+Selecting previously unselected package libqt5printsupport5:amd64.
+Preparing to unpack .../14-libqt5printsupport5_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5printsupport5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package libqt5sql5-sqlite:amd64.
+Preparing to unpack .../15-libqt5sql5-sqlite_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5sql5-sqlite:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package libqt5test5:amd64.
+Preparing to unpack .../16-libqt5test5_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking libqt5test5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package python3-gpg.
+Preparing to unpack .../17-python3-gpg_1.13.1-7ubuntu2_amd64.deb ...
+Unpacking python3-gpg (1.13.1-7ubuntu2) ...
+Selecting previously unselected package python3-sip.
+Preparing to unpack .../18-python3-sip_4.19.21+dfsg-1build1_amd64.deb ...
+Unpacking python3-sip (4.19.21+dfsg-1build1) ...
+Selecting previously unselected package python3-pyqt5.
+Preparing to unpack .../19-python3-pyqt5_5.14.1+dfsg-3build1_amd64.deb ...
+Unpacking python3-pyqt5 (5.14.1+dfsg-3build1) ...
+Selecting previously unselected package python3-socks.
+Preparing to unpack .../20-python3-socks_1.6.8+dfsg-1ubuntu1_all.deb ...
+Unpacking python3-socks (1.6.8+dfsg-1ubuntu1) ...
+Selecting previously unselected package qt5-gtk-platformtheme:amd64.
+Preparing to unpack .../21-qt5-gtk-platformtheme_5.12.8+dfsg-0ubuntu1_amd64.deb ...
+Unpacking qt5-gtk-platformtheme:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Selecting previously unselected package qttranslations5-l10n.
+Preparing to unpack .../22-qttranslations5-l10n_5.12.8-0ubuntu1_all.deb ...
+Unpacking qttranslations5-l10n (5.12.8-0ubuntu1) ...
+Selecting previously unselected package tor.
+Preparing to unpack .../23-tor_0.4.2.7-1_amd64.deb ...
+Unpacking tor (0.4.2.7-1) ...
+Selecting previously unselected package torbrowser-launcher.
+Preparing to unpack .../24-torbrowser-launcher_0.3.2-9_amd64.deb ...
+Unpacking torbrowser-launcher (0.3.2-9) ...
+Selecting previously unselected package torsocks.
+Preparing to unpack .../25-torsocks_2.3.0-2_amd64.deb ...
+Unpacking torsocks (2.3.0-2) ...
+Selecting previously unselected package tor-geoipdb.
+Preparing to unpack .../26-tor-geoipdb_0.4.2.7-1_all.deb ...
+Unpacking tor-geoipdb (0.4.2.7-1) ...
+Setting up libdouble-conversion3:amd64 (3.1.5-4ubuntu1) ...
+Setting up libxcb-xinput0:amd64 (1.14-2) ...
+Setting up python3-socks (1.6.8+dfsg-1ubuntu1) ...
+Setting up libpcre2-16-0:amd64 (10.34-7) ...
+Setting up libxcb-xinerama0:amd64 (1.14-2) ...
+Setting up qttranslations5-l10n (5.12.8-0ubuntu1) ...
+Setting up python3-gpg (1.13.1-7ubuntu2) ...
+Setting up libqt5core5a:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up libqt5dbus5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up tor (0.4.2.7-1) ...
+Something or somebody made /var/lib/tor disappear.
+Creating one for you again.
+Something or somebody made /var/log/tor disappear.
+Creating one for you again.
+Created symlink /etc/systemd/system/multi-user.target.wants/tor.service → /lib/systemd/system/tor.service.
+Setting up libqt5test5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up torsocks (2.3.0-2) ...
+Setting up python3-sip (4.19.21+dfsg-1build1) ...
+Setting up libqt5network5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up tor-geoipdb (0.4.2.7-1) ...
+Setting up libqt5sql5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up libqt5xml5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up libqt5sql5-sqlite:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up libqt5gui5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up libqt5widgets5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up libqt5help5:amd64 (5.12.8-0ubuntu1) ...
+Setting up qt5-gtk-platformtheme:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up libqt5printsupport5:amd64 (5.12.8+dfsg-0ubuntu1) ...
+Setting up libqt5designer5:amd64 (5.12.8-0ubuntu1) ...
+Setting up libqt5svg5:amd64 (5.12.8-0ubuntu1) ...
+Setting up python3-pyqt5 (5.14.1+dfsg-3build1) ...
+Setting up torbrowser-launcher (0.3.2-9) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+Processing triggers for systemd (245.4-4ubuntu3.2) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
+pouria@ubuntu:~$ sudo apt update
+[sudo] password for pouria: 
+Hit:1 http://dl.google.com/linux/chrome/deb stable InRelease                                                                                                                                              
+Hit:2 http://us.archive.ubuntu.com/ubuntu focal InRelease                                                                                                                                                 
+Get:3 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]                                                                                                                              
+Hit:4 http://packages.microsoft.com/repos/vscode stable InRelease                                                                                                                
+Get:5 http://us.archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]                                                                                                       
+Hit:6 https://download.docker.com/linux/ubuntu focal InRelease                                                                                             
+Hit:7 https://deb.nodesource.com/node_12.x focal InRelease                                                    
+Get:8 http://us.archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]           
+Fetched 317 kB in 3s (117 kB/s)      
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+47 packages can be upgraded. Run 'apt list --upgradable' to see them.
+pouria@ubuntu:~$ sudo apt uninstall torbrowser-launcher
+[sudo] password for pouria: 
+E: Invalid operation uninstall
+pouria@ubuntu:~$ sudo apt remove torbrowser-launcher
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+The following packages will be REMOVED:
+  torbrowser-launcher
+0 upgraded, 0 newly installed, 1 to remove and 47 not upgraded.
+After this operation, 184 kB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... 204612 files and directories currently installed.)
+Removing torbrowser-launcher (0.3.2-9) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
+pouria@ubuntu:~$ sudo apt-get install gdebi
+[sudo] password for pouria: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libdouble-conversion3 libfprint-2-tod1 libllvm9 libpcre2-16-0 libqt5core5a libqt5dbus5 libqt5designer5 libqt5gui5 libqt5help5 libqt5network5 libqt5printsupport5 libqt5sql5 libqt5sql5-sqlite
+  libqt5svg5 libqt5test5 libqt5widgets5 libqt5xml5 libxcb-xinerama0 libxcb-xinput0 python3-click python3-colorama python3-gpg python3-pyqt5 python3-sip qt5-gtk-platformtheme qttranslations5-l10n
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  diffstat gdebi-core gettext gnome-icon-theme intltool-debian libapt-pkg-perl libarchive-zip-perl libasync-mergepoint-perl libb-hooks-endofscope-perl libb-hooks-op-check-perl libcapture-tiny-perl
+  libclass-method-modifiers-perl libclass-xsaccessor-perl libclone-perl libcpanel-json-xs-perl libcroco3 libdevel-callchecker-perl libdevel-size-perl libdigest-bubblebabble-perl libdigest-hmac-perl
+  libdynaloader-functions-perl libemail-valid-perl libexporter-tiny-perl libfile-find-rule-perl libfont-ttf-perl libfuture-perl libgtk2-perl libimport-into-perl libio-async-loop-epoll-perl
+  libio-async-perl libio-pty-perl libio-string-perl libipc-run-perl libjson-maybexs-perl liblinux-epoll-perl liblist-compare-perl liblist-moreutils-perl libmodule-implementation-perl
+  libmodule-runtime-perl libmoo-perl libmoox-aliases-perl libnamespace-clean-perl libnet-dns-perl libnet-dns-sec-perl libnet-domain-tld-perl libnet-ip-perl libnet-libidn-perl libnumber-compare-perl
+  libpackage-stash-perl libpackage-stash-xs-perl libpango-perl libparams-classify-perl libpath-tiny-perl libperl4-corelibs-perl libperlio-gzip-perl libreadonly-perl libref-util-perl libref-util-xs-perl
+  librole-tiny-perl libsereal-decoder-perl libsereal-encoder-perl libsereal-perl libstrictures-perl libstruct-dumb-perl libsub-exporter-progressive-perl libsub-identify-perl libsub-name-perl
+  libsub-quote-perl libtest-fatal-perl libtest-refcount-perl libtext-glob-perl libtext-levenshtein-perl libtype-tiny-perl libtype-tiny-xs-perl libunicode-utf8-perl libvariable-magic-perl
+  libxml-libxml-perl libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl libxml-writer-perl libyaml-libyaml-perl lintian patchutils t1utils
+Suggested packages:
+  gettext-doc autopoint libasprintf-dev libgettextpo-dev libgtk2-perl-doc libscalar-number-perl libbareword-filehandles-perl libindirect-perl libmultidimensional-perl libdevel-lexalias-perl
+  libdevel-stacktrace-perl libxml-sax-expatxs-perl binutils-multiarch libtext-template-perl
+The following NEW packages will be installed:
+  diffstat gdebi gdebi-core gettext gnome-icon-theme intltool-debian libapt-pkg-perl libarchive-zip-perl libasync-mergepoint-perl libb-hooks-endofscope-perl libb-hooks-op-check-perl
+  libcapture-tiny-perl libclass-method-modifiers-perl libclass-xsaccessor-perl libclone-perl libcpanel-json-xs-perl libcroco3 libdevel-callchecker-perl libdevel-size-perl libdigest-bubblebabble-perl
+  libdigest-hmac-perl libdynaloader-functions-perl libemail-valid-perl libexporter-tiny-perl libfile-find-rule-perl libfont-ttf-perl libfuture-perl libgtk2-perl libimport-into-perl
+  libio-async-loop-epoll-perl libio-async-perl libio-pty-perl libio-string-perl libipc-run-perl libjson-maybexs-perl liblinux-epoll-perl liblist-compare-perl liblist-moreutils-perl
+  libmodule-implementation-perl libmodule-runtime-perl libmoo-perl libmoox-aliases-perl libnamespace-clean-perl libnet-dns-perl libnet-dns-sec-perl libnet-domain-tld-perl libnet-ip-perl
+  libnet-libidn-perl libnumber-compare-perl libpackage-stash-perl libpackage-stash-xs-perl libpango-perl libparams-classify-perl libpath-tiny-perl libperl4-corelibs-perl libperlio-gzip-perl
+  libreadonly-perl libref-util-perl libref-util-xs-perl librole-tiny-perl libsereal-decoder-perl libsereal-encoder-perl libsereal-perl libstrictures-perl libstruct-dumb-perl
+  libsub-exporter-progressive-perl libsub-identify-perl libsub-name-perl libsub-quote-perl libtest-fatal-perl libtest-refcount-perl libtext-glob-perl libtext-levenshtein-perl libtype-tiny-perl
+  libtype-tiny-xs-perl libunicode-utf8-perl libvariable-magic-perl libxml-libxml-perl libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl libxml-writer-perl
+  libyaml-libyaml-perl lintian patchutils t1utils
+0 upgraded, 87 newly installed, 0 to remove and 47 not upgraded.
+Need to get 16.0 MB of archives.
+After this operation, 42.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu focal/main amd64 diffstat amd64 1.63-1 [27.2 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 gdebi-core all 0.9.5.7+nmu3 [116 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 gnome-icon-theme all 3.12.0-3 [9,620 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 gdebi all 0.9.5.7+nmu3 [23.8 kB]                                                                                                           
+Get:5 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libcroco3 amd64 0.6.13-1 [82.5 kB]                                                                                                             
+Get:6 http://us.archive.ubuntu.com/ubuntu focal/main amd64 gettext amd64 0.19.8.1-10build1 [895 kB]                                                                                                       
+Get:7 http://us.archive.ubuntu.com/ubuntu focal/main amd64 intltool-debian all 0.35.0+20060710.5 [24.9 kB]                                                                                                
+Get:8 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libapt-pkg-perl amd64 0.1.36build3 [68.5 kB]                                                                                                   
+Get:9 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libarchive-zip-perl all 1.67-2 [90.5 kB]                                                                                                       
+Get:10 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libasync-mergepoint-perl all 0.04-2 [10.2 kB]                                                                                                 
+Get:11 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libb-hooks-op-check-perl amd64 0.22-1build2 [10.2 kB]                                                                                         
+Get:12 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libdynaloader-functions-perl all 0.003-1 [11.9 kB]                                                                                            
+Get:13 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libdevel-callchecker-perl amd64 0.008-1ubuntu1 [14.5 kB]                                                                                      
+Get:14 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libparams-classify-perl amd64 0.015-1build2 [21.1 kB]                                                                                         
+Get:15 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libmodule-runtime-perl all 0.016-1 [16.2 kB]                                                                                                  
+Get:16 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libmodule-implementation-perl all 0.09-1 [12.2 kB]                                                                                            
+Get:17 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libsub-exporter-progressive-perl all 0.001013-1 [6,784 B]                                                                                     
+Get:18 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libvariable-magic-perl amd64 0.62-1build2 [34.4 kB]                                                                                           
+Get:19 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libb-hooks-endofscope-perl all 0.24-1 [16.8 kB]                                                                                               
+Get:20 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libcapture-tiny-perl all 0.48-1 [20.4 kB]                                                                                                     
+Get:21 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libclass-method-modifiers-perl all 2.13-1 [16.2 kB]                                                                                           
+Get:22 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libclass-xsaccessor-perl amd64 1.19-3build3 [33.6 kB]                                                                                         
+Get:23 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libclone-perl amd64 0.43-2 [11.0 kB]                                                                                                          
+Get:24 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libcpanel-json-xs-perl amd64 4.19-1build1 [109 kB]                                                                                            
+Get:25 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libdigest-bubblebabble-perl all 0.02-2 [7,908 B]                                                                                              
+Get:26 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libdigest-hmac-perl all 1.03+dfsg-2 [10.3 kB]                                                                                                 
+Get:27 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libnet-ip-perl all 1.26-2 [27.4 kB]                                                                                                           
+Get:28 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libnet-dns-perl all 1.22-1 [336 kB]                                                                                                           
+Get:29 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libnet-domain-tld-perl all 1.75-1 [29.1 kB]                                                                                                   
+Get:30 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libemail-valid-perl all 1.202-1 [16.3 kB]                                                                                                     
+Get:31 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libexporter-tiny-perl all 1.002001-1 [35.5 kB]                                                                                                
+Get:32 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libnumber-compare-perl all 0.03-1 [7,318 B]                                                                                                   
+Get:33 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libtext-glob-perl all 0.10-1 [7,554 B]                                                                                                        
+Get:34 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libfile-find-rule-perl all 0.34-1 [28.3 kB]                                                                                                   
+Get:35 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libio-string-perl all 1.08-3 [11.1 kB]                                                                                                        
+Get:36 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libfont-ttf-perl all 1.06-1 [313 kB]                                                                                                          
+Get:37 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libfuture-perl all 0.43-1 [77.8 kB]                                                                                                           
+Get:38 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libpango-perl amd64 1.227-3build1 [158 kB]                                                                                                
+Get:39 http://us.archive.ubuntu.com/ubuntu focal/universe amd64 libgtk2-perl amd64 2:1.24993-1ubuntu2 [545 kB]                                                                                            
+Get:40 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libimport-into-perl all 1.002005-1 [11.0 kB]                                                                                                  
+Get:41 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libstruct-dumb-perl all 0.09-1 [10.5 kB]                                                                                                      
+Get:42 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libio-async-perl all 0.75-1 [254 kB]                                                                                                          
+Get:43 http://us.archive.ubuntu.com/ubuntu focal/main amd64 liblinux-epoll-perl amd64 0.017-1 [16.0 kB]                                                                                                   
+Get:44 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libio-async-loop-epoll-perl all 0.20-1 [10.4 kB]                                                                                              
+Get:45 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libio-pty-perl amd64 1:1.12-1 [32.4 kB]                                                                                                       
+Get:46 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libipc-run-perl all 20180523.0-2 [89.7 kB]                                                                                                    
+Get:47 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libjson-maybexs-perl all 1.004000-1 [11.0 kB]                                                                                                 
+Get:48 http://us.archive.ubuntu.com/ubuntu focal/main amd64 liblist-compare-perl all 0.53-1 [65.6 kB]                                                                                                     
+Get:49 http://us.archive.ubuntu.com/ubuntu focal/main amd64 liblist-moreutils-perl amd64 0.416-1build5 [55.5 kB]                                                                                          
+Get:50 http://us.archive.ubuntu.com/ubuntu focal/main amd64 librole-tiny-perl all 2.001004-1 [16.5 kB]                                                                                                    
+Get:51 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libstrictures-perl all 2.000006-1 [16.3 kB]                                                                                                   
+Get:52 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libsub-quote-perl all 2.006006-1 [19.5 kB]                                                                                                    
+Get:53 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libmoo-perl all 2.003006-1 [46.3 kB]                                                                                                          
+Get:54 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libmoox-aliases-perl all 0.001006-1 [7,176 B]                                                                                                 
+Get:55 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpackage-stash-perl all 0.38-1 [19.1 kB]                                                                                                    
+Get:56 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libsub-identify-perl amd64 0.14-1build2 [10.7 kB]                                                                                             
+Get:57 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libsub-name-perl amd64 0.26-1 [11.5 kB]                                                                                                       
+Get:58 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libnamespace-clean-perl all 0.27-1 [13.6 kB]                                                                                                  
+Get:59 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libnet-dns-sec-perl amd64 1.15-1 [44.6 kB]                                                                                                    
+Get:60 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libnet-libidn-perl amd64 0.12.ds-3build2 [17.3 kB]                                                                                            
+Get:61 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpackage-stash-xs-perl amd64 0.29-1build1 [18.4 kB]                                                                                         
+Get:62 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libpath-tiny-perl all 0.108-1 [42.6 kB]                                                                                                       
+Get:63 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libperl4-corelibs-perl all 0.004-2 [37.4 kB]                                                                                                  
+Get:64 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libperlio-gzip-perl amd64 0.19-1build5 [14.6 kB]                                                                                              
+Get:65 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libreadonly-perl all 2.050-2 [19.9 kB]                                                                                                        
+Get:66 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libref-util-perl all 0.204-1 [15.0 kB]                                                                                                        
+Get:67 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libref-util-xs-perl amd64 0.117-1build2 [12.0 kB]                                                                                             
+Get:68 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libsereal-decoder-perl amd64 4.011+ds-1build1 [102 kB]                                                                                        
+Get:69 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libsereal-encoder-perl amd64 4.011+ds-1build1 [104 kB]                                                                                        
+Get:70 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libsereal-perl all 4.011-1 [8,604 B]                                                                                                          
+Get:71 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libtest-fatal-perl all 0.014-1 [11.1 kB]                                                                                                      
+Get:72 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libtest-refcount-perl all 0.10-1 [11.4 kB]                                                                                                    
+Get:73 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libtext-levenshtein-perl all 0.13-1 [9,612 B]                                                                                                 
+Get:74 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libtype-tiny-perl all 1.008001-2 [304 kB]                                                                                                     
+Get:75 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libtype-tiny-xs-perl amd64 0.016-1 [22.9 kB]                                                                                                  
+Get:76 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libunicode-utf8-perl amd64 0.62-1build1 [18.1 kB]                                                                                             
+Get:77 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxml-namespacesupport-perl all 1.12-1 [13.2 kB]                                                                                             
+Get:78 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxml-sax-base-perl all 1.09-1 [18.8 kB]                                                                                                     
+Get:79 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxml-sax-perl all 1.02+dfsg-1 [56.2 kB]                                                                                                     
+Get:80 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxml-libxml-perl amd64 2.0134+dfsg-1build1 [320 kB]                                                                                         
+Get:81 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxml-sax-expat-perl all 0.51-1 [10.5 kB]                                                                                                    
+Get:82 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libxml-writer-perl all 0.625-1 [24.9 kB]                                                                                                      
+Get:83 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libyaml-libyaml-perl amd64 0.81+repack-1 [28.5 kB]                                                                                            
+Get:84 http://us.archive.ubuntu.com/ubuntu focal/main amd64 libdevel-size-perl amd64 0.83-1build1 [20.0 kB]                                                                                               
+Get:85 http://us.archive.ubuntu.com/ubuntu focal/main amd64 patchutils amd64 0.3.4-2 [71.1 kB]                                                                                                            
+Get:86 http://us.archive.ubuntu.com/ubuntu focal/main amd64 t1utils amd64 1.41-3 [56.1 kB]                                                                                                                
+Get:87 http://us.archive.ubuntu.com/ubuntu focal/main amd64 lintian all 2.62.0 [980 kB]                                                                                                                   
+Fetched 16.0 MB in 1min 1s (264 kB/s)                                                                                                                                                                     
+Extracting templates from packages: 100%
+Selecting previously unselected package diffstat.
+(Reading database ... 204579 files and directories currently installed.)
+Preparing to unpack .../00-diffstat_1.63-1_amd64.deb ...
+Unpacking diffstat (1.63-1) ...
+Selecting previously unselected package gdebi-core.
+Preparing to unpack .../01-gdebi-core_0.9.5.7+nmu3_all.deb ...
+Unpacking gdebi-core (0.9.5.7+nmu3) ...
+Selecting previously unselected package gnome-icon-theme.
+Preparing to unpack .../02-gnome-icon-theme_3.12.0-3_all.deb ...
+Unpacking gnome-icon-theme (3.12.0-3) ...
+Selecting previously unselected package gdebi.
+Preparing to unpack .../03-gdebi_0.9.5.7+nmu3_all.deb ...
+Unpacking gdebi (0.9.5.7+nmu3) ...
+Selecting previously unselected package libcroco3:amd64.
+Preparing to unpack .../04-libcroco3_0.6.13-1_amd64.deb ...
+Unpacking libcroco3:amd64 (0.6.13-1) ...
+Selecting previously unselected package gettext.
+Preparing to unpack .../05-gettext_0.19.8.1-10build1_amd64.deb ...
+Unpacking gettext (0.19.8.1-10build1) ...
+Selecting previously unselected package intltool-debian.
+Preparing to unpack .../06-intltool-debian_0.35.0+20060710.5_all.deb ...
+Unpacking intltool-debian (0.35.0+20060710.5) ...
+Selecting previously unselected package libapt-pkg-perl.
+Preparing to unpack .../07-libapt-pkg-perl_0.1.36build3_amd64.deb ...
+Unpacking libapt-pkg-perl (0.1.36build3) ...
+Selecting previously unselected package libarchive-zip-perl.
+Preparing to unpack .../08-libarchive-zip-perl_1.67-2_all.deb ...
+Unpacking libarchive-zip-perl (1.67-2) ...
+Selecting previously unselected package libasync-mergepoint-perl.
+Preparing to unpack .../09-libasync-mergepoint-perl_0.04-2_all.deb ...
+Unpacking libasync-mergepoint-perl (0.04-2) ...
+Selecting previously unselected package libb-hooks-op-check-perl.
+Preparing to unpack .../10-libb-hooks-op-check-perl_0.22-1build2_amd64.deb ...
+Unpacking libb-hooks-op-check-perl (0.22-1build2) ...
+Selecting previously unselected package libdynaloader-functions-perl.
+Preparing to unpack .../11-libdynaloader-functions-perl_0.003-1_all.deb ...
+Unpacking libdynaloader-functions-perl (0.003-1) ...
+Selecting previously unselected package libdevel-callchecker-perl.
+Preparing to unpack .../12-libdevel-callchecker-perl_0.008-1ubuntu1_amd64.deb ...
+Unpacking libdevel-callchecker-perl (0.008-1ubuntu1) ...
+Selecting previously unselected package libparams-classify-perl.
+Preparing to unpack .../13-libparams-classify-perl_0.015-1build2_amd64.deb ...
+Unpacking libparams-classify-perl (0.015-1build2) ...
+Selecting previously unselected package libmodule-runtime-perl.
+Preparing to unpack .../14-libmodule-runtime-perl_0.016-1_all.deb ...
+Unpacking libmodule-runtime-perl (0.016-1) ...
+Selecting previously unselected package libmodule-implementation-perl.
+Preparing to unpack .../15-libmodule-implementation-perl_0.09-1_all.deb ...
+Unpacking libmodule-implementation-perl (0.09-1) ...
+Selecting previously unselected package libsub-exporter-progressive-perl.
+Preparing to unpack .../16-libsub-exporter-progressive-perl_0.001013-1_all.deb ...
+Unpacking libsub-exporter-progressive-perl (0.001013-1) ...
+Selecting previously unselected package libvariable-magic-perl.
+Preparing to unpack .../17-libvariable-magic-perl_0.62-1build2_amd64.deb ...
+Unpacking libvariable-magic-perl (0.62-1build2) ...
+Selecting previously unselected package libb-hooks-endofscope-perl.
+Preparing to unpack .../18-libb-hooks-endofscope-perl_0.24-1_all.deb ...
+Unpacking libb-hooks-endofscope-perl (0.24-1) ...
+Selecting previously unselected package libcapture-tiny-perl.
+Preparing to unpack .../19-libcapture-tiny-perl_0.48-1_all.deb ...
+Unpacking libcapture-tiny-perl (0.48-1) ...
+Selecting previously unselected package libclass-method-modifiers-perl.
+Preparing to unpack .../20-libclass-method-modifiers-perl_2.13-1_all.deb ...
+Unpacking libclass-method-modifiers-perl (2.13-1) ...
+Selecting previously unselected package libclass-xsaccessor-perl.
+Preparing to unpack .../21-libclass-xsaccessor-perl_1.19-3build3_amd64.deb ...
+Unpacking libclass-xsaccessor-perl (1.19-3build3) ...
+Selecting previously unselected package libclone-perl.
+Preparing to unpack .../22-libclone-perl_0.43-2_amd64.deb ...
+Unpacking libclone-perl (0.43-2) ...
+Selecting previously unselected package libcpanel-json-xs-perl.
+Preparing to unpack .../23-libcpanel-json-xs-perl_4.19-1build1_amd64.deb ...
+Unpacking libcpanel-json-xs-perl (4.19-1build1) ...
+Selecting previously unselected package libdigest-bubblebabble-perl.
+Preparing to unpack .../24-libdigest-bubblebabble-perl_0.02-2_all.deb ...
+Unpacking libdigest-bubblebabble-perl (0.02-2) ...
+Selecting previously unselected package libdigest-hmac-perl.
+Preparing to unpack .../25-libdigest-hmac-perl_1.03+dfsg-2_all.deb ...
+Unpacking libdigest-hmac-perl (1.03+dfsg-2) ...
+Selecting previously unselected package libnet-ip-perl.
+Preparing to unpack .../26-libnet-ip-perl_1.26-2_all.deb ...
+Unpacking libnet-ip-perl (1.26-2) ...
+Selecting previously unselected package libnet-dns-perl.
+Preparing to unpack .../27-libnet-dns-perl_1.22-1_all.deb ...
+Unpacking libnet-dns-perl (1.22-1) ...
+Selecting previously unselected package libnet-domain-tld-perl.
+Preparing to unpack .../28-libnet-domain-tld-perl_1.75-1_all.deb ...
+Unpacking libnet-domain-tld-perl (1.75-1) ...
+Selecting previously unselected package libemail-valid-perl.
+Preparing to unpack .../29-libemail-valid-perl_1.202-1_all.deb ...
+Unpacking libemail-valid-perl (1.202-1) ...
+Selecting previously unselected package libexporter-tiny-perl.
+Preparing to unpack .../30-libexporter-tiny-perl_1.002001-1_all.deb ...
+Unpacking libexporter-tiny-perl (1.002001-1) ...
+Selecting previously unselected package libnumber-compare-perl.
+Preparing to unpack .../31-libnumber-compare-perl_0.03-1_all.deb ...
+Unpacking libnumber-compare-perl (0.03-1) ...
+Selecting previously unselected package libtext-glob-perl.
+Preparing to unpack .../32-libtext-glob-perl_0.10-1_all.deb ...
+Unpacking libtext-glob-perl (0.10-1) ...
+Selecting previously unselected package libfile-find-rule-perl.
+Preparing to unpack .../33-libfile-find-rule-perl_0.34-1_all.deb ...
+Unpacking libfile-find-rule-perl (0.34-1) ...
+Selecting previously unselected package libio-string-perl.
+Preparing to unpack .../34-libio-string-perl_1.08-3_all.deb ...
+Unpacking libio-string-perl (1.08-3) ...
+Selecting previously unselected package libfont-ttf-perl.
+Preparing to unpack .../35-libfont-ttf-perl_1.06-1_all.deb ...
+Unpacking libfont-ttf-perl (1.06-1) ...
+Selecting previously unselected package libfuture-perl.
+Preparing to unpack .../36-libfuture-perl_0.43-1_all.deb ...
+Unpacking libfuture-perl (0.43-1) ...
+Selecting previously unselected package libpango-perl.
+Preparing to unpack .../37-libpango-perl_1.227-3build1_amd64.deb ...
+Unpacking libpango-perl (1.227-3build1) ...
+Selecting previously unselected package libgtk2-perl.
+Preparing to unpack .../38-libgtk2-perl_2%3a1.24993-1ubuntu2_amd64.deb ...
+Unpacking libgtk2-perl (2:1.24993-1ubuntu2) ...
+Selecting previously unselected package libimport-into-perl.
+Preparing to unpack .../39-libimport-into-perl_1.002005-1_all.deb ...
+Unpacking libimport-into-perl (1.002005-1) ...
+Selecting previously unselected package libstruct-dumb-perl.
+Preparing to unpack .../40-libstruct-dumb-perl_0.09-1_all.deb ...
+Unpacking libstruct-dumb-perl (0.09-1) ...
+Selecting previously unselected package libio-async-perl.
+Preparing to unpack .../41-libio-async-perl_0.75-1_all.deb ...
+Unpacking libio-async-perl (0.75-1) ...
+Selecting previously unselected package liblinux-epoll-perl.
+Preparing to unpack .../42-liblinux-epoll-perl_0.017-1_amd64.deb ...
+Unpacking liblinux-epoll-perl (0.017-1) ...
+Selecting previously unselected package libio-async-loop-epoll-perl.
+Preparing to unpack .../43-libio-async-loop-epoll-perl_0.20-1_all.deb ...
+Unpacking libio-async-loop-epoll-perl (0.20-1) ...
+Selecting previously unselected package libio-pty-perl.
+Preparing to unpack .../44-libio-pty-perl_1%3a1.12-1_amd64.deb ...
+Unpacking libio-pty-perl (1:1.12-1) ...
+Selecting previously unselected package libipc-run-perl.
+Preparing to unpack .../45-libipc-run-perl_20180523.0-2_all.deb ...
+Unpacking libipc-run-perl (20180523.0-2) ...
+Selecting previously unselected package libjson-maybexs-perl.
+Preparing to unpack .../46-libjson-maybexs-perl_1.004000-1_all.deb ...
+Unpacking libjson-maybexs-perl (1.004000-1) ...
+Selecting previously unselected package liblist-compare-perl.
+Preparing to unpack .../47-liblist-compare-perl_0.53-1_all.deb ...
+Unpacking liblist-compare-perl (0.53-1) ...
+Selecting previously unselected package liblist-moreutils-perl.
+Preparing to unpack .../48-liblist-moreutils-perl_0.416-1build5_amd64.deb ...
+Unpacking liblist-moreutils-perl (0.416-1build5) ...
+Selecting previously unselected package librole-tiny-perl.
+Preparing to unpack .../49-librole-tiny-perl_2.001004-1_all.deb ...
+Unpacking librole-tiny-perl (2.001004-1) ...
+Selecting previously unselected package libstrictures-perl.
+Preparing to unpack .../50-libstrictures-perl_2.000006-1_all.deb ...
+Unpacking libstrictures-perl (2.000006-1) ...
+Selecting previously unselected package libsub-quote-perl.
+Preparing to unpack .../51-libsub-quote-perl_2.006006-1_all.deb ...
+Unpacking libsub-quote-perl (2.006006-1) ...
+Selecting previously unselected package libmoo-perl.
+Preparing to unpack .../52-libmoo-perl_2.003006-1_all.deb ...
+Unpacking libmoo-perl (2.003006-1) ...
+Selecting previously unselected package libmoox-aliases-perl.
+Preparing to unpack .../53-libmoox-aliases-perl_0.001006-1_all.deb ...
+Unpacking libmoox-aliases-perl (0.001006-1) ...
+Selecting previously unselected package libpackage-stash-perl.
+Preparing to unpack .../54-libpackage-stash-perl_0.38-1_all.deb ...
+Unpacking libpackage-stash-perl (0.38-1) ...
+Selecting previously unselected package libsub-identify-perl.
+Preparing to unpack .../55-libsub-identify-perl_0.14-1build2_amd64.deb ...
+Unpacking libsub-identify-perl (0.14-1build2) ...
+Selecting previously unselected package libsub-name-perl.
+Preparing to unpack .../56-libsub-name-perl_0.26-1_amd64.deb ...
+Unpacking libsub-name-perl (0.26-1) ...
+Selecting previously unselected package libnamespace-clean-perl.
+Preparing to unpack .../57-libnamespace-clean-perl_0.27-1_all.deb ...
+Unpacking libnamespace-clean-perl (0.27-1) ...
+Selecting previously unselected package libnet-dns-sec-perl.
+Preparing to unpack .../58-libnet-dns-sec-perl_1.15-1_amd64.deb ...
+Unpacking libnet-dns-sec-perl (1.15-1) ...
+Selecting previously unselected package libnet-libidn-perl.
+Preparing to unpack .../59-libnet-libidn-perl_0.12.ds-3build2_amd64.deb ...
+Unpacking libnet-libidn-perl (0.12.ds-3build2) ...
+Selecting previously unselected package libpackage-stash-xs-perl.
+Preparing to unpack .../60-libpackage-stash-xs-perl_0.29-1build1_amd64.deb ...
+Unpacking libpackage-stash-xs-perl (0.29-1build1) ...
+Selecting previously unselected package libpath-tiny-perl.
+Preparing to unpack .../61-libpath-tiny-perl_0.108-1_all.deb ...
+Unpacking libpath-tiny-perl (0.108-1) ...
+Selecting previously unselected package libperl4-corelibs-perl.
+Preparing to unpack .../62-libperl4-corelibs-perl_0.004-2_all.deb ...
+Unpacking libperl4-corelibs-perl (0.004-2) ...
+Selecting previously unselected package libperlio-gzip-perl.
+Preparing to unpack .../63-libperlio-gzip-perl_0.19-1build5_amd64.deb ...
+Unpacking libperlio-gzip-perl (0.19-1build5) ...
+Selecting previously unselected package libreadonly-perl.
+Preparing to unpack .../64-libreadonly-perl_2.050-2_all.deb ...
+Unpacking libreadonly-perl (2.050-2) ...
+Selecting previously unselected package libref-util-perl.
+Preparing to unpack .../65-libref-util-perl_0.204-1_all.deb ...
+Unpacking libref-util-perl (0.204-1) ...
+Selecting previously unselected package libref-util-xs-perl.
+Preparing to unpack .../66-libref-util-xs-perl_0.117-1build2_amd64.deb ...
+Unpacking libref-util-xs-perl (0.117-1build2) ...
+Selecting previously unselected package libsereal-decoder-perl.
+Preparing to unpack .../67-libsereal-decoder-perl_4.011+ds-1build1_amd64.deb ...
+Unpacking libsereal-decoder-perl (4.011+ds-1build1) ...
+Selecting previously unselected package libsereal-encoder-perl.
+Preparing to unpack .../68-libsereal-encoder-perl_4.011+ds-1build1_amd64.deb ...
+Unpacking libsereal-encoder-perl (4.011+ds-1build1) ...
+Selecting previously unselected package libsereal-perl.
+Preparing to unpack .../69-libsereal-perl_4.011-1_all.deb ...
+Unpacking libsereal-perl (4.011-1) ...
+Selecting previously unselected package libtest-fatal-perl.
+Preparing to unpack .../70-libtest-fatal-perl_0.014-1_all.deb ...
+Unpacking libtest-fatal-perl (0.014-1) ...
+Selecting previously unselected package libtest-refcount-perl.
+Preparing to unpack .../71-libtest-refcount-perl_0.10-1_all.deb ...
+Unpacking libtest-refcount-perl (0.10-1) ...
+Selecting previously unselected package libtext-levenshtein-perl.
+Preparing to unpack .../72-libtext-levenshtein-perl_0.13-1_all.deb ...
+Unpacking libtext-levenshtein-perl (0.13-1) ...
+Selecting previously unselected package libtype-tiny-perl.
+Preparing to unpack .../73-libtype-tiny-perl_1.008001-2_all.deb ...
+Unpacking libtype-tiny-perl (1.008001-2) ...
+Selecting previously unselected package libtype-tiny-xs-perl.
+Preparing to unpack .../74-libtype-tiny-xs-perl_0.016-1_amd64.deb ...
+Unpacking libtype-tiny-xs-perl (0.016-1) ...
+Selecting previously unselected package libunicode-utf8-perl.
+Preparing to unpack .../75-libunicode-utf8-perl_0.62-1build1_amd64.deb ...
+Unpacking libunicode-utf8-perl (0.62-1build1) ...
+Selecting previously unselected package libxml-namespacesupport-perl.
+Preparing to unpack .../76-libxml-namespacesupport-perl_1.12-1_all.deb ...
+Unpacking libxml-namespacesupport-perl (1.12-1) ...
+Selecting previously unselected package libxml-sax-base-perl.
+Preparing to unpack .../77-libxml-sax-base-perl_1.09-1_all.deb ...
+Unpacking libxml-sax-base-perl (1.09-1) ...
+Selecting previously unselected package libxml-sax-perl.
+Preparing to unpack .../78-libxml-sax-perl_1.02+dfsg-1_all.deb ...
+Unpacking libxml-sax-perl (1.02+dfsg-1) ...
+Selecting previously unselected package libxml-libxml-perl.
+Preparing to unpack .../79-libxml-libxml-perl_2.0134+dfsg-1build1_amd64.deb ...
+Unpacking libxml-libxml-perl (2.0134+dfsg-1build1) ...
+Selecting previously unselected package libxml-sax-expat-perl.
+Preparing to unpack .../80-libxml-sax-expat-perl_0.51-1_all.deb ...
+Unpacking libxml-sax-expat-perl (0.51-1) ...
+Selecting previously unselected package libxml-writer-perl.
+Preparing to unpack .../81-libxml-writer-perl_0.625-1_all.deb ...
+Unpacking libxml-writer-perl (0.625-1) ...
+Selecting previously unselected package libyaml-libyaml-perl.
+Preparing to unpack .../82-libyaml-libyaml-perl_0.81+repack-1_amd64.deb ...
+Unpacking libyaml-libyaml-perl (0.81+repack-1) ...
+Selecting previously unselected package libdevel-size-perl.
+Preparing to unpack .../83-libdevel-size-perl_0.83-1build1_amd64.deb ...
+Unpacking libdevel-size-perl (0.83-1build1) ...
+Selecting previously unselected package patchutils.
+Preparing to unpack .../84-patchutils_0.3.4-2_amd64.deb ...
+Unpacking patchutils (0.3.4-2) ...
+Selecting previously unselected package t1utils.
+Preparing to unpack .../85-t1utils_1.41-3_amd64.deb ...
+Unpacking t1utils (1.41-3) ...
+Selecting previously unselected package lintian.
+Preparing to unpack .../86-lintian_2.62.0_all.deb ...
+Unpacking lintian (2.62.0) ...
+Setting up libasync-mergepoint-perl (0.04-2) ...
+Setting up libapt-pkg-perl (0.1.36build3) ...
+Setting up libunicode-utf8-perl (0.62-1build1) ...
+Setting up libstruct-dumb-perl (0.09-1) ...
+Setting up gdebi-core (0.9.5.7+nmu3) ...
+Setting up libdynaloader-functions-perl (0.003-1) ...
+Setting up libtext-glob-perl (0.10-1) ...
+Setting up libclass-method-modifiers-perl (2.13-1) ...
+Setting up liblist-compare-perl (0.53-1) ...
+Setting up libref-util-xs-perl (0.117-1build2) ...
+Setting up libio-pty-perl (1:1.12-1) ...
+Setting up libclone-perl (0.43-2) ...
+Setting up libarchive-zip-perl (1.67-2) ...
+Setting up libsub-identify-perl (0.14-1build2) ...
+Setting up libcpanel-json-xs-perl (4.19-1build1) ...
+Setting up libdevel-size-perl (0.83-1build1) ...
+Setting up libperl4-corelibs-perl (0.004-2) ...
+Setting up libfuture-perl (0.43-1) ...
+Setting up libyaml-libyaml-perl (0.81+repack-1) ...
+Setting up libtest-fatal-perl (0.014-1) ...
+Setting up libxml-namespacesupport-perl (1.12-1) ...
+Setting up libtext-levenshtein-perl (0.13-1) ...
+Setting up libsereal-encoder-perl (4.011+ds-1build1) ...
+Setting up gnome-icon-theme (3.12.0-3) ...
+update-alternatives: using /usr/share/icons/gnome/scalable/places/debian-swirl.svg to provide /usr/share/icons/gnome/scalable/places/start-here.svg (start-here.svg) in auto mode
+Setting up libnumber-compare-perl (0.03-1) ...
+Setting up libio-async-perl (0.75-1) ...
+Setting up libpango-perl (1.227-3build1) ...
+Setting up patchutils (0.3.4-2) ...
+Setting up libjson-maybexs-perl (1.004000-1) ...
+Setting up libxml-sax-base-perl (1.09-1) ...
+Setting up libio-string-perl (1.08-3) ...
+Setting up libreadonly-perl (2.050-2) ...
+Setting up libpackage-stash-xs-perl (0.29-1build1) ...
+Setting up libfile-find-rule-perl (0.34-1) ...
+Setting up libdigest-hmac-perl (1.03+dfsg-2) ...
+Setting up libref-util-perl (0.204-1) ...
+Setting up libnet-domain-tld-perl (1.75-1) ...
+Setting up libxml-writer-perl (0.625-1) ...
+Setting up libnet-libidn-perl (0.12.ds-3build2) ...
+Setting up t1utils (1.41-3) ...
+Setting up liblinux-epoll-perl (0.017-1) ...
+Setting up diffstat (1.63-1) ...
+Setting up libvariable-magic-perl (0.62-1build2) ...
+Setting up libcroco3:amd64 (0.6.13-1) ...
+Setting up libb-hooks-op-check-perl (0.22-1build2) ...
+Setting up libipc-run-perl (20180523.0-2) ...
+Setting up libtest-refcount-perl (0.10-1) ...
+Setting up libsub-exporter-progressive-perl (0.001013-1) ...
+Setting up libcapture-tiny-perl (0.48-1) ...
+Setting up libsub-name-perl (0.26-1) ...
+Setting up libtype-tiny-xs-perl (0.016-1) ...
+Setting up libpath-tiny-perl (0.108-1) ...
+Setting up librole-tiny-perl (2.001004-1) ...
+Setting up libstrictures-perl (2.000006-1) ...
+Setting up libsub-quote-perl (2.006006-1) ...
+Setting up libclass-xsaccessor-perl (1.19-3build3) ...
+Setting up libexporter-tiny-perl (1.002001-1) ...
+Setting up libfont-ttf-perl (1.06-1) ...
+Setting up libnet-ip-perl (1.26-2) ...
+Setting up libperlio-gzip-perl (0.19-1build5) ...
+Setting up libsereal-decoder-perl (4.011+ds-1build1) ...
+Setting up libdigest-bubblebabble-perl (0.02-2) ...
+Setting up gettext (0.19.8.1-10build1) ...
+Setting up gdebi (0.9.5.7+nmu3) ...
+Setting up liblist-moreutils-perl (0.416-1build5) ...
+Setting up libtype-tiny-perl (1.008001-2) ...
+Setting up libsereal-perl (4.011-1) ...
+Setting up libnet-dns-perl (1.22-1) ...
+Setting up libdevel-callchecker-perl (0.008-1ubuntu1) ...
+Setting up libxml-sax-perl (1.02+dfsg-1) ...
+update-perl-sax-parsers: Registering Perl SAX parser XML::SAX::PurePerl with priority 10...
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
+
+Creating config file /etc/perl/XML/SAX/ParserDetails.ini with new version
+Setting up libgtk2-perl (2:1.24993-1ubuntu2) ...
+Setting up libio-async-loop-epoll-perl (0.20-1) ...
+Setting up intltool-debian (0.35.0+20060710.5) ...
+Setting up libxml-libxml-perl (2.0134+dfsg-1build1) ...
+update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX::Parser with priority 50...
+update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX with priority 50...
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
+Replacing config file /etc/perl/XML/SAX/ParserDetails.ini with new version
+Setting up libxml-sax-expat-perl (0.51-1) ...
+update-perl-sax-parsers: Registering Perl SAX parser XML::SAX::Expat with priority 50...
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
+Replacing config file /etc/perl/XML/SAX/ParserDetails.ini with new version
+Setting up libemail-valid-perl (1.202-1) ...
+Setting up libparams-classify-perl (0.015-1build2) ...
+Setting up libnet-dns-sec-perl (1.15-1) ...
+Setting up libmodule-runtime-perl (0.016-1) ...
+Setting up libmodule-implementation-perl (0.09-1) ...
+Setting up libpackage-stash-perl (0.38-1) ...
+Setting up libimport-into-perl (1.002005-1) ...
+Setting up libmoo-perl (2.003006-1) ...
+Setting up libmoox-aliases-perl (0.001006-1) ...
+Setting up libb-hooks-endofscope-perl (0.24-1) ...
+Setting up libnamespace-clean-perl (0.27-1) ...
+Setting up lintian (2.62.0) ...
+Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+Processing triggers for desktop-file-utils (0.24-1ubuntu3) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+Processing triggers for man-db (2.9.1-1) ...
+pouria@ubuntu:~$ wget download.opensuse.org/repositories/home:/colomboem/xUbuntu_12.04/amd64/dukto_6.0-1_amd64.deb
+--2020-08-25 01:41:57--  http://download.opensuse.org/repositories/home:/colomboem/xUbuntu_12.04/amd64/dukto_6.0-1_amd64.deb
+Resolving download.opensuse.org (download.opensuse.org)... 195.135.221.134, 2001:67c:2178:8::13
+Connecting to download.opensuse.org (download.opensuse.org)|195.135.221.134|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://plug-mirror.rcac.purdue.edu/opensuse/repositories/home:/colomboem/xUbuntu_12.04/amd64/dukto_6.0-1_amd64.deb [following]
+--2020-08-25 01:41:58--  http://plug-mirror.rcac.purdue.edu/opensuse/repositories/home:/colomboem/xUbuntu_12.04/amd64/dukto_6.0-1_amd64.deb
+Resolving plug-mirror.rcac.purdue.edu (plug-mirror.rcac.purdue.edu)... 128.211.151.254, 2001:18e8:804:35::fe
+Connecting to plug-mirror.rcac.purdue.edu (plug-mirror.rcac.purdue.edu)|128.211.151.254|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 259122 (253K) [application/octet-stream]
+Saving to: ‘dukto_6.0-1_amd64.deb’
+
+dukto_6.0-1_amd64.deb                              100%[===============================================================================================================>] 253.05K   170KB/s    in 1.5s    
+
+2020-08-25 01:42:00 (170 KB/s) - ‘dukto_6.0-1_amd64.deb’ saved [259122/259122]
+
+pouria@ubuntu:~$ gdebi dukto_6.0-1_amd64.deb
+Reading package lists... Done
+Building dependency tree        
+Reading state information... Done
+Reading state information... Done
+This package is uninstallable
+Dependency is not satisfiable: libqt4-declarative (>= 4:4.7.0~rc1)
+
+pouria@ubuntu:~$ cd cascade
+pouria@ubuntu:~/cascade$ source env/bin/activatet
+bash: env/bin/activatet: No such file or directory
+pouria@ubuntu:~/cascade$ source env/bin/activate
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 04:43:23
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.93, 127.0.0.1:55426]
+HTTP GET /static/rest_framework/css/prettify.css 200 [0.20, 127.0.0.1:55438]
+HTTP GET /static/rest_framework/css/default.css 200 [0.20, 127.0.0.1:55440]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 200 [0.32, 127.0.0.1:55426]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 200 [0.21, 127.0.0.1:55436]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.19, 127.0.0.1:55442]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:55436]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:55440]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55436]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:55440]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:55436]
+HTTP GET /static/rest_framework/img/grid.png 200 [0.03, 127.0.0.1:55436]
+******************* Call method works :) ******************
+Not Found: /favicon.ico
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.44, 127.0.0.1:55426]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55440]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55440]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55440]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55438]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:55440]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:55440]
+HTTP GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 200 [0.03, 127.0.0.1:55440]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.09, 127.0.0.1:55440]
+/home/pouria/cascade/DeviceManagement/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 04:45:49
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.12, 127.0.0.1:55464]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55464]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55464]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55464]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:55468]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:55464]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:55470]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.20, 127.0.0.1:55464]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55468]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55470]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55468]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55470]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:55468]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:55470]
+/home/pouria/cascade/DeviceManagement/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 04:50:45
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.11, 127.0.0.1:55502]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55502]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55506]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:55506]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:55506]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:55508]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:55502]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.18, 127.0.0.1:55502]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:55506]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55508]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:55506]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:55508]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:55502]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:55506]
+******************* Call method works :) ******************
+Not Found: /ws/Devices/
+HTTP GET /ws/Devices/ 404 [0.02, 127.0.0.1:55502]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.28, 127.0.0.1:55502]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55502]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55502]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55502]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55522]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:55522]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:55502]
+/home/pouria/cascade/DeviceManagement/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 04:52:47
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.12, 127.0.0.1:55530]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55530]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:55530]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:55538]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.03, 127.0.0.1:55536]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:55542]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:55540]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.19, 127.0.0.1:55530]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55538]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55536]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55542]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:55540]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:55538]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:55536]
+/home/pouria/cascade/DeviceManagement/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 04:53:40
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.19, 127.0.0.1:55556]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55556]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55556]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:55562]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:55556]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:55562]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:55564]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.19, 127.0.0.1:55556]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55562]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55564]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55562]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:55564]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:55562]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:55564]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.07, 127.0.0.1:55582]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55582]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55586]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55586]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:55586]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:55586]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:55586]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.08, 127.0.0.1:55650]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:55650]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:55650]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.04, 127.0.0.1:55654]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:55656]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:55658]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:55660]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.29, 127.0.0.1:55650]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55654]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55656]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55658]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55660]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:55654]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:55656]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.06, 127.0.0.1:55650]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55658]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55660]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:55654]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55656]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:55660]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:55658]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.06, 127.0.0.1:55650]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55654]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55656]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55660]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55658]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:55654]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:55656]
+^C(env) pouria@ubuntu:~/cascade$ docker run -p 6379:6379 -d redis:5
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/create: dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+(env) pouria@ubuntu:~/cascade$ sudo docker run -p 6379:6379 -d redis:5
+[sudo] password for pouria: 
+03b6147214e823096845b92271f2850832ad44d7b45f90a1ba94d423d2688b7b
+(env) pouria@ubuntu:~/cascade$ python3 -m pip install channels_redis
+Collecting channels_redis
+  Using cached channels_redis-3.0.1-py2.py3-none-any.whl (13 kB)
+Requirement already satisfied: asgiref~=3.0 in ./env/lib/python3.8/site-packages (from channels_redis) (3.2.10)
+Requirement already satisfied: channels~=2.2 in ./env/lib/python3.8/site-packages (from channels_redis) (2.4.0)
+Collecting msgpack~=1.0
+  Using cached msgpack-1.0.0-cp38-cp38-manylinux1_x86_64.whl (303 kB)
+Collecting aioredis~=1.0
+  Using cached aioredis-1.3.1-py3-none-any.whl (65 kB)
+Requirement already satisfied: daphne~=2.3 in ./env/lib/python3.8/site-packages (from channels~=2.2->channels_redis) (2.5.0)
+Requirement already satisfied: Django>=2.2 in ./env/lib/python3.8/site-packages (from channels~=2.2->channels_redis) (3.1)
+Collecting hiredis
+  Using cached hiredis-1.1.0-cp38-cp38-manylinux2010_x86_64.whl (62 kB)
+Collecting async-timeout
+  Using cached async_timeout-3.0.1-py3-none-any.whl (8.2 kB)
+Requirement already satisfied: autobahn>=0.18 in ./env/lib/python3.8/site-packages (from daphne~=2.3->channels~=2.2->channels_redis) (20.7.1)
+Requirement already satisfied: twisted[tls]>=18.7 in ./env/lib/python3.8/site-packages (from daphne~=2.3->channels~=2.2->channels_redis) (20.3.0)
+Requirement already satisfied: pytz in ./env/lib/python3.8/site-packages (from Django>=2.2->channels~=2.2->channels_redis) (2020.1)
+Requirement already satisfied: sqlparse>=0.2.2 in ./env/lib/python3.8/site-packages (from Django>=2.2->channels~=2.2->channels_redis) (0.3.1)
+Requirement already satisfied: txaio>=20.3.1 in ./env/lib/python3.8/site-packages (from autobahn>=0.18->daphne~=2.3->channels~=2.2->channels_redis) (20.4.1)
+Requirement already satisfied: cryptography>=2.7 in ./env/lib/python3.8/site-packages (from autobahn>=0.18->daphne~=2.3->channels~=2.2->channels_redis) (3.0)
+Requirement already satisfied: Automat>=0.3.0 in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (20.2.0)
+Requirement already satisfied: PyHamcrest!=1.10.0,>=1.9.0 in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (2.0.2)
+Requirement already satisfied: attrs>=19.2.0 in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (19.3.0)
+Requirement already satisfied: incremental>=16.10.1 in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (17.5.0)
+Requirement already satisfied: constantly>=15.1 in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (15.1.0)
+Requirement already satisfied: zope.interface>=4.4.2 in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (5.1.0)
+Requirement already satisfied: hyperlink>=17.1.1 in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (20.0.1)
+Requirement already satisfied: pyopenssl>=16.0.0; extra == "tls" in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (19.1.0)
+Requirement already satisfied: service-identity>=18.1.0; extra == "tls" in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (18.1.0)
+Requirement already satisfied: idna!=2.3,>=0.6; extra == "tls" in ./env/lib/python3.8/site-packages (from twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (2.10)
+Requirement already satisfied: cffi!=1.11.3,>=1.8 in ./env/lib/python3.8/site-packages (from cryptography>=2.7->autobahn>=0.18->daphne~=2.3->channels~=2.2->channels_redis) (1.14.2)
+Requirement already satisfied: six>=1.4.1 in ./env/lib/python3.8/site-packages (from cryptography>=2.7->autobahn>=0.18->daphne~=2.3->channels~=2.2->channels_redis) (1.15.0)
+Requirement already satisfied: setuptools in ./env/lib/python3.8/site-packages (from zope.interface>=4.4.2->twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (49.2.1)
+Requirement already satisfied: pyasn1-modules in ./env/lib/python3.8/site-packages (from service-identity>=18.1.0; extra == "tls"->twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (0.2.8)
+Requirement already satisfied: pyasn1 in ./env/lib/python3.8/site-packages (from service-identity>=18.1.0; extra == "tls"->twisted[tls]>=18.7->daphne~=2.3->channels~=2.2->channels_redis) (0.4.8)
+Requirement already satisfied: pycparser in ./env/lib/python3.8/site-packages (from cffi!=1.11.3,>=1.8->cryptography>=2.7->autobahn>=0.18->daphne~=2.3->channels~=2.2->channels_redis) (2.20)
+Installing collected packages: msgpack, hiredis, async-timeout, aioredis, channels-redis
+Successfully installed aioredis-1.3.1 async-timeout-3.0.1 channels-redis-3.0.1 hiredis-1.1.0 msgpack-1.0.0
+(env) pouria@ubuntu:~/cascade$ python3 manage.py shell
+Python 3.8.2 (default, Jul 16 2020, 14:00:26) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> import channels.layers
+>>> >>> channel_layer = channels.layers.get_channel_layer()
+  File "<console>", line 1
+    >>> channel_layer = channels.layers.get_channel_layer()
+    ^
+SyntaxError: invalid syntax
+>>> >>> from asgiref.sync import async_to_sync
+  File "<console>", line 1
+    >>> from asgiref.sync import async_to_sync
+    ^
+SyntaxError: invalid syntax
+>>> >>> async_to_sync(channel_layer.send)('test_channel', {'type': 'hello'})
+  File "<console>", line 1
+    >>> async_to_sync(channel_layer.send)('test_channel', {'type': 'hello'})
+    ^
+SyntaxError: invalid syntax
+>>> >>> async_to_sync(channel_layer.receive)('test_channel')
+KeyboardInterrupt
+>>> 
+now exiting InteractiveConsole...
+(env) pouria@ubuntu:~/cascade$ import channel.layers
+
+Command 'import' not found, but can be installed with:
+
+sudo apt install graphicsmagick-imagemagick-compat  # version 1.4+really1.3.35-1, or
+sudo apt install imagemagick-6.q16                  # version 8:6.9.10.23+dfsg-2.1ubuntu11
+sudo apt install imagemagick-6.q16hdri              # version 8:6.9.10.23+dfsg-2.1ubuntu11
+
+(env) pouria@ubuntu:~/cascade$ python3 manage.py shell
+Python 3.8.2 (default, Jul 16 2020, 14:00:26) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> import channels.layers
+>>> channel_layer = channels.layers.get_channel_layer()
+>>> from asgiref.sync import async_to_sync
+>>> async_to_sync(channel_layer.send)('test_channel',{'type':'hello'})
+>>> async_to_sync(channel_layer.recieve)('test_channel')
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'RedisChannelLayer' object has no attribute 'recieve'
+>>> async_to_sync(channel_layer.receive)('test_channel')
+^CTraceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/asgiref/current_thread_executor.py", line 59, in run_until_future
+    work_item = self._work_queue.get(block=False)
+  File "/usr/lib/python3.8/queue.py", line 167, in get
+    raise Empty
+_queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/asgiref/sync.py", line 118, in __call__
+    current_executor.run_until_future(loop_future)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/asgiref/current_thread_executor.py", line 65, in run_until_future
+    time.sleep(0.001)
+KeyboardInterrupt
+>>> 
+now exiting InteractiveConsole...
+^CError in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 40, in _python_exit
+    t.join()
+  File "/usr/lib/python3.8/threading.py", line 1011, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.8/threading.py", line 1027, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+KeyboardInterrupt
+(env) pouria@ubuntu:~/cascade$ python3 manage.py shell
+Python 3.8.2 (default, Jul 16 2020, 14:00:26) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> import channels.layers
+>>> channel_layer = channels.layers.get_channel_layer()
+>>> from asgiref.sync import async_to_sync
+>>> async_to_sync(channel_layer.send)('test_channel',{'type':'hello'})
+>>> async_to_sync(channel_layer.receive)('test_channel')
+{'type': 'hello'}
+>>> /q
+  File "<console>", line 1
+    /q
+    ^
+SyntaxError: invalid syntax
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 06:16:53
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.18, 127.0.0.1:55844]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:55844]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:55850]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.02, 127.0.0.1:55848]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55850]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:55848]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:55850]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.33, 127.0.0.1:55844]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55848]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55850]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55848]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55850]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:55848]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:55850]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.07, 127.0.0.1:55858]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55858]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55858]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:55862]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:55862]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:55858]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:55864]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.22, 127.0.0.1:55858]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:55862]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55864]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55862]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:55864]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:55862]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:55858]
+/home/pouria/cascade/DeviceManagement/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 06:20:30
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.18, 127.0.0.1:55880]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:55880]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55884]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55884]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:55884]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:55880]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:55886]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.38, 127.0.0.1:55880]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:55884]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:55886]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:55884]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:55886]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:55884]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:55886]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:55902]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.77, 127.0.0.1:56048]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.07, 127.0.0.1:56054]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.06, 127.0.0.1:56058]
+HTTP GET /static/rest_framework/css/default.css 304 [0.07, 127.0.0.1:56050]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.06, 127.0.0.1:56056]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.10, 127.0.0.1:56048]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.10, 127.0.0.1:56060]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.04, 127.0.0.1:56054]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:56050]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:56058]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:56056]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.02, 127.0.0.1:56056]
+******************* Call method works :) ******************
+Not Found: /favicon.ico
+HTTP GET /favicon.ico 404 [0.06, 127.0.0.1:56056]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:56056]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:56056]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:56058]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:56050]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.04, 127.0.0.1:56050]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.40, 127.0.0.1:56640]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:56640]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:56640]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:56642]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:56642]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:56642]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.04, 127.0.0.1:56646]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:56648]
+HTTP GET /static/rest_framework/js/default.js 304 [0.04, 127.0.0.1:56650]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:56642]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.05, 127.0.0.1:56640]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:56640]
+HTTP GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 200 [0.03, 127.0.0.1:56640]
+[Failure instance: Traceback: <class 'ValueError'>: No route found for path 'ws/Devices/'.
+/home/pouria/cascade/env/lib/python3.8/site-packages/autobahn/websocket/protocol.py:2839:processHandshake
+/home/pouria/cascade/env/lib/python3.8/site-packages/txaio/tx.py:366:as_future
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/ws_protocol.py:72:onConnect
+--- <exception caught here> ---
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/server.py:200:create_application
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/staticfiles.py:41:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:54:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:47:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:145:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:169:__init__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/middleware.py:31:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:150:__call__
+]
+WebSocket DISCONNECT /ws/Devices/ [127.0.0.1:57446]
+******************* Call method works :) ******************
+login
+HTTP GET /api-auth/login/?next=/Devices/ 200 [1.50, 127.0.0.1:38516]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:38516]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:38516]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:38518]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:38518]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:38518]
+******************* Call method works :) ******************
+login
+HTTP POST /api-auth/login/ 302 [0.64, 127.0.0.1:38518]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.26, 127.0.0.1:38518]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:38518]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:38518]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:38518]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:38516]
+HTTP GET /static/rest_framework/css/default.css 304 [0.01, 127.0.0.1:38518]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.06, 127.0.0.1:38564]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.05, 127.0.0.1:38516]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.08, 127.0.0.1:38568]
+HTTP GET /static/rest_framework/js/default.js 304 [0.08, 127.0.0.1:38570]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.08, 127.0.0.1:38566]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:38566]
+******************* Call method works :) ******************
+device-list
+PING 192.168.110.110 (192.168.110.110) 56(84) bytes of data.
+
+--- 192.168.110.110 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2057ms
+
+HTTP POST /Devices/ 201 [13.93, 127.0.0.1:38566]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:38566]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:38566]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:39086]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:39086]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:39086]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:38566]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:39090]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.03, 127.0.0.1:39088]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:39086]
+HTTP GET /static/rest_framework/js/default.js 304 [0.04, 127.0.0.1:39092]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:39092]
+/home/pouria/cascade/DeviceManagement/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 07:59:58
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [2.02, 127.0.0.1:40632]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:40632]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:40632]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.39, 127.0.0.1:40634]
+HTTP GET /static/rest_framework/css/default.css 304 [0.05, 127.0.0.1:40654]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.05, 127.0.0.1:40656]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.15, 127.0.0.1:40632]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.16, 127.0.0.1:40660]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.16, 127.0.0.1:40658]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.25, 127.0.0.1:40634]
+HTTP GET /static/rest_framework/js/default.js 304 [0.13, 127.0.0.1:40654]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.13, 127.0.0.1:40654]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.22, 127.0.0.1:40654]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:40654]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:40654]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:40634]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:40634]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:40654]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:40658]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:40634]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:40654]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:40660]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:40632]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:40632]
+[Failure instance: Traceback: <class 'ValueError'>: No route found for path 'ws/Devices/'.
+/home/pouria/cascade/env/lib/python3.8/site-packages/autobahn/websocket/protocol.py:2839:processHandshake
+/home/pouria/cascade/env/lib/python3.8/site-packages/txaio/tx.py:366:as_future
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/ws_protocol.py:72:onConnect
+--- <exception caught here> ---
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/server.py:200:create_application
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/staticfiles.py:41:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:54:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:47:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:145:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:169:__init__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/middleware.py:31:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:150:__call__
+]
+WebSocket DISCONNECT /ws/Devices/ [127.0.0.1:42806]
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 08:05:59
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 101, in inner_run
+    application=self.get_application(options),
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 126, in get_application
+    return StaticFilesWrapper(get_default_application())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py", line 29, in get_default_application
+    module = importlib.import_module(path)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/routing.py", line 3, in <module>
+    import DeviceManagement.routing
+  File "/home/pouria/cascade/DeviceManagement/routing.py", line 8, in <module>
+    path('ws/Devices', consumers.StatusConsumer),
+NameError: name 'path' is not defined
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 08:06:18
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.62, 127.0.0.1:43642]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:43642]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:43642]
+HTTP GET /static/rest_framework/css/default.css 304 [0.04, 127.0.0.1:43658]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.06, 127.0.0.1:43644]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.04, 127.0.0.1:43660]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.04, 127.0.0.1:43662]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:43664]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:43658]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.07, 127.0.0.1:43642]
+HTTP GET /static/rest_framework/js/default.js 304 [0.05, 127.0.0.1:43644]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:43644]
+[Failure instance: Traceback: <class 'ValueError'>: No route found for path 'ws/Devices/'.
+/home/pouria/cascade/env/lib/python3.8/site-packages/autobahn/websocket/protocol.py:2839:processHandshake
+/home/pouria/cascade/env/lib/python3.8/site-packages/txaio/tx.py:366:as_future
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/ws_protocol.py:72:onConnect
+--- <exception caught here> ---
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/server.py:200:create_application
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/staticfiles.py:41:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:54:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:47:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:145:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:169:__init__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/middleware.py:31:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:150:__call__
+]
+WebSocket DISCONNECT /ws/Devices/ [127.0.0.1:43756]
+/home/pouria/cascade/DeviceManagement/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 08:07:06
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.33, 127.0.0.1:44032]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:44032]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:44032]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.02, 127.0.0.1:44032]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.04, 127.0.0.1:44046]
+HTTP GET /static/rest_framework/css/default.css 304 [0.05, 127.0.0.1:44034]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.04, 127.0.0.1:44048]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.04, 127.0.0.1:44050]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:44032]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.05, 127.0.0.1:44052]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:44046]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:44046]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.27, 127.0.0.1:44046]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:44046]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:44046]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:44052]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:44052]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44046]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:44032]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:44050]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:44048]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:44034]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:44052]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:44052]
+[Failure instance: Traceback: <class 'ValueError'>: No route found for path 'ws/Devices/'.
+/home/pouria/cascade/env/lib/python3.8/site-packages/autobahn/websocket/protocol.py:2839:processHandshake
+/home/pouria/cascade/env/lib/python3.8/site-packages/txaio/tx.py:366:as_future
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/ws_protocol.py:72:onConnect
+--- <exception caught here> ---
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/server.py:200:create_application
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/staticfiles.py:41:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:54:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:47:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:145:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:169:__init__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/middleware.py:31:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:150:__call__
+]
+WebSocket DISCONNECT /ws/Devices/ [127.0.0.1:44204]
+/home/pouria/cascade/DeviceManagement/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 08:10:39
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.49, 127.0.0.1:45752]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:45752]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.02, 127.0.0.1:45752]
+HTTP GET /static/rest_framework/css/default.css 304 [0.03, 127.0.0.1:45766]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.05, 127.0.0.1:45754]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.03, 127.0.0.1:45768]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.05, 127.0.0.1:45770]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.05, 127.0.0.1:45752]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.07, 127.0.0.1:45772]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:45754]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:45766]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:45766]
+[Failure instance: Traceback: <class 'ValueError'>: No route found for path 'ws/Devices/'.
+/home/pouria/cascade/env/lib/python3.8/site-packages/autobahn/websocket/protocol.py:2839:processHandshake
+/home/pouria/cascade/env/lib/python3.8/site-packages/txaio/tx.py:366:as_future
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/ws_protocol.py:72:onConnect
+--- <exception caught here> ---
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/server.py:200:create_application
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/staticfiles.py:41:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:54:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:47:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:145:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:169:__init__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/middleware.py:31:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:150:__call__
+]
+WebSocket DISCONNECT /ws/Devices/ [127.0.0.1:45952]
+^C(env) pouria@ubuntu:~/cascade$ python -m pip install -U pytest-django pytest-asyncio
+Collecting pytest-django
+  Downloading pytest_django-3.9.0-py2.py3-none-any.whl (19 kB)
+Collecting pytest-asyncio
+  Downloading pytest_asyncio-0.14.0-py3-none-any.whl (11 kB)
+Collecting pytest>=3.6
+  Downloading pytest-6.0.1-py3-none-any.whl (270 kB)
+     |████████████████████████████████| 270 kB 106 kB/s 
+Requirement already satisfied, skipping upgrade: attrs>=17.4.0 in ./env/lib/python3.8/site-packages (from pytest>=3.6->pytest-django) (19.3.0)
+Collecting pluggy<1.0,>=0.12
+  Downloading pluggy-0.13.1-py2.py3-none-any.whl (18 kB)
+Collecting iniconfig
+  Downloading iniconfig-1.0.1-py3-none-any.whl (4.2 kB)
+Collecting py>=1.8.2
+  Downloading py-1.9.0-py2.py3-none-any.whl (99 kB)
+     |████████████████████████████████| 99 kB 204 kB/s 
+Requirement already satisfied, skipping upgrade: toml in ./env/lib/python3.8/site-packages (from pytest>=3.6->pytest-django) (0.10.1)
+Collecting more-itertools>=4.0.0
+  Downloading more_itertools-8.4.0-py3-none-any.whl (43 kB)
+     |████████████████████████████████| 43 kB 2.7 MB/s 
+Collecting packaging
+  Downloading packaging-20.4-py2.py3-none-any.whl (37 kB)
+Requirement already satisfied, skipping upgrade: six in ./env/lib/python3.8/site-packages (from packaging->pytest>=3.6->pytest-django) (1.15.0)
+Collecting pyparsing>=2.0.2
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+     |████████████████████████████████| 67 kB 151 kB/s 
+Installing collected packages: pluggy, iniconfig, py, more-itertools, pyparsing, packaging, pytest, pytest-django, pytest-asyncio
+Successfully installed iniconfig-1.0.1 more-itertools-8.4.0 packaging-20.4 pluggy-0.13.1 py-1.9.0 pyparsing-2.4.7 pytest-6.0.1 pytest-asyncio-0.14.0 pytest-django-3.9.0
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 09:24:33
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [1.01, 127.0.0.1:53388]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.29, 127.0.0.1:53434]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.32, 127.0.0.1:53438]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.32, 127.0.0.1:53436]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.33, 127.0.0.1:53390]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.33, 127.0.0.1:53388]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.34, 127.0.0.1:53440]
+HTTP GET /static/rest_framework/css/default.css 304 [0.01, 127.0.0.1:53434]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:53438]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.05, 127.0.0.1:53436]
+HTTP GET /static/rest_framework/js/default.js 304 [0.06, 127.0.0.1:53390]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.09, 127.0.0.1:53390]
+******************* Call method works :) ******************
+device-list
+HTTP GET /ws/Devices/ 200 [0.51, 127.0.0.1:53390]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:53390]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:53390]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:53390]
+HTTP GET /static/rest_framework/css/default.css 304 [0.01, 127.0.0.1:53436]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.03, 127.0.0.1:53440]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.04, 127.0.0.1:53438]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.05, 127.0.0.1:53388]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.06, 127.0.0.1:53434]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:53390]
+HTTP GET /static/rest_framework/js/default.js 304 [0.04, 127.0.0.1:53436]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:53436]
+/home/pouria/cascade/DeviceManagement/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 09:26:34
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.22, 127.0.0.1:53904]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:53904]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.11, 127.0.0.1:53904]
+HTTP GET /static/rest_framework/css/default.css 304 [0.02, 127.0.0.1:53910]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.06, 127.0.0.1:53906]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.06, 127.0.0.1:53912]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.05, 127.0.0.1:53914]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.04, 127.0.0.1:53904]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.05, 127.0.0.1:53916]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:53910]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:53906]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.05, 127.0.0.1:53906]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.26, 127.0.0.1:53906]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:53906]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:53906]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:53910]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:53910]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:53906]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:53904]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.03, 127.0.0.1:53916]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.06, 127.0.0.1:53914]
+HTTP GET /static/rest_framework/js/default.js 304 [0.05, 127.0.0.1:53912]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.06, 127.0.0.1:53910]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:53910]
+/home/pouria/cascade/DeviceManagement/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 11:24:32
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [1.66, 127.0.0.1:47918]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:47918]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:47920]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:47920]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.01, 127.0.0.1:47918]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:47920]
+HTTP GET /static/rest_framework/css/default.css 304 [0.05, 127.0.0.1:47940]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.05, 127.0.0.1:47942]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.07, 127.0.0.1:47944]
+HTTP GET /static/rest_framework/js/default.js 304 [0.08, 127.0.0.1:47946]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:47920]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.07, 127.0.0.1:47920]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [1.10, 127.0.0.1:47920]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:47920]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:47920]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.05, 127.0.0.1:47946]
+HTTP GET /static/rest_framework/css/default.css 304 [0.06, 127.0.0.1:47944]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:47944]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.02, 127.0.0.1:47946]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:47920]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:47942]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.05, 127.0.0.1:47940]
+HTTP GET /static/rest_framework/js/default.js 304 [0.03, 127.0.0.1:47946]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:47946]
+[Failure instance: Traceback: <class 'ValueError'>: No route found for path 'ws/Devices/'.
+/home/pouria/cascade/env/lib/python3.8/site-packages/autobahn/websocket/protocol.py:2839:processHandshake
+/home/pouria/cascade/env/lib/python3.8/site-packages/txaio/tx.py:366:as_future
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/ws_protocol.py:72:onConnect
+--- <exception caught here> ---
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/server.py:200:create_application
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/staticfiles.py:41:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:54:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:47:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:145:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:169:__init__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/middleware.py:31:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:150:__call__
+]
+WebSocket DISCONNECT /ws/Devices/ [127.0.0.1:48944]
+^C(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 11:50:01
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.24, 127.0.0.1:60424]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:60424]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.02, 127.0.0.1:60424]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.02, 127.0.0.1:60440]
+HTTP GET /static/rest_framework/css/default.css 304 [0.02, 127.0.0.1:60438]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.04, 127.0.0.1:60426]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.04, 127.0.0.1:60442]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.03, 127.0.0.1:60444]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:60424]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:60440]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:60438]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:60438]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.29, 127.0.0.1:60438]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:60438]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:60438]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:60440]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:60440]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:60440]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:60438]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:60424]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:60440]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:60444]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:60442]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:60442]
+/home/pouria/cascade/DeviceManagement/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 11:52:24
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.81, 127.0.0.1:33038]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.01, 127.0.0.1:33038]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.03, 127.0.0.1:33040]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:33040]
+HTTP GET /static/rest_framework/css/default.css 304 [0.02, 127.0.0.1:33040]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.03, 127.0.0.1:33052]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.05, 127.0.0.1:33038]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.03, 127.0.0.1:33054]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:33056]
+HTTP GET /static/rest_framework/js/default.js 304 [0.01, 127.0.0.1:33040]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:33058]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:33058]
+/home/pouria/cascade/DeviceManagement/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 11:53:23
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.55, 127.0.0.1:33544]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:33544]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:33544]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.05, 127.0.0.1:33546]
+HTTP GET /static/rest_framework/css/default.css 304 [0.03, 127.0.0.1:33550]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.03, 127.0.0.1:33552]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.03, 127.0.0.1:33554]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:33544]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.05, 127.0.0.1:33556]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.02, 127.0.0.1:33546]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:33550]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:33550]
+******************* Call method works :) ******************
+device-list
+Bad Request: /Devices/
+HTTP POST /Devices/ 400 [0.22, 127.0.0.1:35624]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:35624]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:35624]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:35626]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:35626]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:35624]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:35624]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:35640]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:35642]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.02, 127.0.0.1:35638]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:35644]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:35644]
+******************* Call method works :) ******************
+device-list
+PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=128 time=223 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=128 time=233 ms
+64 bytes from 1.1.1.1: icmp_seq=3 ttl=128 time=224 ms
+
+--- 1.1.1.1 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 223.309/226.598/232.760/4.360 ms
+HTTP POST /Devices/ 201 [2.72, 127.0.0.1:35644]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.01, 127.0.0.1:35644]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:35644]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:35644]
+HTTP GET /static/rest_framework/css/default.css 304 [0.01, 127.0.0.1:35638]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:35642]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.02, 127.0.0.1:35644]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.03, 127.0.0.1:35624]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.04, 127.0.0.1:35640]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.03, 127.0.0.1:35638]
+HTTP GET /static/rest_framework/js/default.js 304 [0.05, 127.0.0.1:35626]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:35626]
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.09, 127.0.0.1:35626]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:35626]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:35626]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:35626]
+HTTP GET /static/rest_framework/css/default.css 304 [0.01, 127.0.0.1:35638]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:35640]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.01, 127.0.0.1:35624]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.01, 127.0.0.1:35644]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.00, 127.0.0.1:35644]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.00, 127.0.0.1:35644]
+HTTP GET /static/rest_framework/js/default.js 304 [0.00, 127.0.0.1:35624]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/?event=%27hello%27 200 [0.37, 127.0.0.1:38052]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:38052]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.00, 127.0.0.1:38052]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:38054]
+HTTP GET /static/rest_framework/css/default.css 304 [0.00, 127.0.0.1:38066]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:38066]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:38054]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.00, 127.0.0.1:38052]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.02, 127.0.0.1:38068]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:38072]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.04, 127.0.0.1:38070]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:38070]
+******************* Call method works :) ******************
+Not Found: /Devices/<event='hello'>
+HTTP GET /Devices/%3Cevent=%27hello%27%3E 404 [0.04, 127.0.0.1:38070]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:38070]
+/home/pouria/cascade/DeviceManagement/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 12:15:57
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.74, 127.0.0.1:44298]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.02, 127.0.0.1:44298]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:44298]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:44298]
+HTTP GET /static/rest_framework/css/default.css 304 [0.03, 127.0.0.1:44298]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.10, 127.0.0.1:44300]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.09, 127.0.0.1:44308]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.07, 127.0.0.1:44312]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.07, 127.0.0.1:44298]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.07, 127.0.0.1:44310]
+HTTP GET /static/rest_framework/js/default.js 304 [0.08, 127.0.0.1:44314]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:44314]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.22, 127.0.0.1:44314]
+HTTP GET /static/rest_framework/css/bootstrap.min.css 304 [0.00, 127.0.0.1:44314]
+HTTP GET /static/rest_framework/css/bootstrap-tweaks.css 304 [0.01, 127.0.0.1:44314]
+HTTP GET /static/rest_framework/css/prettify.css 304 [0.00, 127.0.0.1:44314]
+HTTP GET /static/rest_framework/css/default.css 304 [0.01, 127.0.0.1:44314]
+HTTP GET /static/rest_framework/js/jquery-3.4.1.min.js 304 [0.00, 127.0.0.1:44314]
+HTTP GET /static/rest_framework/js/ajax-form.js 304 [0.00, 127.0.0.1:44310]
+HTTP GET /static/rest_framework/js/prettify-min.js 304 [0.01, 127.0.0.1:44308]
+HTTP GET /static/rest_framework/js/bootstrap.min.js 304 [0.01, 127.0.0.1:44312]
+HTTP GET /static/rest_framework/js/csrf.js 304 [0.02, 127.0.0.1:44298]
+HTTP GET /static/rest_framework/js/default.js 304 [0.02, 127.0.0.1:44314]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:44314]
+^C(env) pouria@ubuntu:~/cascade$ cd ~/tutorial/2/tutorial
+(env) pouria@ubuntu:~/tutorial/2/tutorial$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/tutorial/urls.py", line 28, in <module>
+    path('', include('snippets.urls')),
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/snippets/urls.py", line 114
+    path('remote/snippets/', ,snippet_list name='snippet-list'),
+                             ^
+SyntaxError: invalid syntax
+/home/pouria/tutorial/2/tutorial/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/commands/runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/base.py", line 392, in check
+    all_issues = checks.run_checks(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/registry.py", line 70, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 408, in check
+    for pattern in self.url_patterns:
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 589, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/resolvers.py", line 582, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/tutorial/urls.py", line 28, in <module>
+    path('', include('snippets.urls')),
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/2/tutorial/snippets/urls.py", line 114
+    path('remote/snippets/', snippet_list name='snippet-list'),
+                                          ^
+SyntaxError: invalid syntax
+/home/pouria/tutorial/2/tutorial/snippets/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 12:18:47
+Django version 3.1, using settings 'tutorial.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+[26/Aug/2020 12:19:01] "GET / HTTP/1.1" 200 9993
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[26/Aug/2020 12:19:01] "GET /static/rest_framework/css/bootstrap.min.css.map HTTP/1.1" 404 1746
+^C(env) pouria@ubuntu:~/tutorial/2/tutorial$ cd ..
+(env) pouria@ubuntu:~/tutorial/2$ cd channel
+bash: cd: channel: No such file or directory
+(env) pouria@ubuntu:~/tutorial/2$ cd channels
+bash: cd: channels: No such file or directory
+(env) pouria@ubuntu:~/tutorial/2$ cd ..
+(env) pouria@ubuntu:~/tutorial$ cd channel
+(env) pouria@ubuntu:~/tutorial/channel$ ls
+mysite
+(env) pouria@ubuntu:~/tutorial/channel$ cd mysite
+(env) pouria@ubuntu:~/tutorial/channel/mysite$ ls
+chat  db.sqlite3  google-chrome-stable_current_amd64.deb  manage.py  mysite
+(env) pouria@ubuntu:~/tutorial/channel/mysite$ python manage.py makemigrations
+No changes detected
+(env) pouria@ubuntu:~/tutorial/channel/mysite$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+(env) pouria@ubuntu:~/tutorial/channel/mysite$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 12:26:03
+Django version 3.1, using settings 'mysite.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Not Found: /
+HTTP GET / 404 [0.07, 127.0.0.1:49152]
+HTTP GET /chat/ 200 [0.05, 127.0.0.1:49152]
+HTTP GET /chat/lobby/ 200 [0.04, 127.0.0.1:49152]
+WebSocket HANDSHAKING /ws/chat/lobby/ [127.0.0.1:49380]
+WebSocket CONNECT /ws/chat/lobby/ [127.0.0.1:49380]
+WebSocket DISCONNECT /ws/chat/lobby/ [127.0.0.1:49380]
+HTTP GET /chat/lobby/ 200 [0.00, 127.0.0.1:49152]
+WebSocket HANDSHAKING /ws/chat/lobby/ [127.0.0.1:49848]
+WebSocket CONNECT /ws/chat/lobby/ [127.0.0.1:49848]
+Not Found: /ws/chat/lobby/
+HTTP GET /ws/chat/lobby/ 404 [0.15, 127.0.0.1:49152]
+WebSocket DISCONNECT /ws/chat/lobby/ [127.0.0.1:49848]
+WebSocket HANDSHAKING /ws/chat/lobby/ [127.0.0.1:49982]
+WebSocket CONNECT /ws/chat/lobby/ [127.0.0.1:49982]
+/home/pouria/tutorial/channel/mysite/chat/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 12:29:43
+Django version 3.1, using settings 'mysite.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Not Found: /
+HTTP GET / 404 [0.10, 127.0.0.1:50956]
+HTTP GET /chat 301 [0.00, 127.0.0.1:50956]
+HTTP GET /chat/ 200 [0.00, 127.0.0.1:50956]
+HTTP GET /chat/lobby/ 200 [0.00, 127.0.0.1:50956]
+WebSocket HANDSHAKING /ws/chat/lobby/ [127.0.0.1:51104]
+********** THis message will show here if your channel socket work correctly ! *************
+WebSocket CONNECT /ws/chat/lobby/ [127.0.0.1:51104]
+/home/pouria/tutorial/channel/mysite/chat/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 12:36:49
+Django version 3.1, using settings 'mysite.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.8/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/utils/autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 101, in inner_run
+    application=self.get_application(options),
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/management/commands/runserver.py", line 126, in get_application
+    return StaticFilesWrapper(get_default_application())
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py", line 29, in get_default_application
+    module = importlib.import_module(path)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/tutorial/channel/mysite/mysite/routing.py", line 3, in <module>
+    import chat.routing
+  File "/home/pouria/tutorial/channel/mysite/chat/routing.py", line 3, in <module>
+    from . import consumers
+  File "/home/pouria/tutorial/channel/mysite/chat/consumers.py", line 7
+    await self.accept()
+                      ^
+TabError: inconsistent use of tabs and spaces in indentation
+/home/pouria/tutorial/channel/mysite/chat/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 12:37:35
+Django version 3.1, using settings 'mysite.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+HTTP GET /chat/ 200 [0.06, 127.0.0.1:54758]
+HTTP GET /chat/lobby/ 200 [0.00, 127.0.0.1:54758]
+WebSocket HANDSHAKING /ws/chat/lobby/ [127.0.0.1:54906]
+********** THis message will show here if your channel socket work correctly ! *************
+WebSocket CONNECT /ws/chat/lobby/ [127.0.0.1:54906]
+^C(env) pouria@ubuntu:~/tutorial/channel/mysite$ cd ~/cascade/
+(env) pouria@ubuntu:~/cascade$ ls
+DeviceManagement  env  main  manage.py  snippet  static  utils
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 12:45:42
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.17, 127.0.0.1:58630]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:58630]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:58630]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.26, 127.0.0.1:58630]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:58630]
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 12:46:23
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.12, 127.0.0.1:58986]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:58986]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.24, 127.0.0.1:58986]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:58986]
+******************* Call method works :) ******************
+Not Found: /ws/Devices/
+HTTP GET /ws/Devices/ 404 [0.01, 127.0.0.1:58986]
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 12:47:15
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.37, 127.0.0.1:59412]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:59412]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:59412]
+******************* Call method works :) ******************
+Not Found: /ws/Devices/
+HTTP GET /ws/Devices/ 404 [0.01, 127.0.0.1:59952]
+******************* Call method works :) ******************
+Not Found: /ws/Devices
+HTTP GET /ws/Devices 404 [0.01, 127.0.0.1:59952]
+/home/pouria/cascade/main/settings.py changed, reloading.
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 345, in execute
+    settings.INSTALLED_APPS
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 83, in __getattr__
+    self._setup(name)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/settings.py", line 51, in <module>
+    ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+NameError: name 'static' is not defined
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 07:59:10
+Django version 3.1, using settings 'main.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 127, in get_response
+    set_urlconf(settings.ROOT_URLCONF)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 84, in __getattr__
+    val = getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'ROOT_URLCONF'
+[26/Aug/2020 07:59:21] "GET / HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/wsgiref/handlers.py", line 137, in run
+    self.result = application(self.environ, self.start_response)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/wsgi.py", line 133, in __call__
+    response = self.get_response(request)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 127, in get_response
+    set_urlconf(settings.ROOT_URLCONF)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 84, in __getattr__
+    val = getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'ROOT_URLCONF'
+[26/Aug/2020 07:59:34] "GET /Devices/ HTTP/1.1" 500 59
+^C(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Traceback (most recent call last):
+  File "manage.py", line 22, in <module>
+    main()
+  File "manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/core/management/__init__.py", line 345, in execute
+    settings.INSTALLED_APPS
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 83, in __getattr__
+    self._setup(name)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/pouria/cascade/main/settings.py", line 52, in <module>
+    ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+NameError: name 'settings' is not defined
+(env) pouria@ubuntu:~/cascade$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 13:13:32
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.22, 127.0.0.1:43818]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.02, 127.0.0.1:43818]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.04, 127.0.0.1:43818]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.29, 127.0.0.1:43818]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:43818]
+******************* Call method works :) ******************
+login
+HTTP GET /api-auth/login/?next=/Devices/ 200 [0.12, 127.0.0.1:43818]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:43818]
+******************* Call method works :) ******************
+login
+HTTP POST /api-auth/login/ 302 [0.55, 127.0.0.1:43818]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.31, 127.0.0.1:43818]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:43818]
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 13:47:11
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 13:47:48
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.29, 127.0.0.1:60298]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.06, 127.0.0.1:60298]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.52, 127.0.0.1:60298]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.03, 127.0.0.1:60298]
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 13:58:07
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.56, 127.0.0.1:37030]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.03, 127.0.0.1:37030]
+******************* Call method works :) ******************
+Not Found: /Devices/pouria
+HTTP GET /Devices/pouria 404 [0.01, 127.0.0.1:37030]
+******************* Call method works :) ******************
+Not Found: /Devices/lobby
+HTTP GET /Devices/lobby 404 [0.01, 127.0.0.1:37030]
+******************* Call method works :) ******************
+Not Found: /Devices/$
+HTTP GET /Devices/$ 404 [0.01, 127.0.0.1:37030]
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 14:11:15
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+Not Found: /Devices/$
+HTTP GET /Devices/$ 404 [0.09, 127.0.0.1:43350]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.52, 127.0.0.1:43350]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.04, 127.0.0.1:43350]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.06, 127.0.0.1:43350]
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 14:19:42
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+api-root
+HTTP GET / 200 [0.50, 127.0.0.1:47498]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:47498]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.05, 127.0.0.1:47498]
+******************* Call method works :) ******************
+device-list
+HTTP GET /Devices/ 200 [0.25, 127.0.0.1:47498]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:47498]
+******************* Call method works :) ******************
+Not Found: /Device/
+HTTP GET /Device/ 404 [0.01, 127.0.0.1:47498]
+******************* Call method works :) ******************
+Not Found: /ws/Device/
+HTTP GET /ws/Device/ 404 [0.01, 127.0.0.1:47498]
+******************* Call method works :) ******************
+Not Found: /ws/Device
+HTTP GET /ws/Device 404 [0.01, 127.0.0.1:47498]
+******************* Call method works :) ******************
+Remote_device-list
+HTTP GET /ws/remote/Devices/ 200 [0.25, 127.0.0.1:48568]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:48568]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:48568]
+/home/pouria/cascade/DeviceManagement/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 14:22:33
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 14:22:45
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+Not Found: /ws/remote/Devices/
+HTTP GET /ws/remote/Devices/ 404 [0.07, 127.0.0.1:48944]
+******************* Call method works :) ******************
+Remote_device-list
+HTTP GET /remote/Devices/ 200 [0.47, 127.0.0.1:48944]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:48944]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:48944]
+[Failure instance: Traceback: <class 'ValueError'>: No route found for path 'remote/Devices/'.
+/home/pouria/cascade/env/lib/python3.8/site-packages/autobahn/websocket/protocol.py:2839:processHandshake
+/home/pouria/cascade/env/lib/python3.8/site-packages/txaio/tx.py:366:as_future
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/ws_protocol.py:72:onConnect
+--- <exception caught here> ---
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/server.py:200:create_application
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/staticfiles.py:41:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:54:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:47:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:145:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:169:__init__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/middleware.py:31:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:150:__call__
+]
+WebSocket DISCONNECT /remote/Devices/ [127.0.0.1:49734]
+/home/pouria/cascade/DeviceManagement/routing.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 14:24:56
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+Remote_device-list
+HTTP GET /remote/Devices/ 200 [0.58, 127.0.0.1:49986]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:49986]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.02, 127.0.0.1:49986]
+WebSocket HANDSHAKING /remote/Devices/ [127.0.0.1:50706]
+Exception inside application: connect() missing 1 required positional argument: 'event'
+Traceback (most recent call last):
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py", line 183, in __call__
+    return await self.inner(receive, self.send)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/middleware.py", line 41, in coroutine_call
+    await inner_instance(receive, send)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/consumer.py", line 73, in dispatch
+    await handler(message)
+  File "/home/pouria/cascade/env/lib/python3.8/site-packages/channels/generic/websocket.py", line 175, in websocket_connect
+    await self.connect()
+TypeError: connect() missing 1 required positional argument: 'event'
+WebSocket DISCONNECT /remote/Devices/ [127.0.0.1:50706]
+/home/pouria/cascade/DeviceManagement/consumers.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 14:27:14
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+****************** My first Middleware ********************
+******************* Call method works :) ******************
+Remote_device-list
+HTTP GET /remote/Devices/ 200 [0.55, 127.0.0.1:51114]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.01, 127.0.0.1:51114]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.01, 127.0.0.1:51114]
+WebSocket HANDSHAKING /remote/Devices/ [127.0.0.1:51308]
+********* Now it's the first Step ! **********
+WebSocket CONNECT /remote/Devices/ [127.0.0.1:51308]
+******************* Call method works :) ******************
+Remote_device-list
+PING 2.2.2.2 (2.2.2.2) 56(84) bytes of data.
+
+--- 2.2.2.2 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2041ms
+
+HTTP POST /remote/Devices/ 201 [12.39, 127.0.0.1:54652]
+WebSocket DISCONNECT /remote/Devices/ [127.0.0.1:51308]
+HTTP GET /static/rest_framework/img/grid.png 304 [0.00, 127.0.0.1:54652]
+HTTP GET /static/rest_framework/css/bootstrap.min.css.map 404 [0.00, 127.0.0.1:54652]
+[Failure instance: Traceback: <class 'ValueError'>: No route found for path 'remote/Devices/$'.
+/home/pouria/cascade/env/lib/python3.8/site-packages/autobahn/websocket/protocol.py:2839:processHandshake
+/home/pouria/cascade/env/lib/python3.8/site-packages/txaio/tx.py:366:as_future
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/ws_protocol.py:72:onConnect
+--- <exception caught here> ---
+/home/pouria/cascade/env/lib/python3.8/site-packages/twisted/internet/defer.py:151:maybeDeferred
+/home/pouria/cascade/env/lib/python3.8/site-packages/daphne/server.py:200:create_application
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/staticfiles.py:41:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:54:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:47:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:145:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/sessions.py:169:__init__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/middleware.py:31:__call__
+/home/pouria/cascade/env/lib/python3.8/site-packages/channels/routing.py:150:__call__
+]
+WebSocket DISCONNECT /remote/Devices/$ [127.0.0.1:55492]
+WebSocket HANDSHAKING /remote/Devices/ [127.0.0.1:55830]
+********* Now it's the first Step ! **********
+WebSocket CONNECT /remote/Devices/ [127.0.0.1:55830]
+/home/pouria/cascade/DeviceManagement/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 26, 2020 - 14:55:52
+Django version 3.1, using settings 'main.settings'
+Starting ASGI/Channels version 2.4.0 development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+

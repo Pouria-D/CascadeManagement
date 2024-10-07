@@ -1,0 +1,10 @@
+[Unit]
+Description=ha_checker_timer
+
+[Timer]
+OnBootSec=30
+OnUnitActiveSec=1min
+Unit=ha_checker.service
+
+[Install]
+WantedBy=multi-user.target

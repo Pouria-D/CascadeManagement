@@ -1,0 +1,199 @@
+[
+  {
+    "pk": 1,
+    "model": "config_app.DNSConfig",
+    "fields": {
+      "primary_dns_server": "4.2.2.4"
+    }
+  },
+  {
+    "model": "config_app.SystemService",
+    "pk": "auto_fix",
+    "fields": {
+      "real_name": "watcher"
+    },
+    "descriptions": "This service will check/fix current status to ensure that anything work well."
+  },
+  {
+    "model": "config_app.SystemService",
+    "pk": "dns",
+    "fields": {
+      "real_name": "dnsmasq"
+    },
+    "descriptions": "This service is related to local and forward DNS server."
+  },
+  {
+    "model": "config_app.SystemService",
+    "pk": "vpn",
+    "fields": {
+      "real_name": "ipsec"
+    },
+    "descriptions": "This service is related to VPN (IPSec)."
+  },
+  {
+    "model": "config_app.SystemService",
+    "pk": "live_notifier",
+    "fields": {
+      "real_name": "ws"
+    },
+    "descriptions": "This service is related to reports on dashboard."
+  },
+  {
+    "model": "config_app.setting",
+    "pk": "ssh-port",
+    "fields": {
+      "data": {
+        "value": "22"
+      },
+      "display_name": "Admin CLI ssh port",
+      "descriptions": "",
+      "type": "number",
+      "order": "2",
+      "category": "Access Settings"
+    }
+  },
+  {
+    "model": "config_app.setting",
+    "pk": "http-port",
+    "fields": {
+      "data": {
+        "value": "80"
+      },
+      "display_name": "Admin UI http port",
+      "descriptions": "",
+      "type": "number",
+      "order": "3",
+      "category": "Access Settings"
+    }
+  },
+  {
+    "model": "config_app.setting",
+    "pk": "https-port",
+    "fields": {
+      "data": {
+        "value": "443"
+      },
+      "display_name": "Admin UI https port",
+      "descriptions": "",
+      "type": "number",
+      "order": "4",
+      "category": "Access Settings"
+    }
+  },
+  {
+    "model": "config_app.setting",
+    "pk": "admin-session-timeout",
+    "fields": {
+      "data": {
+        "value": "600"
+      },
+      "display_name": "Admin Session-timeout",
+      "descriptions": "Session timeout (in minute)",
+      "type": "number",
+      "order": "1",
+      "category": "Security"
+    }
+  },
+  {
+    "model": "config_app.setting",
+    "pk": "max-login-attempts",
+    "fields": {
+      "data": {
+        "value": "3"
+      },
+      "display_name": "Max Login Attempts",
+      "descriptions": "Display Captcha when failed attempts reach max login attempts",
+      "type": "number",
+      "order": "5",
+      "category": "Security"
+    }
+  },
+  {
+    "model": "config_app.setting",
+    "pk": "min-password-length",
+    "fields": {
+      "data": {
+        "value": "8"
+      },
+      "display_name": "Min Password Length",
+      "descriptions": "",
+      "type": "number",
+      "order": "6",
+      "category": "Authentication Settings"
+    }
+  },
+  {
+    "model": "config_app.Hostname",
+    "pk": "host-name",
+    "fields": {
+      "data": {
+        "value": "narin"
+      },
+      "display_name": "Host name",
+      "descriptions": "",
+      "type": "string",
+      "order": "3",
+      "category": "Authentication Settings"
+    }
+  },
+
+  {
+    "model": "config_app.setting",
+    "pk": "login-message",
+    "fields": {
+      "data": {
+        "value": "Welcome to Narin \n All connections are monitored and recorded \n Disconnect IMMEDIATELY if you are not an authorized user!"
+      },
+      "display_name": "Login Display Message",
+      "descriptions": "This value will display in UI and CLI login page",
+      "type": "string",
+      "order": "8",
+      "category": "Authentication Settings"
+
+    }
+  },
+  {
+    "model": "config_app.setting",
+    "pk": "ssh-ban-time",
+    "fields": {
+      "data": {
+        "value": "300"
+      },
+      "display_name": "SSH Ban Time",
+      "descriptions": "Time to ban a failed attempt on ssh(in seconds)",
+      "type": "number",
+      "order": "7",
+      "category": "Security"
+    }
+  },
+  {
+    "model": "config_app.setting",
+    "pk": "protection-log",
+    "fields": {
+      "data": {
+        "value": "false"
+      },
+      "display_name": "Log Spoof-Prevention packets",
+      "descriptions": "By enable this, the packets from illegal network IPs(spoof-prevention), bad-syn packets and fragmented ICMPes will be logged.",
+      "type": "bool",
+      "order": "8",
+      "category": "Security"
+    }
+  },
+  {
+    "model": "config_app.setting",
+    "pk": "ssl_certificate",
+    "fields": {
+      "data": {
+        "public_key": "",
+        "private_key": "",
+        "is_uploaded_by_user": false
+      },
+      "display_name": "SSL Certificate",
+      "descriptions": "SSL Certificate used by web connections",
+      "type": "certificate",
+      "order": "9",
+      "category": "Security"
+    }
+  }
+]

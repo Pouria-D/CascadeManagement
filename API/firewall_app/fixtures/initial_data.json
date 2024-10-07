@@ -1,0 +1,15 @@
+[
+  {
+    "model": "entity_app.address",
+    "pk": 1,
+    "fields": {
+      "name": "any",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "0.0.0.0/0"
+      ],
+      "is_user_defined": true
+    }
+  }
+]

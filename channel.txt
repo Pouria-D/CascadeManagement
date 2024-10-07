@@ -1,0 +1,24 @@
+In the name of GOD
+
+~$ this Doc is implementation of channel and websocket for our Devicemanagement app
+
+~$ earlier we build a chat room by serving up a channel layer and web socket to become familiar with Django channels and test them
+   now it's time to use them as we need.
+
+~$ As we know our api user can add Devices to api . each device has a name , ip , port , address , id , status . 
+   at the creating moment , api will check the device IP and ping it 3 times and then return status of device ( enabled , disabled or failed ) .
+   Now we want api to have a real time connection to all devices IPs and if their states changed , change the device status !
+
+~$ what to do ?
+
+so we should define a new socket ( I don't know where !?! )
+then creat a routing file ( like a url ) to get the socket and go to consumers and return the response 
+and at last a consumers.py that contains our methods to check the device states and set their status .
+  
+~$ what  is my problem now ?
+
+I set the primery requirements ( installing channel :) , creating and passing approparate routings , and wrote base of consumer file )
+but :
+	1. don't know where to define new Socket ( In a example of Django-channel Doc It used html forms to write views and defined there ; 
+	and in dashboard sample code I could't find such a definition ! )
+	2. how to complete consumer ! actually  :  a- what should event be  &   b- how to have a loop for all Device instances which is created ! ) 

@@ -1,0 +1,375 @@
+pouria@ubuntu:~$ source my_venv/bin/activate
+(my_venv) pouria@ubuntu:~$ sudo gedit /etc/nginx/
+[sudo] password for pouria: 
+
+(gedit:18665): Tepl-WARNING **: 23:04:15.317: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:~$ sudo gedit /etc/nginx/sites-avalable
+
+(gedit:18676): Tepl-WARNING **: 23:04:41.481: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:~$ cd /etc/nginx/sites-avalable
+bash: cd: /etc/nginx/sites-avalable: No such file or directory
+(my_venv) pouria@ubuntu:~$ cd /etc/nginx/
+(my_venv) pouria@ubuntu:/etc/nginx$ ls
+conf.d          koi-win            nginx.conf       sites-enabled
+fastcgi.conf    mime.types         proxy_params     snippets
+fastcgi_params  modules-available  scgi_params      uwsgi_params
+koi-utf         modules-enabled    sites-available  win-utf
+(my_venv) pouria@ubuntu:/etc/nginx$ cd /etc/nginx/sites-available
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ ls
+default  tutorial_nginx.conf
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ sudo tutorial_nginx.conf
+sudo: tutorial_nginx.conf: command not found
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ sudo gedit tutorial_nginx.conf
+
+(gedit:18692): Tepl-WARNING **: 23:12:06.780: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+^C
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ sudo gedit tutorial_nginx.conf
+
+(gedit:18937): Tepl-WARNING **: 23:12:21.496: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ cd ..
+(my_venv) pouria@ubuntu:/etc/nginx$ cd sites-enabled
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo rm tutorial_nginx.conf
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo ln -s /etc/nginx/sites-available/tutorial_nginx.conf /etc/nginx/sites-enabled/
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ ls
+default  tutorial_nginx.conf
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo /etc/init.d/nginx restart
+Restarting nginx (via systemctl): nginx.serviceJob for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ failed!
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>
+     Active: failed (Result: exit-code) since Sun 2020-08-09 23:16:34 PDT; 21s >
+       Docs: man:nginx(8)
+    Process: 18974 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_proc>
+
+Aug 09 23:16:34 ubuntu systemd[1]: Starting A high performance web server and a>
+Aug 09 23:16:34 ubuntu nginx[18974]: nginx: [emerg] directive "server" has no o>
+Aug 09 23:16:34 ubuntu nginx[18974]: nginx: configuration file /etc/nginx/nginx>
+Aug 09 23:16:34 ubuntu systemd[1]: nginx.service: Control process exited, code=>
+Aug 09 23:16:34 ubuntu systemd[1]: nginx.service: Failed with result 'exit-code>
+Aug 09 23:16:34 ubuntu systemd[1]: Failed to start A high performance web serve>
+lines 1-12/12 (END)...skipping...
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2020-08-09 23:16:34 PDT; 21s ago
+       Docs: man:nginx(8)
+    Process: 18974 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Aug 09 23:16:34 ubuntu systemd[1]: Starting A high performance web server and a reverse proxy server...
+Aug 09 23:16:34 ubuntu nginx[18974]: nginx: [emerg] directive "server" has no opening "{" in /etc/nginx/sites-enabled/tutorial_nginx.conf:4
+Aug 09 23:16:34 ubuntu nginx[18974]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Aug 09 23:16:34 ubuntu systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Aug 09 23:16:34 ubuntu systemd[1]: nginx.service: Failed with result 'exit-code'.
+Aug 09 23:16:34 ubuntu systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-12/12 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2020-08-09 23:16:34 PDT; 21s ago
+       Docs: man:nginx(8)
+    Process: 18974 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Aug 09 23:16:34 ubuntu systemd[1]: Starting A high performance web server and a reverse proxy server...
+Aug 09 23:16:34 ubuntu nginx[18974]: nginx: [emerg] directive "server" has no opening "{" in /etc/nginx/sites-enabled/tutorial_nginx.conf:4
+Aug 09 23:16:34 ubuntu nginx[18974]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Aug 09 23:16:34 ubuntu systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Aug 09 23:16:34 ubuntu systemd[1]: nginx.service: Failed with result 'exit-code'.
+Aug 09 23:16:34 ubuntu systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ ls
+default  tutorial_nginx.conf
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit tutorial_nginx.conf
+
+(gedit:19017): Tepl-WARNING **: 23:18:39.501: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ cd /etc/nginx/sites-available
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ sudo gedit tutorial_nginx.conf
+
+(gedit:19039): Tepl-WARNING **: 23:19:23.653: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ cd ..
+(my_venv) pouria@ubuntu:/etc/nginx$ cd sites-enabled
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit tutorial_nginx.conf
+
+(gedit:19053): Tepl-WARNING **: 23:19:54.125: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ cd ..
+(my_venv) pouria@ubuntu:/etc/nginx$ sudo /etc/init.d/nginx restart
+Restarting nginx (via systemctl): nginx.serviceJob for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ failed!
+(my_venv) pouria@ubuntu:/etc/nginx$ systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2020-08-09 23:20:09 PDT; 9s ago
+       Docs: man:nginx(8)
+    Process: 19073 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Aug 09 23:20:09 ubuntu systemd[1]: Starting A high performance web server and a reverse proxy server...
+Aug 09 23:20:09 ubuntu nginx[19073]: nginx: [emerg] open() "/home/tutorial/2/tutorial/tutorial" failed (2: No such file or directory) in /etc/nginx/sites-enabled/tutorial_nginx.conf:30
+Aug 09 23:20:09 ubuntu nginx[19073]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Aug 09 23:20:09 ubuntu systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Aug 09 23:20:09 ubuntu systemd[1]: nginx.service: Failed with result 'exit-code'.
+Aug 09 23:20:09 ubuntu systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+(my_venv) pouria@ubuntu:/etc/nginx$ cd site-enabled
+bash: cd: site-enabled: No such file or directory
+(my_venv) pouria@ubuntu:/etc/nginx$ cd sites-enabled
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit tutorial_nginx.conf
+
+(gedit:19294): Tepl-WARNING **: 23:26:41.919: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+^C
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ cd /etc/nginx/sites-available
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ sudo gedit tutorial_nginx.conf
+
+(gedit:19348): Tepl-WARNING **: 23:27:39.080: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ sudo /etc/init.d/nginx restart
+Restarting nginx (via systemctl): nginx.serviceJob for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ failed!
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2020-08-09 23:27:44 PDT; 15s ago
+       Docs: man:nginx(8)
+    Process: 19371 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Aug 09 23:27:44 ubuntu systemd[1]: Starting A high performance web server and a reverse proxy server...
+Aug 09 23:27:44 ubuntu nginx[19371]: nginx: [emerg] open() "/home/tutorial/2/tutorial" failed (2: No such file or directory) in /etc/nginx/sites-enabled/tutorial_nginx.conf:30
+Aug 09 23:27:44 ubuntu nginx[19371]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Aug 09 23:27:44 ubuntu systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Aug 09 23:27:44 ubuntu systemd[1]: nginx.service: Failed with result 'exit-code'.
+Aug 09 23:27:44 ubuntu systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ sudo gedit tutorial_nginx.conf
+
+(gedit:19397): Tepl-WARNING **: 23:29:42.933: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-available$ cd /etc/nginx/sites-enabled
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit tutorial_nginx.conf
+
+(gedit:19418): Tepl-WARNING **: 23:30:07.846: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo /etc/init.d/nginx restart
+Restarting nginx (via systemctl): nginx.serviceJob for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ failed!
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2020-08-09 23:30:14 PDT; 3s ago
+       Docs: man:nginx(8)
+    Process: 19440 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Aug 09 23:30:14 ubuntu systemd[1]: Starting A high performance web server and a reverse proxy server...
+Aug 09 23:30:14 ubuntu nginx[19440]: nginx: [emerg] open() "/home/tutorial/2/tutorial/uwsgi_params" failed (2: No such file or directory) in /etc/nginx/sites-enabled/tutorial_nginx.conf:30
+Aug 09 23:30:14 ubuntu nginx[19440]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Aug 09 23:30:14 ubuntu systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Aug 09 23:30:14 ubuntu systemd[1]: nginx.service: Failed with result 'exit-code'.
+Aug 09 23:30:14 ubuntu systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ gksudo gedit
+
+Command 'gksudo' not found, did you mean:
+
+  command 'gfsudo' from deb gfarm-client (2.7.15+dfsg-1)
+
+Try: sudo apt install <deb name>
+
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo apt install gksudo
+[sudo] password for pouria: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package gksudo
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit
+
+(gedit:19944): Tepl-WARNING **: 23:52:59.334: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+^C
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo /etc/init.d/nginx restart
+Restarting nginx (via systemctl): nginx.serviceJob for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ failed!
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2020-08-09 23:53:40 PDT; 4s ago
+       Docs: man:nginx(8)
+    Process: 19971 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+
+Aug 09 23:53:40 ubuntu systemd[1]: Starting A high performance web server and a reverse proxy server...
+Aug 09 23:53:40 ubuntu nginx[19971]: nginx: [emerg] open() "/home/tutorial/2/tutorial/uwsgi_params" failed (2: No such file or directory) in /etc/nginx/sites-enabled/tutorial_nginx.conf:30
+Aug 09 23:53:40 ubuntu nginx[19971]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Aug 09 23:53:40 ubuntu systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Aug 09 23:53:40 ubuntu systemd[1]: nginx.service: Failed with result 'exit-code'.
+Aug 09 23:53:40 ubuntu systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit tutorial_nginx.conf
+
+(gedit:21396): Tepl-WARNING **: 00:08:30.371: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo /etc/init.d/nginx restart
+Restarting nginx (via systemctl): nginx.service.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2020-08-10 00:08:40 PDT; 37s ago
+       Docs: man:nginx(8)
+    Process: 21420 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 21435 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 21436 (nginx)
+      Tasks: 2 (limit: 4624)
+     Memory: 3.5M
+     CGroup: /system.slice/nginx.service
+             ├─21436 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             └─21442 nginx: worker process
+
+Aug 10 00:08:39 ubuntu systemd[1]: Starting A high performance web server and a reverse proxy server...
+Aug 10 00:08:40 ubuntu systemd[1]: Started A high performance web server and a reverse proxy server.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit tutorial_nginx.conf
+
+(gedit:21516): Tepl-WARNING **: 00:16:01.780: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo ls /run/uwsgi
+ls: cannot access '/run/uwsgi': No such file or directory
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo /etc/init.d/nginx restart
+Restarting nginx (via systemctl): nginx.serviceJob for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ failed!
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit tutorial_nginx.conf
+^C
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ cd ..
+(my_venv) pouria@ubuntu:/etc/nginx$ ls
+conf.d        fastcgi_params  koi-win     modules-available  nginx.conf    scgi_params      sites-enabled  uwsgi_params
+fastcgi.conf  koi-utf         mime.types  modules-enabled    proxy_params  sites-available  snippets       win-utf
+(my_venv) pouria@ubuntu:/etc/nginx$ cd uwsgi_params ~/tutorial/2/tutorial
+bash: cd: too many arguments
+(my_venv) pouria@ubuntu:/etc/nginx$ cp uwsgi_params ~/tutorial/2/tutorial
+cp: cannot create regular file '/home/pouria/tutorial/2/tutorial/uwsgi_params': Permission denied
+(my_venv) pouria@ubuntu:/etc/nginx$ sudo cp uwsgi_params ~/tutorial/2/tutorial
+(my_venv) pouria@ubuntu:/etc/nginx$ cd sites-enabled
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit tutorial_nginx.conf
+
+(gedit:21639): Tepl-WARNING **: 00:23:25.923: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo /etc/init.d/nginx restart
+Restarting nginx (via systemctl): nginx.serviceJob for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xe" for details.
+ failed!
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ sudo gedit tutorial_nginx.conf
+
+(gedit:21946): Tepl-WARNING **: 00:53:42.186: GVfs metadata is not supported. Fallback to TeplMetadataManager. Either GVfs is not correctly installed or GVfs metadata are not supported on this platform. In the latter case, you should configure Tepl with --disable-gvfs-metadata.
+(my_venv) pouria@ubuntu:/etc/nginx/sites-enabled$ 
+

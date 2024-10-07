@@ -1,0 +1,42 @@
+[
+  {
+    "model": "entity_app.address",
+    "pk": 1,
+    "fields": {
+      "name": "any",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "0.0.0.0/0"
+      ],
+      "is_user_defined": true
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 2,
+    "fields": {
+      "name": "test1",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "3.6.6.6",
+        "44.55.66.33"
+      ],
+      "is_user_defined": true
+    }
+  },
+  {
+    "model": "entity_app.address",
+    "pk": 3,
+    "fields": {
+      "name": "test2",
+      "description": null,
+      "type": "ip",
+      "value_list": [
+        "2.6.2.6"
+      ],
+      "is_user_defined": true
+    }
+  }
+]

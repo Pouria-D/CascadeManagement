@@ -1,0 +1,61 @@
+Username and password
+    -We already considered the requester username in authentication and for 127.0.0.1 we considered it as 'ngfw'.
+     It was OK! until we encountered problems in changing password in CLI!
+    because the requester IP in CLI is 127.0.0.1 and so the username considered as 'ngfw' and then the authentication went
+    wrong for changing password.
+    We change the requester for all situations to 'admin'. but it's a temporary solution! and it should be fix.
+
+Threads and pending status
+    -Staying in pending state problem caused by different unexpected situations that are hard to find, such as restarting gunicorn workers!
+    For this reason we give a solution:
+    We make a global dictionary from every thread that runs with 'run_thread' function named 'thread_dict'. once the
+    thread finished it's work we pop it from the explained dictionary. In PolicyWatcher and VPNWatcher we check every
+    'pending interval' time to see if there is a pending object with no thread in the thread_dict. if this objects exist
+    we change the status from pending to failed or succeeded. 
+
+netdata
+    -this service listen to 19999 port
+
+Deployment:
+    Enable ssl in nginx:
+        Originally From https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-16-04
+
+        Step 1: Create the SSL Certificate
+            run this command to create a self-signed key and certificate pair:
+                sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+                -keyout /etc/ssl/private/nginx-selfsigned.key \
+                -out /etc/ssl/certs/nginx-selfsigned.crt \
+                -subj "/O=Payam Pardaz/OU=Narin/CN=narin.loc"
+
+            run this command to create a strong Diffie-Hellman group:
+                sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+
+        Step 2: Configure Nginx to Use SSL
+            copy snippets folder from installer to nginx path
+            copy narin.conf to sites-available in nginx path
+            create soft link from sites-available to sites-enabled
+            restart nginx service
+
+        Step 3: Adjust the Firewall
+            Firewall should allow nginx ports. (default ports are 80 and 443)
+
+
+WebSocket:
+    - required modules:
+        - channels: main django channel module
+        - Twisted[tls,http2]: Twisted is required for events.
+            - tls submodule is for handling HTTPS.
+            - http2 submodule is for handling HTTP2 connections.
+        - channels_redis: is required when redis is used as django channel backend
+
+    - config:
+        - ASGI_APPLICATION: specify root router for async websocket requests.
+        - CHANNEL_LAYERS: specify backend for django channel. (e.g. redis)
+
+    - router:
+        - urls for accessing websocket consumers are placed in api/routing.py
+
+    - deploy:
+        - for getting websocket requests daphne has used (similar to gunicorn except it's for websocket protocol)
+        - all requests which their urls start with /ws are giving to daphne by nginx
+        - daphne service is placed in /etc/systemd/system/ws.service

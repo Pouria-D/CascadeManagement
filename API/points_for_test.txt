@@ -1,0 +1,72 @@
+### config: interface ###
+- dhcp
+- static IP
+- set multiple IP manually
+- enable and disable interface
+- change link type from PPPOE to Ethernet and vice versa
+- set interface as default gateway and change it to another
+
+
+### config: NTP ###
+- enable and disable NTP servers
+- define NTP servers
+- change NTP servers
+
+### config: Syslog ###
+- define multiple rsyslog server
+- enable and disable servers
+# check whether logs send securely or not
+
+### config: static route ###
+# enable and disable static route
+# add routes with same metric
+
+
+### config: backup and restore ###
+# create backup from one version
+# restore previous backup in newer version
+
+
+### config: update ###
+# automatically update according to schedule
+# update from server
+# update from file
+
+### entity: address ###
+- delete address that is used in other parts of system like VPN and policy
+- update address that is used in other parts of system like VPN and policy
+
+### entity: service ###
+- delete service that is used in other parts of system like VPN and policy
+- update service that is used in other parts of system like VPN and policy
+
+
+### entity: schedule ###
+- delete schedule that is used in other parts of system like VPN and policy
+- update schedule that is used in other parts of system like VPN and policy
+
+
+### firewall ###
+- policy with NAT
+- policy without NAT
+- policy with different actions (accept, reject, drop)
+- policy order (important)
+- policy with schedule
+- enable and disable policy
+- enable and disable log in policy
+- ipsec
+- GEOIP
+- test different sources and destinations in policy with multiple values for each of them
+
+- NAT order
+- different NAT types
+- enable and disable NAT
+
+### VPN ###
+- VPN without tunnel
+- VPN with different types of tunnel (GRE, IPIP, VTUN)
+- enable and disable VPN
+- different algorithms in phase 1 and 2
+- multi value for local network and remote network
+- effect of enabling and disabling DPD
+- vtun client and server

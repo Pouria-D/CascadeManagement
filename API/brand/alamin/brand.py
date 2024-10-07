@@ -1,0 +1,2 @@
+BRAND = 'alamin'
+COMPANY = 'Rawatalebdaa'

@@ -1,0 +1,13 @@
+[Unit]
+Description=HA_SYNCER Service
+After=network.target
+
+[Service]
+User=ngfw
+Group=www-data
+WorkingDirectory=/opt/narin/api/ha_syncer
+ExecStart=/opt/narin/.env/bin/python /opt/narin/api/ha_syncer/run.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

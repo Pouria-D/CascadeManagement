@@ -1,0 +1,21 @@
+- System Overview:
+    cpu: http://127.0.0.1:19999/api/v1/data?chart=system.cpu
+    disk I/O: http://127.0.0.1:19999/api/v1/data?chart=system.io
+    ram: http://127.0.0.1:19999/api/v1/data?chart=system.ram
+    ipv4 bandwidth: http://127.0.0.1:19999/api/v1/data?chart=system.ipv4
+    cpu interrupts: http://127.0.0.1:19999/api/v1/data?chart=system.intr
+    softirqs: http://127.0.0.1:19999/api/v1/data?chart=system.softirqs
+    softnet: http://127.0.0.1:19999/api/v1/data?chart=system.softnet_stats
+    uptime: http://127.0.0.1:19999/api/v1/data?chart=system.uptime
+    
+- IPv4 Networking:
+    ipv4 packets: http://127.0.0.1:19999/api/v1/data?chart=ipv4.packets
+    errors: http://127.0.0.1:19999/api/v1/data?chart=ipv4.inerrors
+    ipv4 tcp connection: http://127.0.0.1:19999/api/v1/data?chart=ipv4.tcpsock
+    ipv4 tcp tcppackets: http://127.0.0.1:19999/api/v1/data?chart=ipv4.tcppackets
+    ipv4 udp sockets: http://127.0.0.1:19999/api/v1/data?chart=ipv4.sockstat_udp_sockets
+    ipv4 udp tcppackets: http://127.0.0.1:19999/api/v1/data?chart=ipv4.udppackets
+    firewall(netfilter): http://127.0.0.1:19999/api/v1/data?chart=netfilter.conntrack_sockets
+
+- Network Interfaces:
+    bandwidth: http://127.0.0.1:19999/api/v1/data?chart=net.ens*

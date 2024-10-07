@@ -1,0 +1,65 @@
+A. Install the PPPoE  Server Software
+1)sudo apt-get install ppp
+
+2) rp-pppoe (non apt suite)
+wget -c https://www.roaringpenguin.com/files/download/rp-pppoe-3.12.tar.gz
+sudo tar zxvf rp-pppoe-3.12.tar.gz
+cd rp-pppoe-3.12/src
+# Configure with plugin enabled
+./configure --enable-plugin
+# Build pppoe binaries
+make 
+# Build pppoe Kernel mode plugins
+make rp-pppoe.so
+# Install to system folders
+make install
+
+
+Two. To configure: 
+sudo vim /etc/ppp/options
+sudo vim /etc/ppp/pppoe-server-options 
+#######
+ms-dns 4.2.2.2
+ms-dns 4.2.2.3
+-pap
++chap
+.......
+#######
+
+
+Three. Add user: 
+sudo vim /etc/ppp/chap-secrets
+##############################
+# Secrets for authentication using CHAP
+# client server secret   IP addresses
+naghdi  *       "123qwe!"       *
+
+##############################
+
+
+Four. Enable forward:
+echo "1">/proc/sys/net/ipv4/ip_forward
+Note: this command must be executed with the root ID, sudo no use, otherwise it would suggest Operation not permitted.
+         If forward is not enabled, client even get IP, traffic can't go, only to server.
+
+
+Five. Start PPPoE Server:
+allan@allan-desktop:~# sudo pppoe-server -I ens18 -L 172.25.27.125 -R 172.25.27.181 -N 10
+
+sudo vim /etc/ppp/ipaddress_pool
+10.10.10.1-10
+
+sudo pppoe-server -C isp -L 10.10.10.20 -p /etc/ppp/ipaddress_pool -I ens18 -m 1412
+
+OR
+
+pppoe-server -I eth0 -L 192.168.0.1 -R 192.168.0.5 -N 10
+
+-I eth0 the specified PPPoE server connection requests in the network interface monitor
+-L 192.168.0.1 the specified PPPoE server IP address. (Note: this IP address is not the network card IP address, but the PPPOE of the virtual server IP)
+The -R 192.168.0.5 PPPoE server assigns the IP address of the client, from the beginning of 192.168.0.5, increasing
+-N 10 specifies the number of clients can connect to the PPPoE server
+
+
+
+

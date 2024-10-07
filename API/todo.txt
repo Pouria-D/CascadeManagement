@@ -1,0 +1,6 @@
+entity_app
+- update an entity -> change other parts of the system like policy [✔]
+- an entity used in other parts of the system like policy -> do not let entity to remove [✔]
+
+
+- make connection for each interface in installer [✔] (done in config_app/apps.py)
